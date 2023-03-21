@@ -1,0 +1,72 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "path:\"Algorithms/Sort algorithms\"",
+      "color": {
+        "a": 1,
+        "rgb": 6808389
+      }
+    },
+    {
+      "query": "path:\"Algorithms/Data structures algorithms\"",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "path:\"Algorithms/Programming techniques\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:\"Algorithms/Mathematical algorithms\"",
+      "color": {
+        "a": 1,
+        "rgb": 16449791
+      }
+    },
+    {
+      "query": "path:\"Algorithms/Graph algorithms\"",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
+      }
+    },
+    {
+      "query": "path:\"Annotations/Mathmatic annotations\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:Annotations",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.50364583333333,
+  "lineSizeMultiplier": 1.29947916666667,
+  "collapse-forces": true,
+  "centerStrength": 0.255208333333333,
+  "repelStrength": 20,
+  "linkStrength": 0.5,
+  "linkDistance": 223,
+  "scale": 0.05330362903550505,
+  "close": true
+}

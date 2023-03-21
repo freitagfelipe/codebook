@@ -1,0 +1,5 @@
+- [[Euclidean algorithm]]
+- [[Extended Euclidean algorithm]]
+- [[Fast multiplication]]
+- [[Fast exponentiation]]
+- [[Prime test]]

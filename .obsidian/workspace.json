@@ -1,0 +1,179 @@
+{
+  "main": {
+    "id": "89d194ae24ef64bc",
+    "type": "split",
+    "children": [
+      {
+        "id": "dd9c5541bd2a9c9c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2a5243604d8122d2",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2e28e27e7f1f5057",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3a8077efe8f6a32",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "41e1ec0b5b78ddb9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f8ec5a375566282b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "88f5ada9ebd6553a",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 269.5
+  },
+  "right": {
+    "id": "ec0338f3f8858459",
+    "type": "split",
+    "children": [
+      {
+        "id": "82ee7302c0ddc2ac",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5f4cf69b33e6a9f6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c47f800c6fab94ea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "690cfe4c4445460a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "836d9f9b8886e22e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "2a5243604d8122d2",
+  "lastOpenFiles": [
+    "2023-03-21.md",
+    "README.md",
+    "Algorithms/Programming techniques/Programming techniques.md",
+    "Annotations/Mathmatic annotations/Combinatory annotations.md",
+    "Annotations/Mathmatic annotations/Mathmatic annotations.md",
+    "Annotations/Mathmatic annotations/Geometry annotations.md",
+    "Competitive programming.md",
+    "Contents.md",
+    "Annotations/Mathmatic annotations/Number theory annotations.md",
+    "Annotations/Mathmatic annotations/Algebra annotations.md",
+    "Algorithms/Sort algorithms/Sort algorithms.md",
+    "Algorithms/Sort algorithms/Merge sort.md",
+    "Algorithms/Programming techniques/Two pointers.md",
+    "Algorithms/Programming techniques/Tree pointers.md",
+    "Algorithms/Programming techniques/Subset sum.md",
+    "Algorithms/Programming techniques/Prefix sum array (PSA).md",
+    "Algorithms/Programming techniques/Longest increasing subsequence (LIS).md",
+    "Algorithms/Programming techniques/Longest common subsequence (LCS).md",
+    "Algorithms/Programming techniques/Levenshtein distance.md",
+    "Algorithms/Programming techniques/Knapsack.md",
+    "Algorithms/Programming techniques/Kadane's algorithm.md",
+    "Algorithms/Programming techniques/Binary search.md",
+    "Algorithms/Mathematical algorithms/Prime test.md",
+    "Algorithms/Mathematical algorithms/Mathematical algorithms.md",
+    "Algorithms/Mathematical algorithms/Fast multiplication.md",
+    "Algorithms/Mathematical algorithms/Fast exponentiation.md",
+    "Annotations/Mathmatic annotations",
+    "Algorithms/Sort algorithms",
+    "Algorithms/Programming techniques",
+    "Algorithms/Mathematical algorithms",
+    "Algorithms/Graph algorithms",
+    "Algorithms/Data structures algorithms",
+    "Annotations",
+    "Algorithms",
+    "Competitive programming"
+  ]
+}
