@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "dd9c5541bd2a9c9c",
+        "id": "df05ea97ac7b7290",
         "type": "tabs",
         "children": [
           {
-            "id": "2a5243604d8122d2",
+            "id": "508d729cdf1d0e66",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {}
             }
           }
@@ -81,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Algorithms/Data structures algorithms/Binary heap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Algorithms/Data structures algorithms/Binary heap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Algorithms/Data structures algorithms/Binary heap.md"
+              }
             }
           }
         ]
@@ -135,11 +139,14 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "2a5243604d8122d2",
+  "active": "41e1ec0b5b78ddb9",
   "lastOpenFiles": [
+    "Algorithms/Data structures algorithms/Binary search tree (BST).md",
+    "Algorithms/Data structures algorithms/Binary heap.md",
     "2023-03-21.md",
     "README.md",
     "Algorithms/Programming techniques/Programming techniques.md",
@@ -164,8 +171,6 @@
     "Algorithms/Programming techniques/Binary search.md",
     "Algorithms/Mathematical algorithms/Prime test.md",
     "Algorithms/Mathematical algorithms/Mathematical algorithms.md",
-    "Algorithms/Mathematical algorithms/Fast multiplication.md",
-    "Algorithms/Mathematical algorithms/Fast exponentiation.md",
     "Annotations/Mathmatic annotations",
     "Algorithms/Sort algorithms",
     "Algorithms/Programming techniques",
