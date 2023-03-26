@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "df05ea97ac7b7290",
+        "id": "a38f600e4f151387",
         "type": "tabs",
         "children": [
           {
-            "id": "508d729cdf1d0e66",
+            "id": "8d6256b7bb0b5df0",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms/Data structures algorithms/Binary heap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms/Data structures algorithms/Binary heap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Algorithms/Data structures algorithms/Binary heap.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -143,12 +139,27 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "41e1ec0b5b78ddb9",
+  "active": "8d6256b7bb0b5df0",
   "lastOpenFiles": [
-    "Algorithms/Data structures algorithms/Binary search tree (BST).md",
+    "Algorithms/Data structures algorithms/Fenwick tree (Binary Indexed Tree).md",
+    "Algorithms/Programming techniques/Subset sum.md",
+    "Algorithms/Data structures algorithms/Segment tree.md",
+    "Algorithms/Data structures algorithms/Segment tree with lazy propagation.md",
+    "Algorithms/Programming techniques/Kadane's algorithm.md",
+    "Algorithms/Programming techniques/Prefix sum array (PSA).md",
+    "Algorithms/Programming techniques/Two pointers.md",
+    "Algorithms/Programming techniques/Tree pointers.md",
     "Algorithms/Data structures algorithms/Binary heap.md",
-    "2023-03-21.md",
+    "Algorithms/Data structures algorithms/Binary search tree (BST).md",
+    "Algorithms/Data structures algorithms/Data structures algorithms.md",
+    "Algorithms/Data structures algorithms/Sparse table.md",
+    "Algorithms/Programming techniques/Longest common subsequence (LCS).md",
+    "Algorithms/Data structures algorithms/Union-find.md",
+    "Algorithms/Data structures algorithms/Red-black tree.md",
+    "Annotations/Bit manipulation annotations.md",
     "README.md",
+    "Algorithms/Graph algorithms/Bellman-Ford.md",
+    "2023-03-21.md",
     "Algorithms/Programming techniques/Programming techniques.md",
     "Annotations/Mathmatic annotations/Combinatory annotations.md",
     "Annotations/Mathmatic annotations/Mathmatic annotations.md",
@@ -156,21 +167,6 @@
     "Competitive programming.md",
     "Contents.md",
     "Annotations/Mathmatic annotations/Number theory annotations.md",
-    "Annotations/Mathmatic annotations/Algebra annotations.md",
-    "Algorithms/Sort algorithms/Sort algorithms.md",
-    "Algorithms/Sort algorithms/Merge sort.md",
-    "Algorithms/Programming techniques/Two pointers.md",
-    "Algorithms/Programming techniques/Tree pointers.md",
-    "Algorithms/Programming techniques/Subset sum.md",
-    "Algorithms/Programming techniques/Prefix sum array (PSA).md",
-    "Algorithms/Programming techniques/Longest increasing subsequence (LIS).md",
-    "Algorithms/Programming techniques/Longest common subsequence (LCS).md",
-    "Algorithms/Programming techniques/Levenshtein distance.md",
-    "Algorithms/Programming techniques/Knapsack.md",
-    "Algorithms/Programming techniques/Kadane's algorithm.md",
-    "Algorithms/Programming techniques/Binary search.md",
-    "Algorithms/Mathematical algorithms/Prime test.md",
-    "Algorithms/Mathematical algorithms/Mathematical algorithms.md",
     "Annotations/Mathmatic annotations",
     "Algorithms/Sort algorithms",
     "Algorithms/Programming techniques",
