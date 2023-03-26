@@ -12,14 +12,14 @@ collapse: true
 ```
 
 `````ad-example
-title: Encontrar dois números que somam $K$
+title: Encontrar dois números que somam $K$.
 
 ```ad-attention
 title: Restrição
 
 - A entrada tem que estar ordenada.
 ```
-⠀
+
 ```cpp
 #include <iostream>
 
@@ -65,9 +65,9 @@ title: Encontrar quantos intervalos em um vetor somam $K$
 ```ad-attention
 title: Restrição
 
-- Para o exemplo abaixo a entrada tem que conter apenas números maiores que um, pois caso contrário para um mesmo $p2$ existiriam vários $p1$, e não precisa seguir a restrição anterior. Caso aconteça de ter números menores ou iguais a zero podemos utilizar uma adaptação da técnica de [[Prefix sum array (PSA)]].
+- Para o exemplo abaixo a entrada tem que conter apenas números maiores que um, pois caso contrário para um mesmo $p2$ existiriam vários $p1$, e não precisa seguir a restrição anterior. Caso aconteça de ter números menores ou iguais a zero podemos utilizar uma adaptação da técnica de [[Prefix sum array (PSA)]] ou [[Tree pointers]], mas caso tenha números negativos a técnica de três ponteiros não funciona.
 ```
-⠀
+
 ```cpp
 #include <bits/stdc++.h>
 

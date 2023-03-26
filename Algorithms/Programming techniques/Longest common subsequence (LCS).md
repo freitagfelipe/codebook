@@ -30,7 +30,7 @@ title: Caso uma das sequências tenha apenas elementos destintos
 ``````
 
 ````ad-example
-title: LIS para encontrar LCS
+title: LIS para encontrar LCS.
 ⠀
 ```cpp
 #include <bits/stdc++.h>

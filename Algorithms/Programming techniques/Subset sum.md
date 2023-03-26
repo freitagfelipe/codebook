@@ -8,7 +8,7 @@ title: Objetivo
 title: Complexidade
 collapse: true
 
-- $O(\frac{n * sum}{wordsize})$
+- $O(\frac{n * k}{wordsize})$
 ```
 
 ```cpp

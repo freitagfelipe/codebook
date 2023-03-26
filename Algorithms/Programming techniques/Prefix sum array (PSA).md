@@ -1,11 +1,11 @@
 ```ad-info
 title: Sobre a técnica
 
-- A técnica de Soma de prefixo é uma técnica que pode ser adaptada de várias maneiras. A mais simples delas está demonstrada logo abaixo.
+- A técnica de Soma de prefixo é uma técnica que pode ser adaptada de várias maneiras. A mais simples delas está demonstrada logo abaixo. Caso seja necessário fazer atualizações em elementos do vetor $v$ a [[Fenwick tree (Binary Indexed Tree)]] pode ser utilizada assim como outras estruturas.
 ```
 
 ````ad-example
-title: Dado um vetor responder várias perguntas sobre qual é a soma do intervalo [L, R]
+title: Dado um vetor responder várias perguntas sobre qual é a soma do intervalo $[L, R]$.
 
 ```ad-note
 title: Complexidade
@@ -13,7 +13,7 @@ collapse: true
 
 - $O(n)$
 ```
-⠀
+
 ```cpp
 #include <bits/stdc++.h>
 
