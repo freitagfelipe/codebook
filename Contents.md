@@ -114,7 +114,7 @@ flexGrow=1
     - [x] Lista ligada
     - [x] Heap binária
     - [x] Tabela esparsa
-    - [ ] Árvore de Fenwick
+    - [x] Árvore de Fenwick
     - [x] Segment tree
     - [x] Segment tree com lazy propagation
     - [x] Aplicações de segment tree
