@@ -7,13 +7,14 @@ collapse: true
 ```
 
 ```cpp
+template <typename T>
 class BinaryHeap {
 public:
     BinaryHeap(bool is_min_heap = false) : tree(1) {
         this->is_min_heap = is_min_heap;
     }
 
-    void push(int val) {
+    void push(T val) {
         this->tree.push_back(val);
 
         this->fix_push(this->tree.size() - 1);
@@ -31,7 +32,7 @@ public:
         fix_pop(1);
     }
 
-    int top() {
+    T top() {
         if (this->tree.size() == 1) {
             throw std::runtime_error("Binary heap size == 0");
         }
@@ -44,7 +45,7 @@ public:
     }
     
 private:
-    vector<int> tree;
+    vector<T> tree;
     bool is_min_heap;
 
     int get_parent(int node) {

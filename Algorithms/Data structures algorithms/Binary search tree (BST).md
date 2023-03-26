@@ -9,22 +9,7 @@ collapse: true
 ```
 
 ```cpp
-class Node {
-public:
-    Node(int v) {
-        this->key = v;
-        this->left = nullptr;
-        this->right = nullptr;
-    }
-
-private:
-    int key;
-    Node *left;
-    Node *right;
-
-    friend class BST;
-};
-
+template <typename T>
 class BST {
 public:
     BST() {
@@ -35,29 +20,29 @@ public:
         this->free(this->root);
     }
 
-    bool search(int v) {
+    bool search(T v) {
         return this->search(this->root, v);
     }
 
-    void insert(int v) {
+    void insert(T v) {
         this->insert(this->root, v);
     }
 
-    void remove(int v) {
+    void remove(T v) {
         this->remove(this->root, v);
     }
 
-    int minimun_key() {
+    T minimun_key() {
         if (this->root == nullptr) {
-            std::runtime_error("BST size == 0");
+            std::runtime_error("bst size == 0");
         }
 
         return this->minimun_key(this->root);
     }
 
-    int maximun_key() {
+    T maximun_key() {
         if (this->root == nullptr) {
-            std::runtime_error("BST size == 0");
+            std::runtime_error("bst size == 0");
         }
 
         return this->maximun_key(this->root);
@@ -80,9 +65,21 @@ public:
     }
 
 private:
+    struct Node {
+        T key;
+        Node *left;
+        Node *right;
+
+        Node(T v) {
+            this->key = v;
+            this->left = nullptr;
+            this->right = nullptr;
+        }
+    };
+
     Node *root;
 
-    bool search(Node *node, int v) {
+    bool search(Node *node, T v) {
         if (node == nullptr) {
             return false;
         } else if (node->key == v) {
@@ -96,7 +93,7 @@ private:
         return this->search(node->right, v);
     }
 
-    void insert(Node *&node, int v) {
+    void insert(Node *&node, T v) {
         if (node == nullptr) {
             node = new Node(v);
         }
@@ -108,7 +105,7 @@ private:
         }
     }
 
-    void remove(Node *&node, int v) {
+    void remove(BST::Node *&node, T v) {
         if (node == nullptr) {
             return;
         }
@@ -134,7 +131,7 @@ private:
         }
     }
 
-    int minimun_key(Node *node) {
+    T minimun_key(Node *node) {
         if (node->left == nullptr) {
             return node->key;
         }
@@ -142,7 +139,7 @@ private:
         return this->minimun_key(node->left);
     }
 
-    int maximun_key(Node *node) {
+    T maximun_key(Node *node) {
         if (node->right == nullptr) {
             return node->key;
         }

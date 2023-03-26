@@ -20,50 +20,46 @@ collapse: true
 ```
 
 `````ad-example
-title: Segment tree para fazer $Q$ operações em um intervalo $[L, R]$
-- No exemplo a baixo as operações são somar um valor $v$ em um $v_i$ e dizer a soma do intervalo $[L, R]$.
+title: Segment tree para fazer $Q$ operações de somar um valor $v$ em $v_i$ ou responder a soma de todos os elementos no intervalo $[L, R]$.
 
 ```cpp
-class Node {
-public: 
-    Node(int s = 0) {
-        this->sum = s;
-    }
-
-    Node operator+(const Node &other) {
-        return Node(this->sum + other.sum);
-    }
-
-private:
-    int sum;
-
-    friend class SegmentTree;
-};
-
+template <typename T>
 class SegmentTree {
 public:
     void build(int n, int *v) {
         this->n = n;
 
-        arr.resize(n + 1);
-        tree.resize(4 * n);
+        this->arr.resize(n + 1);
+        this->tree.resize(4 * n);
 
         this->build(v, 1, 1, n);
     }
 
     // target_node tem que pertencer ao intervalo [1..N]
-    void update(int target_node, int v) {
+    void update(int target_node, T v) {
         this->update(1, 1, this->n, target_node, v);
     }
 
     // Queries no intervalo [1..N]
-    int query(int l, int r) {
+    T query(int l, int r) {
         return this->query(1, 1, this->n, l, r).sum;
     }
 
 private:
+    struct Node {
+        T sum;
+
+        Node(T s = 0) {
+            this->sum = s;
+        }
+
+        Node operator+(const Node &other) {
+            return Node(this->sum + other.sum);
+        }
+    };
+
     int n;
-    vector<int> arr;
+    vector<T> arr;
     vector<Node> tree;
 
     // l pertence ao intervalo [1..N]
@@ -86,7 +82,7 @@ private:
         this->tree[node] = this->tree[node * 2] + this->tree[node * 2 + 1];
     }
 
-    void update(int node, int l, int r, int target_node, int v) {
+    void update(int node, int l, int r, int target_node, T v) {
         if (l == r) {
             this->arr[target_node] += v;
 
@@ -108,9 +104,9 @@ private:
 
     Node query(int node, int l, int r, int l_target, int r_target) {
         if (r_target < l || r < l_target) {
-            return 0;
+            return Node();
         } else if (l_target <= l && r <= r_target) {
-            return tree[node].sum;
+            return tree[node];
         }
 
         int mid {(l + r) / 2};

@@ -8,7 +8,7 @@ title: Objetivo
 title: Restrições
 
 - O vetor não pode mudar durante as perguntas.
-- A função utilizada na sparse table deve ser associativa, pois as vezes pode acontecer de os intervalos checados pela sparse table podem não ser disjuntos.
+- A função utilizada na sparse table deve aceitar sobreposições, pois as vezes pode acontecer de os intervalos utilizados durante a query da sparse table não serem disjuntos. Caso a função utilizada não aceite sobreposições o que se deve fazer é dividir o intervalo nos maiores logs possíveis. 
 ```
 
 ```ad-note
@@ -20,13 +20,14 @@ collapse: true
 ```
 
 ```cpp
+template <typename T>
 class SparseTable {
 public:
     SparseTable(auto fn) {
         this->fn = fn;
     }
 
-    void build(int n, int *v) {
+    void build(int n, T *v) {
         this->logs.resize(n + 1);
 
         this->logs[1] = 0;
@@ -57,7 +58,7 @@ public:
     
 private:
     vector<int> logs;
-    vector<vector<int>> arr;
+    vector<vector<T>> arr;
     auto fn;
 };
 ```
