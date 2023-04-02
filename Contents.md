@@ -6,15 +6,15 @@ flexGrow=1
 - # Matemática computacional
     - [x] Matemática básica
     - [x] Aritmética modular
-    - [ ] Indução matemática
+    - [x] Indução matemática
     - [x] Algoritmo de euclides
     - [x] Algoritmo de euclides extendido
     - [x] Manipulação de bits
     - [x] Exponenciação rápida
-    - [ ] Inverso modular
+    - [x] Inverso modular
     - [x] Teste de primalidade
-    - [ ] Crivo de Erastótenes
-    - [ ] Fatoração de primos e divisores
+    - [x] Crivo de Erastótenes
+    - [x] Fatoração de primos e divisores
     - [ ] Coeficientes binomiais
     - [ ] Método da bissecção
 
