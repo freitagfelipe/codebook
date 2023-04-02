@@ -3,5 +3,6 @@
   "showIndentGuide": false,
   "rightToLeft": false,
   "defaultViewMode": "preview",
-  "readableLineLength": false
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true
 }

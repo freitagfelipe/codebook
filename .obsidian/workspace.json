@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a38f600e4f151387",
+        "id": "6ab879bd9fbb145b",
         "type": "tabs",
         "children": [
           {
-            "id": "8d6256b7bb0b5df0",
+            "id": "a039a06da8ab5d42",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Algorithms/Mathematical algorithms/Sieve of Eratosthenes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Algorithms/Mathematical algorithms/Sieve of Eratosthenes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Algorithms/Mathematical algorithms/Sieve of Eratosthenes.md"
+              }
             }
           }
         ]
@@ -139,34 +143,34 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8d6256b7bb0b5df0",
+  "active": "41e1ec0b5b78ddb9",
   "lastOpenFiles": [
-    "Algorithms/Data structures algorithms/Fenwick tree (Binary Indexed Tree).md",
-    "Algorithms/Programming techniques/Subset sum.md",
-    "Algorithms/Data structures algorithms/Segment tree.md",
-    "Algorithms/Data structures algorithms/Segment tree with lazy propagation.md",
-    "Algorithms/Programming techniques/Kadane's algorithm.md",
-    "Algorithms/Programming techniques/Prefix sum array (PSA).md",
-    "Algorithms/Programming techniques/Two pointers.md",
-    "Algorithms/Programming techniques/Tree pointers.md",
-    "Algorithms/Data structures algorithms/Binary heap.md",
-    "Algorithms/Data structures algorithms/Binary search tree (BST).md",
-    "Algorithms/Data structures algorithms/Data structures algorithms.md",
-    "Algorithms/Data structures algorithms/Sparse table.md",
-    "Algorithms/Programming techniques/Longest common subsequence (LCS).md",
-    "Algorithms/Data structures algorithms/Union-find.md",
-    "Algorithms/Data structures algorithms/Red-black tree.md",
-    "Annotations/Bit manipulation annotations.md",
-    "README.md",
-    "Algorithms/Graph algorithms/Bellman-Ford.md",
-    "2023-03-21.md",
-    "Algorithms/Programming techniques/Programming techniques.md",
-    "Annotations/Mathmatic annotations/Combinatory annotations.md",
-    "Annotations/Mathmatic annotations/Mathmatic annotations.md",
-    "Annotations/Mathmatic annotations/Geometry annotations.md",
-    "Competitive programming.md",
+    "Algorithms/Mathematical algorithms/Prime test in sqrt n.md",
+    "Algorithms/Mathematical algorithms/Prime factor.md",
+    "Algorithms/Mathematical algorithms/Linear sieve.md",
+    "Algorithms/Mathematical algorithms/Mathematical algorithms.md",
+    "Algorithms/Mathematical algorithms/Find modular inverse.md",
+    "Algorithms/Mathematical algorithms/Find divisors.md",
+    "Algorithms/Mathematical algorithms/Fast multiplication.md",
+    "Algorithms/Mathematical algorithms/Fast exponentiation.md",
+    "Algorithms/Mathematical algorithms/Extended Euclidean algorithm.md",
+    "Algorithms/Mathematical algorithms/Euclidean algorithm.md",
+    "Algorithms/Mathematical algorithms/Couting divisors.md",
     "Contents.md",
+    "Algorithms/Mathematical algorithms/Sieve of Eratosthenes.md",
+    "Algorithms/Data structures algorithms/Red-black tree.md",
     "Annotations/Mathmatic annotations/Number theory annotations.md",
+    "Annotations/Mathmatic annotations/Algebra annotations.md",
+    "Annotations/Mathmatic annotations/Combinatory annotations.md",
+    "Annotations/Search strategies annotations.md",
+    "Annotations/Bit manipulation annotations.md",
+    "Annotations/Graph annotations.md",
+    "Annotations/Other annotations.md",
+    "Algorithms/Graph algorithms/Graph algorithms.md",
+    "Algorithms/Data structures algorithms/Data structures algorithms.md",
+    "Algorithms/Data structures algorithms/Binary heap.md",
+    "Algorithms/Sort algorithms/Sort algorithms.md",
+    "Algorithms/Programming techniques/Programming techniques.md",
     "Annotations/Mathmatic annotations",
     "Algorithms/Sort algorithms",
     "Algorithms/Programming techniques",

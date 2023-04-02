@@ -46,7 +46,7 @@
       "query": "path:\"Annotations/Mathmatic annotations\"",
       "color": {
         "a": 1,
-        "rgb": 14701138
+        "rgb": 24848
       }
     },
     {
@@ -54,6 +54,13 @@
       "color": {
         "a": 1,
         "rgb": 5395168
+      }
+    },
+    {
+      "query": "path:/",
+      "color": {
+        "a": 1,
+        "rgb": 16777215
       }
     }
   ],
