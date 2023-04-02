@@ -1,3 +1,9 @@
+```ad-attention
+title: Restrição
+
+- O gráfico deve ser um DAG para ter ordenação topológica.
+```
+
 ```ad-note
 title: Complexidade
 collapse: true

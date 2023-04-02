@@ -1,7 +1,7 @@
 ```ad-info
 title: Objetivo
 
-- Dados dois números $a, b$ calcular a identidade de Bézout, ou seja, dois números $x, y$ tais que $ax + by = mdc(a, b)$ 
+- Dados dois números $a, b$ calcular a identidade de Bézout, ou seja, dois números $x, y$ tais que $ax + by = mdc(a, b)$.
 ```
 
 ```ad-note
@@ -34,11 +34,11 @@ int gcd_extended(int a, int b, int &x, int &y) {
 ```ad-hint
 title: Resolver equações diofantinas lineares com duas variáveis
 
-- Utilizando o algoritmo de Euclides extendido podemos também resolver equações diofantinas lineares com duas variáveis. Esse tipo de equação tem o seguinte formato: $ax + by = c$ onde $x, y \in \mathbb{Z}$. Supondo que exista uma solução para a equação todas as outras soluções são derivadas dela e seguem o seguinte formato: $(x + k \dfrac{b}{g}, y - k \dfrac{a}{g})$.
+- Utilizando o algoritmo de Euclides extendido podemos também resolver equações diofantinas lineares com duas variáveis. Esse tipo de equação tem o seguinte formato: $ax + by = c$ onde $x, y \in \mathbb{Z}$. Supondo que exista uma solução para a equação todas as outras soluções são derivadas dela e seguem o seguinte formato: $(x + k \dfrac{b}{gcd(a, b)}, y - k \dfrac{a}{gcd(a, b)})$.
 ```
 
 ```cpp
-bool solver(int a, int b, int c, int &x, int &y) {
+bool linear_diophantine_solver(int a, int b, int c, int &x, int &y) {
     if (a == 0 && b == 0) {
         if (c == 0) {
             x = y = 0;

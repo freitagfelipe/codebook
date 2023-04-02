@@ -1,9 +1,10 @@
 - [[Binary heap]]
-- [[Union-find]]
-- [[Sparse table]]
+- [[Binary search tree (BST)]]
+- [[Fenwick tree (Binary Indexed Tree)]]
+- [[Red-black tree]]
 - [[Segment tree]]
 - [[Segment tree with lazy propagation]]
-- [[Binary search tree (BST)]]
-- [[Red-black tree]]
+- [[Sparse table]]
+- [[Union-find]]
 
 ---

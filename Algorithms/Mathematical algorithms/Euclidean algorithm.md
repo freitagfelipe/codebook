@@ -1,7 +1,7 @@
 ```ad-info
 title: Objetivo
 
-- Dados dois números $a, b$ encontrar o máximo divisor comum (mdc)
+- Dados dois números $a, b$ encontrar o máximo divisor comum (mdc).
 ```
 
 ```ad-note

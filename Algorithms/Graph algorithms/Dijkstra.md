@@ -53,7 +53,7 @@ void dijkstra(int s) {
 ```
 
 ```ad-attention
-title: Restrição
+title: Atenção
 
 - Caso o grafo seja denso, ou seja, $E \approx V^2$, é melhor utilizar a adaptação abaixo.
 ```
