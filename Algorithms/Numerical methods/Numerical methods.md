@@ -1,0 +1,3 @@
+- [[Bisection method]]
+
+---

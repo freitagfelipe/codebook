@@ -24,7 +24,7 @@ int gcd(int a, int b) {
 ```ad-hint
 title: Encontrar o mmc
 
-- Utilizando a propriedade que envolve o máximo divisor comum (mdc) e o mínimo múltiplo comum (mmc) que é: $mmc(a, b) * mdc(a, b) = a * b$, ou seja, podemos concluir que $mmc(a, b) = \dfrac{a * b}{mdc(a, b)}$. O código está logo abaixo.
+- Utilizando a propriedade que envolve o máximo divisor comum (mdc) e o mínimo múltiplo comum (mmc) que é: $mmc(a, b) \cdot mdc(a, b) = a \cdot b$, ou seja, podemos concluir que $mmc(a, b) = \dfrac{a \cdot b}{mdc(a, b)}$. O código está logo abaixo.
 ```
 
 ```cpp

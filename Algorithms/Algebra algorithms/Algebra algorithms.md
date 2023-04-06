@@ -1,10 +1,13 @@
 - [[Couting divisors]]
 - [[Euclidean algorithm]]
 - [[Extended Euclidean algorithm]]
-- [[Fast multiplication]]
 - [[Fast exponentiation]]
+- [[Fast multiplication]]
 - [[Find divisors]]
+- [[Find modular inverse]]
 - [[Linear sieve]]
 - [[Prime factor]]
 - [[Prime test in sqrt n]]
 - [[Sieve of Eratosthenes]]
+
+---

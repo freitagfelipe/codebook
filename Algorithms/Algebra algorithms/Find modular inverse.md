@@ -8,7 +8,7 @@ title: Objetivo
 title: Atenção
 
 - Os algoritmos apresentados supõem que já foi verificado se o número possui inverso modular, ou seja, $mdc(a, m) = 1$.
-- O algoritmo utilizando [[Fast exponentiation]] só funciona se $m$ for primo.
+- O algoritmo utilizando [[Fast exponentiation]] só funciona se $m$ for primo. Porém, nem todo $a \text{ mod } m$ é primo, só sera primo se $a \text{ mod } m < m$.
 ```
 
 ```cpp
@@ -36,13 +36,13 @@ int get_modular_inverse(int a, int m) {
 ```ad-info
 title: Objetivo
 
-- O objetivo da implementação abaixo é encontrar o inverso modular de cada número em um interval $[1, m - 1]$.
+- O objetivo da implementação abaixo é encontrar o inverso modular de cada número em um intervalo $[1, m - 1]$.
 ```
 
 ```ad-attention
 title: Atenção
 
-- O algoritmo abaixo só funciona quando $m$ é primo, pois quando $m$ é primo, todos os número de $[1, m - 1]$ são coprimos de $m$.
+- O algoritmo abaixo só funciona quando $m$ é primo, pois quando $m$ é primo todos os número de $[1, m - 1]$ são coprimos de $m$.
 ```
 
 ```ad-note
