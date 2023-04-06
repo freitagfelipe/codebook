@@ -16,9 +16,9 @@
 
 ## Representação de um grafo
 
-- Lista de arestas
-- Matriz de adjacência
-- Lista de adjacência
+- Lista de arestas.
+- Matriz de adjacência.
+- Lista de adjacência.
 
 ---
 

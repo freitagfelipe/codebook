@@ -2,7 +2,7 @@
 title: Complexidade
 collapse: true
 
-- $O(nm)$
+- $O(ns)$
 ```
 
 ```cpp
@@ -36,7 +36,7 @@ int knapsack() {
 ```ad-hint
 title: Adaptação
 
-- Utilizando a adaptação abaixo ao invés do espaço auxiliar ser $O(NS)$ ele se torna $O(S)$.
+- Utilizando a adaptação abaixo ao invés do espaço auxiliar ser $O(ns)$ ele se torna $O(s)$.
 ```
 
 ```cpp

@@ -1,5 +1,5 @@
 ```ad-info
-title: O que é?
+title: Objetivo
 
 - A técnica de dois ponteiros pode ser usada de várias maneiras, mas sua utilização sempre consiste em usar dois ponteiros para apontar para lugares de um vetor. Por se tratar de uma técnica é necessário adaptá-la de acordo com as necessidades.
 ```

@@ -16,7 +16,7 @@
 
 ## Funções
 
-- Funções são relações com determinadas propriedades entre dois conjuntos. Uma relação $f$ entre os conjuntos $A, B$ é considerada uma função se e somente se apenas cada elemento de $A$ estiver relacionado com **exatamente** um elemento de $B$.
+- Funções são relações com determinadas propriedades entre dois conjuntos. Uma relação $f$ entre os conjuntos $A, B$ é considerada uma função se e somente se apenas cada elemento de $A$ estiver relacionado com exatamente um elemento de $B$.
 - Determinamos $f(x)$ o elemento do conjunto $B$ que está relacionado com o elemento de $x$ de $A$. Uma vez que as funções são apenas relações entre elementos, podemos fazer relações envolvendo equações matemáticas. Quando trabalhamos com funções que envolvem equações, podemos representá-las como um gráfico. Outro conceito relacionado com funções é a raiz de uma função. Basicamente, as raízes de uma função $f$ são todos os elementos $x$ do conjunto $A$ tais que $f(x) = 0$.
 
 ---

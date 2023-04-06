@@ -26,12 +26,12 @@ size_t LCS(string &a, string &b) {
 `````ad-hint
 title: Caso uma das sequências tenha apenas elementos destintos
 
-- Nesse caso a LCS pode ser feita por meio de uma LIS adaptada da seguinte maneira mostrada logo abaixo no exemplo.
+- Nesse caso a LCS pode ser feita por meio de uma [[Longest increasing subsequence (LIS)]] adaptada da seguinte maneira mostrada logo abaixo no exemplo. Com complexidade de uma [[Longest increasing subsequence (LIS)]].
 ``````
 
 ````ad-example
 title: LIS para encontrar LCS.
-⠀
+
 ```cpp
 #include <bits/stdc++.h>
 

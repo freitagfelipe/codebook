@@ -1,7 +1,7 @@
--  [[Graph annotations]]
-- [[Search strategies annotations]]
--  [[Bit manipulation annotations]]
 -  [[Mathmatic annotations]]
+-  [[Bit manipulation annotations]]
+-  [[Graph annotations]]
 - [[Other annotations]]
+- [[Search strategies annotations]]
 
 ---

@@ -1,14 +1,14 @@
 ```ad-info
 title: Objetivo
 
-- Dado uma sequência de inteiros não negativos e um valor $K$, determine se existe alguma sequência de números que 
+- Dado uma sequência de inteiros não negativos e um valor $k$, determine se existe algum subconjunto de números que somem $k$.
 ```
 
 ```ad-note
 title: Complexidade
 collapse: true
 
-- $O(\frac{n * k}{wordsize})$
+- $O(\dfrac{nk}{wordsize})$
 ```
 
 ```cpp

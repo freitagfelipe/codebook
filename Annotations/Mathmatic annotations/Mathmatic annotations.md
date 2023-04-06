@@ -1,4 +1,4 @@
-- [[Number theory annotations]]
 - [[Algebra annotations]]
-- [[Geometry annotations]]
 - [[Combinatory annotations]]
+- [[Geometry annotations]]
+- [[Number theory annotations]]
