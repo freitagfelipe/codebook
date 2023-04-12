@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6ab879bd9fbb145b",
+        "id": "80c5239d818a8b7b",
         "type": "tabs",
         "children": [
           {
-            "id": "a039a06da8ab5d42",
+            "id": "d99c0af9e4ccb74f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -65,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.5
+    "width": 261.5
   },
   "right": {
     "id": "ec0338f3f8858459",
@@ -81,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms/Mathematical algorithms/Sieve of Eratosthenes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms/Mathematical algorithms/Sieve of Eratosthenes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Algorithms/Mathematical algorithms/Sieve of Eratosthenes.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -143,42 +139,47 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "41e1ec0b5b78ddb9",
+  "active": "d99c0af9e4ccb74f",
   "lastOpenFiles": [
-    "Algorithms/Mathematical algorithms/Prime test in sqrt n.md",
-    "Algorithms/Mathematical algorithms/Prime factor.md",
-    "Algorithms/Mathematical algorithms/Linear sieve.md",
-    "Algorithms/Mathematical algorithms/Mathematical algorithms.md",
-    "Algorithms/Mathematical algorithms/Find modular inverse.md",
-    "Algorithms/Mathematical algorithms/Find divisors.md",
-    "Algorithms/Mathematical algorithms/Fast multiplication.md",
-    "Algorithms/Mathematical algorithms/Fast exponentiation.md",
-    "Algorithms/Mathematical algorithms/Extended Euclidean algorithm.md",
-    "Algorithms/Mathematical algorithms/Euclidean algorithm.md",
-    "Algorithms/Mathematical algorithms/Couting divisors.md",
-    "Contents.md",
-    "Algorithms/Mathematical algorithms/Sieve of Eratosthenes.md",
-    "Algorithms/Data structures algorithms/Red-black tree.md",
+    "Algorithms/Algebra algorithms/Algebra algorithms.md",
+    "Algorithms/Algebra algorithms/Find modular inverse.md",
+    "Algorithms/Combinatorics algorithms/Binomial coefficient.md",
+    "Algorithms/Algebra algorithms/Sieve of Eratosthenes.md",
+    "Algorithms/Algebra algorithms/Prime factor.md",
+    "Algorithms/Algebra algorithms/Linear sieve.md",
+    "Algorithms/Algebra algorithms/Find divisors.md",
+    "Algorithms/Numerical methods/Bisection method.md",
     "Annotations/Mathmatic annotations/Number theory annotations.md",
-    "Annotations/Mathmatic annotations/Algebra annotations.md",
-    "Annotations/Mathmatic annotations/Combinatory annotations.md",
-    "Annotations/Search strategies annotations.md",
-    "Annotations/Bit manipulation annotations.md",
-    "Annotations/Graph annotations.md",
-    "Annotations/Other annotations.md",
-    "Algorithms/Graph algorithms/Graph algorithms.md",
-    "Algorithms/Data structures algorithms/Data structures algorithms.md",
-    "Algorithms/Data structures algorithms/Binary heap.md",
-    "Algorithms/Sort algorithms/Sort algorithms.md",
+    "Algorithms/Geometry algorithms/Area of ​​a simple polygon.md",
+    "Algorithms/Utils/Geometry utils/Point2D.md",
+    "Algorithms/Programming techniques/Two pointers.md",
+    "Algorithms/Programming techniques/Tree pointers.md",
+    "Algorithms/Programming techniques/Prefix sum array (PSA).md",
+    "Algorithms/Programming techniques/Line sweep.md",
+    "Algorithms/Programming techniques/Kadane's algorithm.md",
+    "Algorithms/Programming techniques/Binary search.md",
+    "Algorithms/Programming techniques/Knapsack.md",
+    "Algorithms/Programming techniques/Levenshtein distance.md",
+    "Algorithms/Programming techniques/Longest common subsequence (LCS).md",
+    "Algorithms/Programming techniques/Longest increasing subsequence (LIS).md",
     "Algorithms/Programming techniques/Programming techniques.md",
-    "Annotations/Mathmatic annotations",
-    "Algorithms/Sort algorithms",
-    "Algorithms/Programming techniques",
-    "Algorithms/Mathematical algorithms",
-    "Algorithms/Graph algorithms",
-    "Algorithms/Data structures algorithms",
-    "Annotations",
-    "Algorithms",
-    "Competitive programming"
+    "Algorithms/Programming techniques/Subset sum.md",
+    "Algorithms/Data structures algorithms/Segment tree with lazy propagation.md",
+    "Algorithms/Data structures algorithms/Segment tree.md",
+    "Algorithms/Data structures algorithms/Fenwick tree (Binary Indexed Tree).md",
+    "Algorithms/Geometry algorithms",
+    "Algorithms/Numerical method/Numerical methods",
+    "Algorithms/Numerical methods",
+    "Algorithms/Utils/Geometry utils",
+    "Algorithms/Algebra algorithms",
+    "Algorithms/Combinatorics algorithms",
+    "Algorithms/Mathematical algorithms/Untitled",
+    "Algorithms/Utils",
+    "Assets/Círculo trigonométrico.png",
+    "Assets/Identidades trigonométricas.png",
+    "Assets/Triângulo retângulo.png",
+    "Assets",
+    "943.png",
+    "Annotations/Mathmatic annotations"
   ]
 }

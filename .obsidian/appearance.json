@@ -1,4 +1,7 @@
 {
   "accentColor": "",
-  "showViewHeader": true
+  "showViewHeader": true,
+  "enabledCssSnippets": [
+    "image"
+  ]
 }

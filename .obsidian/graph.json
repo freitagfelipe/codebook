@@ -29,10 +29,31 @@
       }
     },
     {
-      "query": "path:\"Algorithms/Mathematical algorithms\"",
+      "query": "path:\"Algorithms/Algebra algorithms\"",
       "color": {
         "a": 1,
         "rgb": 16449791
+      }
+    },
+    {
+      "query": "path:\"Algorithms/Combinatorics algorithms\"",
+      "color": {
+        "a": 1,
+        "rgb": 16449791
+      }
+    },
+    {
+      "query": "path:\"Algorithms/Numerical methods\"\"",
+      "color": {
+        "a": 1,
+        "rgb": 16056575
+      }
+    },
+    {
+      "query": "path:\"Algorithms/Geometry algorithms\"",
+      "color": {
+        "a": 1,
+        "rgb": 16056575
       }
     },
     {
@@ -43,10 +64,17 @@
       }
     },
     {
+      "query": "path:\"Algorithms/Utils/Geometry utils\"",
+      "color": {
+        "a": 1,
+        "rgb": 8257793
+      }
+    },
+    {
       "query": "path:\"Annotations/Mathmatic annotations\"",
       "color": {
         "a": 1,
-        "rgb": 24848
+        "rgb": 13958912
       }
     },
     {
