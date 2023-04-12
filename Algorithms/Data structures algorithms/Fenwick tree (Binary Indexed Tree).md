@@ -1,14 +1,14 @@
 ```ad-info
 title: Objetivo
 
-- É uma estrutura de dados que suporta consultas sobre intervalos e atualizações em apenas um índice ou atualizações em um intervalo e perguntas sobre um índice. Caso as duas operações sejam para fazer em intervalos a [[Segment tree with lazy propagation]] é uma melhor escolha.
+- É uma estrutura de dados que suporta consultas sobre intervalos e atualizações em apenas um índice ou atualizações em um intervalo e perguntas sobre um índice. Caso as duas operações sejam para fazer em intervalos a [[Segment tree with lazy propagation]] é uma escolha melhor.
 ```
 
 ```ad-note
 title: Complexidade
 collapse: true
 
-- Build: $O(n)$ para implementação de consulta com intervalos e atualizações em índice ou $O(n \log n)$ para implementação com atualizações em intervalo e consultas em índice.
+- Build: $O(n \log n)$
 - Query/update: $O(\log n)$
 ```
 

@@ -7,7 +7,7 @@ title: Objetivo
 ```ad-attention
 title: Atenção
 
-- $\binom{n}{k} = 0 \text{, se } k > n$.
+- $\binom{n}{k}, k \leq n$.
 - A segunda implementação só funciona se $m$ é primo e $m > n$.
 ```
 
