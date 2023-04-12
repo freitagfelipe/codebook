@@ -1,7 +1,7 @@
 ```ad-info
 title: Objetivo
 
-- Encontrar em um grafo acíclico e conexo, ou seja, uma árvore a distância máxima entre dois vértices desse grafo.
+- Encontrar em um grafo acíclico e conexo, ou seja, uma árvore a distância máxima entre dois vértices desse grafo. Utiliza uma adaptação da [[Depth-first search (DFS)]].
 ```
 
 ```ad-note
@@ -12,49 +12,29 @@ collapse: true
 ```
 
 ```cpp
-int n;
+typedef pair<int, int> pii;
+
 vector<int> g[MAXN];
-int dist[MAXN];
-bool visited[MAXN];
 
-void dfs(int curr) {
-    visited[curr] = true;
+pii dfs(int curr, int d = 0, int p = -1) {
+    pii most_distant {curr, d};
 
-    for (int v : g[curr]) {
-        if (!visited[v]) {
-            dist[v] = dist[curr] + 1;
+    for (int neigh : g[curr]) {
+        if (neigh != p) {
+            pii result {dfs(neigh, d + 1, curr)};
 
-            dfs(v);
-        }
-    }
-}
-
-int get_farthest(int s) {
-    dist[s] = 0;
-
-    dfs(s);
-
-    int max_dist {};
-    int farthest_node {s};
-
-    for (int i {}; i < n; ++i) {
-        if (max_dist < dist[i]) {
-            max_dist = dist[i];
-            farthest_node = i;
+            if (result.second > most_distant.second) {
+                most_distant = result;
+            }
         }
     }
 
-    return farthest_node;
+    return most_distant;
 }
 
-int get_diameter() {
-    int x {get_farthest(0)};
-
-    memset(dist, 0, sizeof(dist));
-    memset(visited, 0, sizeof(visited));
-
-    int y {get_farthest(x)};
-
-    return dist[y];
+int tree_diameter() {
+	return dfs(dfs(0).first).second;
 }
 ```
+
+---
