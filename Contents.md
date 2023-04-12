@@ -15,8 +15,8 @@ flexGrow=1
     - [x] Teste de primalidade
     - [x] Crivo de Erastótenes
     - [x] Fatoração de primos e divisores
-    - [ ] Coeficientes binomiais
-    - [ ] Método da bissecção
+    - [x] Coeficientes binomiais
+    - [x] Método da bissecção
 
 ```
 
@@ -25,12 +25,12 @@ flexGrow=1
 ===
 
 - # Geometria computacional
-    - [ ] Geometria básica
-    - [ ] Produto escalar e vetorial
-    - [ ] Produto de vetores
-    - [ ] Área de um polígono
-    - [ ] Aplicações de produto escalar e vetorial
-    - [ ] Distância entre ponto e reta ou segmento
+    - [x] Geometria básica
+    - [x] Produto escalar e vetorial
+    - [x] Produto de vetores
+    - [x] Área de um polígono
+    - [x] Aplicações de produto escalar e vetorial
+    - [x] Distância entre ponto e reta ou segmento
     - [ ] Line sweep
     - [ ] Fecho convexo
     - [ ] Par de pontos mais próximos
@@ -94,7 +94,6 @@ flexGrow=1
 ===
 
 - # Estruturas de dados básica
-    - [x] Complexidade
     - [x] Lista
     - [x] Fila
     - [x] Pilha
@@ -117,7 +116,6 @@ flexGrow=1
     - [x] Árvore de Fenwick
     - [x] Segment tree
     - [x] Segment tree com lazy propagation
-    - [x] Aplicações de segment tree
     - [ ] Soma de prefixo 2D
     - [ ] Árvore de Fenwick 2D
     - [ ] Segment Tree 2D

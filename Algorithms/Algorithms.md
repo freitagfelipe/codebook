@@ -1,6 +1,7 @@
 - [[Algebra algorithms]]
 - [[Combinatorics algorithms]]
 - [[Data structures algorithms]]
+- [[Geometry algorithms]]
 - [[Graph algorithms]]
 - [[Numerical methods]]
 - [[Programming techniques]]
