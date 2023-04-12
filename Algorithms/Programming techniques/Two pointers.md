@@ -4,15 +4,15 @@ title: Objetivo
 - A técnica de dois ponteiros pode ser usada de várias maneiras, mas sua utilização sempre consiste em usar dois ponteiros para apontar para lugares de um vetor. Por se tratar de uma técnica é necessário adaptá-la de acordo com as necessidades.
 ```
 
+`````ad-example
+title: Encontrar dois números que somam $K$.
+
 ```ad-note
 title: Complexidade
 collapse: true
 
-- $O(N)$
+- $O(n)$
 ```
-
-`````ad-example
-title: Encontrar dois números que somam $K$.
 
 ```ad-attention
 title: Restrição
@@ -21,7 +21,7 @@ title: Restrição
 ```
 
 ```cpp
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -62,10 +62,17 @@ int main() {
 ````ad-example
 title: Encontrar quantos intervalos em um vetor somam $K$
 
+```ad-note
+title: Complexidade
+collapse: true
+
+- $O(n)$
+```
+
 ```ad-attention
 title: Restrição
 
-- Para o exemplo abaixo a entrada tem que conter apenas números maiores que um, pois caso contrário para um mesmo $p2$ existiriam vários $p1$, e não precisa seguir a restrição anterior. Caso aconteça de ter números menores ou iguais a zero podemos utilizar uma adaptação da técnica de [[Prefix sum array (PSA)]] ou [[Tree pointers]], mas caso tenha números negativos a técnica de três ponteiros não funciona.
+- Para o exemplo abaixo a entrada tem que conter apenas números maiores que um, pois caso contrário para um mesmo $p2$ existiriam vários $p1$, e não precisa seguir a restrição anterior. Caso aconteça de ter números iguais a zero podemos utilizar uma adaptação da técnica de [[Prefix sum array (PSA)]] ou [[Tree pointers]], mas caso tenha números negativos a técnica de três ponteiros não funcionará.
 ```
 
 ```cpp

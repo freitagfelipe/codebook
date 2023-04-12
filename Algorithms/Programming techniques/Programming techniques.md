@@ -2,9 +2,12 @@
 - [[Kadane's algorithm]]
 - [[Knapsack]]
 - [[Levenshtein distance]]
+- [[Line sweep]]
 - [[Longest increasing subsequence (LIS)]]
 - [[Longest common subsequence (LCS)]]
 - [[Prefix sum array (PSA)]]
 - [[Subset sum]]
 - [[Two pointers]]
 - [[Tree pointers]]
+
+---
