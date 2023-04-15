@@ -109,14 +109,14 @@ int orientation(const Point2D<T> &a, const Point2D<T> &b, const Point2D<T> &c) {
 }
 
 template <typename T>
-bool clockwise(const Point2D<T> &a, const Point2D<T> &b, const Point2D<T> &c, bool include_collinear) {
+bool cw(const Point2D<T> &a, const Point2D<T> &b, const Point2D<T> &c, bool include_collinear) {
     int result {orientation(a, b, c)};
 
     return result < 0 || (include_collinear && result == 0);
 }
 
 template <typename T>
-bool counterclockwise(const Point2D<T> &a, const Point2D<T> &b, const Point2D<T> &c, bool include_collinear) {
+bool ccw(const Point2D<T> &a, const Point2D<T> &b, const Point2D<T> &c, bool include_collinear) {
     int result {orientation(a, b, c)};
 
 	return result > 0 || (include_collinear && result == 0);
@@ -124,10 +124,10 @@ bool counterclockwise(const Point2D<T> &a, const Point2D<T> &b, const Point2D<T>
 
 template <typename T>
 bool intersect(const Point2D<T> &a, const Point2D<T> &b, const Point2D<T> &c, const Point2D<T> &d) {
-	bool first_condition {clockwise(a, b, c) != clockwise(a, b, d)};
-	bool second_condition {clockwise(c, d, a) != clockwise(c, d, b)};
+	bool first_condition {cw(a, b, c) != cw(a, b, d)};
+	bool second_condition {cw(c, d, a) != cw(c, d, b)};
 
-	return (first_condition && second_condition);
+	return first_condition && second_condition;
 }
 
 template <typename T>
