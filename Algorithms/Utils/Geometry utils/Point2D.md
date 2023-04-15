@@ -9,6 +9,11 @@ template <typename T>
 struct Point2D {
     T x;
     T y;
+
+	Point2D() {
+		this->x = 0;
+		this->y = 0;
+	}
     
     Point2D(T x, T y) {
 	    this->x = x;
@@ -22,21 +27,21 @@ struct Point2D {
         return *this;
     }
     
-    Point2D& operator-=(const Point2D &t) {
+    Point2D &operator-=(const Point2D &t) {
         this->x -= t.x;
         this->y -= t.y;
         
         return *this;
     }
     
-    Point2D& operator*=(T t) {
+    Point2D &operator*=(T t) {
         this->x *= t;
         this->y *= t;
         
         return *this;
     }
     
-    Point2D& operator/=(T t) {
+    Point2D &operator/=(T t) {
         this->x /= t;
         this->y /= t;
         
@@ -91,8 +96,30 @@ double angle(const Point2D<T> &a, const Point2D<T> &b) {
 }
 
 template <typename T>
-bool clockwise(const Point2D<T> &a, const Point2D<T> &b, const Point2D<T> &c) {
-	return cross((b - a), (c - a)) < 0;
+int orientation(const Point2D<T> &a, const Point2D<T> &b, const Point2D<T> &c) {
+    T result {a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y)};
+
+    if (result < 0) {
+        return -1;
+    } else if (result > 0) {
+        return 1;
+    }
+
+    return 0;
+}
+
+template <typename T>
+bool clockwise(const Point2D<T> &a, const Point2D<T> &b, const Point2D<T> &c, bool include_collinear) {
+    int result {orientation(a, b, c)};
+
+    return result < 0 || (include_collinear && result == 0);
+}
+
+template <typename T>
+bool counterclockwise(const Point2D<T> &a, const Point2D<T> &b, const Point2D<T> &c, bool include_collinear) {
+    int result {orientation(a, b, c)};
+
+	return result > 0 || (include_collinear && result == 0);
 }
 
 template <typename T>
