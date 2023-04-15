@@ -24,9 +24,9 @@ vector<Point2D<T>> monotone_chain(vector<Point2D<T>> &points, bool include_colli
     down.push_back(p1);
 
     for (int i {1}; i < points.size(); ++i) {
-        if (i == points.size() - 1 || clockwise(p1, points[i], p2, include_collinear)) {
+        if (i == points.size() - 1 || cw(p1, points[i], p2, include_collinear)) {
             while (up.size() >= 2 
-                && !clockwise(up[up.size() - 2], up.back(), points[i], include_collinear)
+                && !cw(up[up.size() - 2], up.back(), points[i], include_collinear)
             ) {
                 up.pop_back();
             }
@@ -34,9 +34,9 @@ vector<Point2D<T>> monotone_chain(vector<Point2D<T>> &points, bool include_colli
             up.push_back(points[i]);
         }
 
-        if (i == points.size() - 1 || counterclockwise(p1, points[i], p2, include_collinear)) {
+        if (i == points.size() - 1 || ccw(p1, points[i], p2, include_collinear)) {
             while (down.size() >= 2
-                && !counterclockwise(down[down.size() - 2], down.back(), points[i], include_collinear)
+                && !ccw(down[down.size() - 2], down.back(), points[i], include_collinear)
             ) {
                 down.pop_back();
             }
@@ -44,6 +44,10 @@ vector<Point2D<T>> monotone_chain(vector<Point2D<T>> &points, bool include_colli
             down.push_back(points[i]);
         }
     }
+
+	if (include_collinear && up.size() == points.size()) {
+		return reverse(up.begin(), up.end());
+	}
 
 	vector<Point2D<T>> convex_hull {move(up)};
 
