@@ -24,7 +24,8 @@ collapse: false
 ```
 
 ```cpp
-double calculate_area(vector<Point2D> polygon) {
+template <typename T>
+double calculate_area(vector<Point2D<T>> polygon) {
 	polygon.push_back(polygon[0]);
 
 	double ans {};
