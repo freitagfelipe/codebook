@@ -3,5 +3,7 @@
   "showViewHeader": true,
   "enabledCssSnippets": [
     "image"
-  ]
+  ],
+  "theme": "obsidian",
+  "cssTheme": "Things"
 }

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "80c5239d818a8b7b",
+        "id": "c354ee4430a3dbad",
         "type": "tabs",
         "children": [
           {
-            "id": "d99c0af9e4ccb74f",
+            "id": "f572540dbdd109d9",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -60,12 +60,20 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "42b18f1449398950",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 261.5
+    "width": 227.5
   },
   "right": {
     "id": "ec0338f3f8858459",
@@ -139,34 +147,34 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d99c0af9e4ccb74f",
+  "active": "f572540dbdd109d9",
   "lastOpenFiles": [
+    "Algorithms/Algebra algorithms/Couting divisors.md",
     "Algorithms/Algebra algorithms/Algebra algorithms.md",
-    "Algorithms/Algebra algorithms/Find modular inverse.md",
-    "Algorithms/Combinatorics algorithms/Binomial coefficient.md",
-    "Algorithms/Algebra algorithms/Sieve of Eratosthenes.md",
-    "Algorithms/Algebra algorithms/Prime factor.md",
-    "Algorithms/Algebra algorithms/Linear sieve.md",
-    "Algorithms/Algebra algorithms/Find divisors.md",
-    "Algorithms/Numerical methods/Bisection method.md",
-    "Annotations/Mathmatic annotations/Number theory annotations.md",
-    "Algorithms/Geometry algorithms/Area of ​​a simple polygon.md",
+    "README.md",
+    "Algorithms/Geometry algorithms/Pick's theorem.md",
+    "Algorithms/Geometry algorithms/Area of ​​a simple polygon - Shoelace.md",
+    "Annotations/Mathmatic annotations/Algebra annotations.md",
+    "Algorithms/Algebra algorithms/Euclidean algorithm.md",
+    "Annotations/Mathmatic annotations/Geometry annotations.md",
+    "Algorithms/Geometry algorithms/Graham's scan.md",
+    "Algorithms/Geometry algorithms/Geometry algorithms.md",
+    "Algorithms/Geometry algorithms/Nearest pair of points with line sweep.md",
     "Algorithms/Utils/Geometry utils/Point2D.md",
-    "Algorithms/Programming techniques/Two pointers.md",
-    "Algorithms/Programming techniques/Tree pointers.md",
-    "Algorithms/Programming techniques/Prefix sum array (PSA).md",
-    "Algorithms/Programming techniques/Line sweep.md",
+    "Algorithms/Geometry algorithms/Triangle area.md",
+    "Algorithms/Geometry algorithms/Monotone chain.md",
+    "Algorithms/Algebra algorithms/Sieve of Eratosthenes.md",
+    "Algorithms/Geometry algorithms/Radial sweep.md",
+    "Algorithms/Algebra algorithms/Prime test in sqrt n.md",
     "Algorithms/Programming techniques/Kadane's algorithm.md",
-    "Algorithms/Programming techniques/Binary search.md",
-    "Algorithms/Programming techniques/Knapsack.md",
-    "Algorithms/Programming techniques/Levenshtein distance.md",
-    "Algorithms/Programming techniques/Longest common subsequence (LCS).md",
-    "Algorithms/Programming techniques/Longest increasing subsequence (LIS).md",
-    "Algorithms/Programming techniques/Programming techniques.md",
-    "Algorithms/Programming techniques/Subset sum.md",
-    "Algorithms/Data structures algorithms/Segment tree with lazy propagation.md",
-    "Algorithms/Data structures algorithms/Segment tree.md",
     "Algorithms/Data structures algorithms/Fenwick tree (Binary Indexed Tree).md",
+    "Anotações.md",
+    "Algorithms/Geometry algorithms/Line sweep.md",
+    "Algorithms/Programming techniques/Programming techniques.md",
+    "Algorithms/Sort algorithms/Merge sort.md",
+    "Algorithms/Sort algorithms/Quick sort.md",
+    "Algorithms/Data structures algorithms/Segment tree.md",
+    "Algorithms/Sort algorithms/Sort algorithms.md",
     "Algorithms/Geometry algorithms",
     "Algorithms/Numerical method/Numerical methods",
     "Algorithms/Numerical methods",
