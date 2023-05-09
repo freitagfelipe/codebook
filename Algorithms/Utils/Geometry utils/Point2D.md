@@ -10,10 +10,7 @@ struct Point2D {
     T x;
     T y;
 
-	Point2D() {
-		this->x = 0;
-		this->y = 0;
-	}
+	Point2D() = default;
     
     Point2D(T x, T y) {
 	    this->x = x;
@@ -63,6 +60,22 @@ struct Point2D {
     Point2D operator/(T t) const {
         return Point2D(*this) /= t;
     }
+
+	bool operator<(const Point2D &t) const {
+		if (this->x == t.x) {
+			return this->y < t.y;
+		}
+
+		return this->x < t.x;
+	}
+
+	bool operator>(const Point2D &t) const {
+		if (this->x == t.x) {
+			return this->y > t.y;
+		}
+
+		return this->x > t.x;
+	}
 };
 
 template <typename T>
@@ -100,9 +113,9 @@ int orientation(const Point2D<T> &a, const Point2D<T> &b, const Point2D<T> &c) {
     T result {a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y)};
 
     if (result < 0) {
-        return -1;
+        return -1; // cw
     } else if (result > 0) {
-        return 1;
+        return 1; // ccw
     }
 
     return 0;
@@ -158,6 +171,16 @@ double distance_between_segment_and_point(const Point2D<T> &a, const Point2D<T> 
 	}
 
 	return distance_between_line_and_point(a, b, p);
+}
+
+template <typename T>
+Point2D<double> rotate_point(const Point2D<T> &p, double theta) {
+	auto [x, y] = p;
+
+	double new_x {x * cos(theta) - y * sin(theta)};
+	double new_y {x * sin(theta) + y * cos(theta)};
+
+	return Point2D<double>(new_x, new_y);
 }
 ```
 
