@@ -25,19 +25,17 @@ collapse: false
 
 ```cpp
 template <typename T>
-double calculate_area(vector<Point2D<T>> polygon) {
-	polygon.push_back(polygon[0]);
+T calculate_area(const vector<Point2D<T>> &polygon) {
+	T ans {};
 
-	double ans {};
+	for (int i {}; i < polygon.size(); ++i) {
+		Point2D<T> q {i ? polygon[i - 1] : polygon.back()};
+		Point2D<T> p {polygon[i]};
 
-	for (int i {}; i < polygon.size() - 1; ++i) {
-		int sum_y {polygon[i + 1].y + polygon[i].y};
-		int diff_x {polygon[i + 1].x - polygon[i].x};
-
-		ans += diff_x * sum_y;
+		ans += (p.y + q.y) * (p.x - q.x);
 	}
 
-	return abs(ans / 2);
+	return abs(ans / 2); // fabs(ans / 2);
 }
 ```
 
