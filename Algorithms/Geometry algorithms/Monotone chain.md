@@ -46,7 +46,9 @@ vector<Point2D<T>> monotone_chain(vector<Point2D<T>> &points, bool include_colli
     }
 
 	if (include_collinear && up.size() == points.size()) {
-		return reverse(up.begin(), up.end());
+		reverse(up.begin(), up.end());
+
+		return up;
 	}
 
 	vector<Point2D<T>> convex_hull {move(up)};
