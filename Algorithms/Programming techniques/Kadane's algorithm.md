@@ -32,11 +32,16 @@ title: Adaptação
 ```
 
 ```cpp
-pair<int, int> kadane(vector<int> &v) {
+typedef pair<int, int> pii;
+
+int DP[MAXN];
+int opt[MAXN];
+
+pii kadane(vector<int> &v) {
     DP[0] = v[0];
     opt[0] = 0;
     
-    for (int i {1}; i < n; ++i) {
+    for (int i {1}; i < v.size(); ++i) {
         if (v[i] >= v[i] + DP[i - 1]) {
             opt[i] = i;
         } else {
@@ -48,14 +53,14 @@ pair<int, int> kadane(vector<int> &v) {
 
     int answer {DP[0]}, optimal {};
     
-    for (int i {1}; i < n; ++i) {
+    for (int i {1}; i < v.size(); ++i) {
         if (answer < DP[i]) {
             answer = DP[i];
             optimal = i;
         }
     }
 
-    return {opt[i], i};
+    return {opt[optimal], optimal};
 }
 ```
 
