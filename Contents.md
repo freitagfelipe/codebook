@@ -31,13 +31,13 @@ flexGrow=1
     - [x] Área de um polígono
     - [x] Aplicações de produto escalar e vetorial
     - [x] Distância entre ponto e reta ou segmento
-    - [ ] Line sweep
-    - [ ] Fecho convexo
-    - [ ] Par de pontos mais próximos
-    - [ ] Radial sweep
+    - [x] Line sweep
+    - [x] Fecho convexo
+    - [x] Par de pontos mais próximos
+    - [x] Radial sweep
     - [ ] Algoritmo de graham scan
     - [ ] Ponto no polígono
-    - [ ] Truques de geometria
+    - [x] Truques de geometria
 
 ```
 ````
