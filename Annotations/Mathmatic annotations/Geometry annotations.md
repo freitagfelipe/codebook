@@ -61,3 +61,17 @@
 - Vetor entre dois pontos: considere dois pontos $A$ e $B$, se quisermos saber as coordenadas de um vetor que começa em $A$ e termina em $B$, temos que $\vec{a} = (x_A, y_A)$ e $\vec{b} = (x_B, y_B)$, o vetor $\vec{AB} = \vec{a} - \vec{b}$.
 
 ---
+
+## Outros
+
+### Pick's theorem
+
+- Seja $S$ a área de um polígono qualquer, $i$ a quantidade de lattice points (pontos em que ambas as coordenadas são inteiras) dentro desse polígono qualquer, $p$ a quantidade de vértices que formam esse polígono, então o teorema nos diz que:
+
+$$
+\begin{gathered}
+S = i + \frac{p}{2} - 1
+\end{gathered}
+$$
+
+---
