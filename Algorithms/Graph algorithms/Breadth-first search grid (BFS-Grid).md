@@ -6,6 +6,8 @@ collapse: true
 ```
 
 ```cpp
+typedef pair<int, int> pii;
+
 int l, c;
 int di[] = {1, 0, -1, 0};
 int dj[] = {0, 1, 0, -1};
@@ -23,7 +25,7 @@ bool is_cell_valid(int i, int j) {
 }
 
 void BFS(int ri, int rj) {
-    queue<pair<int, int>> q;
+    queue<pii> q;
 
     q.push({ri, rj});
 
