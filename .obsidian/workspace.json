@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c354ee4430a3dbad",
+        "id": "03efc41922764da5",
         "type": "tabs",
         "children": [
           {
-            "id": "f572540dbdd109d9",
+            "id": "cff20c6f92713c1f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -73,7 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227.5
+    "width": 256.5
   },
   "right": {
     "id": "ec0338f3f8858459",
@@ -147,8 +147,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f572540dbdd109d9",
+  "active": "cff20c6f92713c1f",
   "lastOpenFiles": [
+    "Algorithms/Geometry algorithms/Nearest pair of points with line sweep.md",
+    "Algorithms/Programming techniques/Kadane's algorithm.md",
+    "Contents.md",
     "Algorithms/Algebra algorithms/Couting divisors.md",
     "Algorithms/Algebra algorithms/Algebra algorithms.md",
     "README.md",
@@ -159,14 +162,12 @@
     "Annotations/Mathmatic annotations/Geometry annotations.md",
     "Algorithms/Geometry algorithms/Graham's scan.md",
     "Algorithms/Geometry algorithms/Geometry algorithms.md",
-    "Algorithms/Geometry algorithms/Nearest pair of points with line sweep.md",
     "Algorithms/Utils/Geometry utils/Point2D.md",
     "Algorithms/Geometry algorithms/Triangle area.md",
     "Algorithms/Geometry algorithms/Monotone chain.md",
     "Algorithms/Algebra algorithms/Sieve of Eratosthenes.md",
     "Algorithms/Geometry algorithms/Radial sweep.md",
     "Algorithms/Algebra algorithms/Prime test in sqrt n.md",
-    "Algorithms/Programming techniques/Kadane's algorithm.md",
     "Algorithms/Data structures algorithms/Fenwick tree (Binary Indexed Tree).md",
     "Anotações.md",
     "Algorithms/Geometry algorithms/Line sweep.md",
@@ -174,7 +175,6 @@
     "Algorithms/Sort algorithms/Merge sort.md",
     "Algorithms/Sort algorithms/Quick sort.md",
     "Algorithms/Data structures algorithms/Segment tree.md",
-    "Algorithms/Sort algorithms/Sort algorithms.md",
     "Algorithms/Geometry algorithms",
     "Algorithms/Numerical method/Numerical methods",
     "Algorithms/Numerical methods",
