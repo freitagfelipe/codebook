@@ -8,7 +8,7 @@ collapse: true
 ```cpp
 int v[MAXN];
 int w[MAXN];
-int DP[MAXN][MAXW];
+int DP[MAXN + 1][MAXW + 1];
 
 int knapsack() {
     int n, s;
@@ -42,7 +42,7 @@ title: Adaptação
 ```cpp
 int v[MAXN];
 int w[MAXN];
-int DP[MAXW];
+int DP[MAXW + 1];
 
 int knapsack() {
     int n, s;
