@@ -1,1 +1,4 @@
 - [[Merge sort]]
+- [[Quick sort]]
+
+---
