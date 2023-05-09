@@ -23,6 +23,48 @@ size_t LCS(string &a, string &b) {
 }
 ```
 
+```ad-hint
+title: Encontrar a maior subsequência comum
+
+- O código abaixo pode ser utilizado para encontrar uma das LCS presentes na sequência.
+```
+
+```cpp
+string LCS(string &a, string &b) {
+	vector<vector<int>> tab(a.size() + 1, vector<int>(b.size() + 1, 0));
+
+    for (int i {}; i < a.size(); ++i) {
+        for (int j {}; j < b.size(); ++j) {
+            if (a[i] != b[j]) {
+                tab[i + 1][j + 1] = max(tab[i + 1][j], tab[i][j + 1]);
+            } else {
+                tab[i + 1][j + 1] = tab[i][j] + 1;
+            }
+        }
+    }
+
+	int i {int(a.size() + 1)}, j {int(b.size() + 1)};
+	string answer;
+
+	while (i && j) {
+		if (a[i - 1] == b[j - 1]) {
+			answer.push_back(a[i - 1]);
+
+			--i;
+			--j;
+		} else if (tab[i][j - 1] > tab[i - 1][j]) {
+			--j;
+		} else {
+			--i;
+		}
+	}
+
+	reverse(answer.begin(), answer.end());
+
+	return answer;
+}
+```
+
 `````ad-hint
 title: Caso uma das sequências tenha apenas elementos destintos
 
