@@ -1,9 +1,6 @@
 > [!info] Objetivo
 > A técnica de soma de prefixo é uma técnica que pode ser adaptada de várias maneiras.
 
-> [!note]- Complexidade
-> $O(n)$ 
-
 ````ad-example
 title: Dado um vetor responder várias perguntas sobre qual é a soma do intervalo $[L, R]$.
 
@@ -12,6 +9,9 @@ title: Dado um vetor responder várias perguntas sobre qual é a soma do interva
 
 > [!hint] Alterações no vetor
 > Caso seja necessário fazer alterações no vetor além de dizer qual a soma do intervalo, vale a pena olhar a [[Fenwick tree (Binary Indexed Tree)]].
+
+> [!note]- Complexidade
+> $O(n)$, pois o laço é lineares.
 
 ```cpp
 #include <bits/stdc++.h>
@@ -60,6 +60,9 @@ title: Dado um vetor responder quantos intervalos de $V$ somam $K$.
 
 > [!faq] Como funciona?
 > Queremos descobrir quantos intervalos somam $K$, ou seja, quantos $psa[r] - psa[l - 1] = K$. Portanto, fazendo algumas alterações na fórmula, basta descobrirmos quantos $psa[l - 1] = psa[r] - k$, com isso basta salvarmos a frequência com que cada soma acumulada ocorre. Logo de início a soma de valor zero ocorre que é um intervalo vazio, por isso, iniciaremos a frequência dela com um, agora para cada elemento da sequência somaremos ele na variável de $sum$ e checaremos quantas vezes $sum - k$ apareceu e incrementaremos isso a resposta, após isso devemos incrementar a frequência de $sum$ e ao final desse processo teremos a resposta.
+
+> [!note]- Complexidade
+> $O(n)$, pois o laço é linear e atualizar o hash map é constante.
 
 ```cpp
 #include <bits/stdc++.h>
