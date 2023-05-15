@@ -1,18 +1,17 @@
-```ad-info
-title: Sobre a técnica
+> [!info] Objetivo
+> A técnica de soma de prefixo é uma técnica que pode ser adaptada de várias maneiras.
 
-- A técnica de Soma de prefixo é uma técnica que pode ser adaptada de várias maneiras. A mais simples delas está demonstrada logo abaixo. Caso seja necessário fazer atualizações em elementos do vetor $v$ a [[Fenwick tree (Binary Indexed Tree)]] pode ser utilizada assim como outras estruturas.
-```
+> [!note]- Complexidade
+> $O(n)$ 
 
 ````ad-example
 title: Dado um vetor responder várias perguntas sobre qual é a soma do intervalo $[L, R]$.
 
-```ad-note
-title: Complexidade
-collapse: true
+> [!faq] Como funciona?
+> O vetor $psa$ na posição $i$ irá guardar as somas dos elementos de $v[1..i]$. Por isso, quando um intervalo nos for dado basta dizermos que a soma é $psa[r] - psa[l - 1]$, porém quando $l$ for zero, devemos retornar apenas a soma de $psa[r]$. Isso funciona pois estamos fazendo basicamente $(v_1 + v_2 + \ldots v_r) - (v_1 + v_2 + \ldots v_{l - 1}) = (v_l + \ldots + v_r)$.
 
-- $O(n)$
-```
+> [!hint] Alterações no vetor
+> Caso seja necessário fazer alterações no vetor além de dizer qual a soma do intervalo, vale a pena olhar a [[Fenwick tree (Binary Indexed Tree)]].
 
 ```cpp
 #include <bits/stdc++.h>
@@ -59,12 +58,8 @@ int main() {
 ````ad-example
 title: Dado um vetor responder quantos intervalos de $V$ somam $K$.
 
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O(n)$
-```
+> [!faq] Como funciona?
+> Queremos descobrir quantos intervalos somam $K$, ou seja, quantos $psa[r] - psa[l - 1] = K$. Portanto, fazendo algumas alterações na fórmula, basta descobrirmos quantos $psa[l - 1] = psa[r] - k$, com isso basta salvarmos a frequência com que cada soma acumulada ocorre. Logo de início a soma de valor zero ocorre que é um intervalo vazio, por isso, iniciaremos a frequência dela com um, agora para cada elemento da sequência somaremos ele na variável de $sum$ e checaremos quantas vezes $sum - k$ apareceu e incrementaremos isso a resposta, após isso devemos incrementar a frequência de $sum$ e ao final desse processo teremos a resposta.
 
 ```cpp
 #include <bits/stdc++.h>
