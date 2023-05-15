@@ -1,4 +1,5 @@
-- [[Merge sort]]
-- [[Quick sort]]
+> [!summary] Índice
+> [[Merge sort]]
+> [[Quick sort]]
 
 ---
