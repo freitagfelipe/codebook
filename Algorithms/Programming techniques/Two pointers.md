@@ -1,9 +1,6 @@
 > [!info] Objetivo
 > A técnica de dois ponteiros pode ser usada de algumas maneiras por se tratar de uma técnica, mas sua utilização sempre consiste em usar dois ponteiros para apontar para lugares de um vetor.
 
-> [!note]- Complexidade
-> $O(n)$ 
-
 `````ad-example
 title: Encontrar dois números que somam $K$ em um vetor.
 
@@ -12,6 +9,9 @@ title: Encontrar dois números que somam $K$ em um vetor.
 
 > [!faq] Como funciona?
 > Nessa adaptação como o vetor está ordenado, nos colocaremos um ponteiro no início e outro no fim, caso a soma dos elementos seja maior que o elemento procurado basta mover o ponteiro do fim para a esquerda e com isso diminuiremos a soma, caso o elemento procurado seja maior que a soma dos elementos basta mover o ponteiro do início para a dereita e com isso aumentaremos a soma, repetiremos esse processo até encontrar o elemento ou até que os ponteiros se encontrem, nesse caso o vetor não possui dois elementos que somem $k$.
+
+> [!note]- Complexidade
+> $O(n)$, pois os ponteiros vão um em direção ao outro, ou seja, no máximo dará $n$ iterações.
 
 ```cpp
 #include <bits/stdc++.h>
@@ -60,6 +60,9 @@ title: Encontrar quantos intervalos em um vetor somam $K$
 
 > [!faq] Como funciona?
 > Começaremos ambos os ponteiros no início do vetor e armazenaremos uma variável com a soma dos elementos de $p1$ até $p2$, caso a soma desses elementos seja menor ou igual a $K$ basta deslocar $p2$ uma unidade para a direita e adicionemos esse elemento na soma, caso a soma dos elementos seja maior que $K$ basta deslocar $p1$ uma casa para a direita e diminuir o antigo elemento que $p1$ apontava da soma e antes de cada um desses passos basta checarmos se a soma desse intervalo formado pelos elementos de $p1$ até $p2$ somam $K$.
+
+> [!note]- Complexidade
+> $O(n)$, pois no máximo ambos os ponteiros andarão $n$ e isso ainda nos dará uma complexidade linear.
 
 ```cpp
 #include <bits/stdc++.h>
