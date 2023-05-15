@@ -1,8 +1,5 @@
-```ad-info
-title: Objetivo
-
-- Apresentar uma implementação de um ponto 3D.
-```
+> [!info] Objetivo
+> - Apresentar uma implementação básica e genérica de um Point3D e algumas funções que a utilizam.
 
 ```cpp
 template <typename T>
@@ -65,38 +62,14 @@ struct Point3D {
         return Point3D(*this) /= t;
     }
 };
-
-template <typename T>
-T dot(const Point3D<T> &a, const Point3D<T> &b) {
-    return a.x * b.x + a.y * b.y + a.z * b.z;
-}
-
-template <typename T>
-Point3D<T> cross(Point3D<T> &a, Point3D<T> &b) {
-    return Point3D(a.y * b.z - a.z * b.y,
-                   a.z * b.x - a.x * b.z,
-                   a.x * b.y - a.y * b.x);
-}
-
-template <typename T>
-T norm(const Point3D<T> &a) {
-	return dot(a, a);
-}
-
-template <typename T>
-double length(const Point3D<T> &a) {
-	return sqrt(norm(a));
-}
-
-template <typename T>
-double projection(const Point3D<T> &a, const Point3D<T> &b) {
-	return dot(a, b) / length(b);
-}
-
-template <typename T>
-double angle(const Point3D<T> &a, const Point3D<T> &b) {
-	return acos(dot(a, b) / length(a) / length(b));
-}
 ```
+
+> [!summary] Lista de funções que a utilizam
+> - [[Algorithms/Utils/Geometry utils/Point3D/Angle|Angle]]
+> - [[Algorithms/Utils/Geometry utils/Point3D/Cross product|Cross product]]
+> - [[Algorithms/Utils/Geometry utils/Point3D/Dot product|Dot product]]
+> - [[Algorithms/Utils/Geometry utils/Point3D/Length|Length]]
+> - [[Algorithms/Utils/Geometry utils/Point3D/Norm|Norm]]
+> - [[Algorithms/Utils/Geometry utils/Point3D/Projection|Projection]]
 
 ---

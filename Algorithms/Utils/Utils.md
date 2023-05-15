@@ -1,3 +1,4 @@
-- [[Geometry utils]]
+> [!summary] Índice
+> [[Geometry utils]]
 
 ---
