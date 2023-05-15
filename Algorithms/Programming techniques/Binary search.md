@@ -7,11 +7,11 @@
 > [!faq] Como funciona?
 > Dado que o vetor está ordenado e a propriedade consiga me responder se o elemento procurado é menor que o atual, se o elemento procurado é maior que o atual ou se o elemento procurado é o atual, a busca binária irá escolher o elemento do meio do vetor e checará a propriedade, se ela nos retornar que o elemento procurado é menor que o atual basta descartar todos os elementos do meio até o fim, caso contrário se ela nos retornar que o elemento procurado é maior que o atual basta descartar todos os elementos do meio até o começo. Portanto, basta repetir esses passos até que o elemento seja encontrado ou não.
 
-> [!note]- Complexidade
-> $O(\log n)$, que é o tamanho máximo da árvore de recursão.
-
 `````ad-example
 title: Procurar um elemento $x$ no vetor.
+
+> [!note]- Complexidade
+> $O(\log n)$, que é a quantidade máxima de divisões que o algoritmo faz e também por não fazer nenhuma outra operação que não seja constante.
 
 ```cpp
 bool binary_search(const vector<int> &v, int x) {

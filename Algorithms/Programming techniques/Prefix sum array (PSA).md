@@ -11,7 +11,8 @@ title: Dado um vetor responder várias perguntas sobre qual é a soma do interva
 > Caso seja necessário fazer alterações no vetor além de dizer qual a soma do intervalo, vale a pena olhar a [[Fenwick tree (Binary Indexed Tree)]].
 
 > [!note]- Complexidade
-> $O(n)$, pois o laço é lineares.
+> Build: $O(n)$, pois o laço para montar a $PSA$ é linear e só utiliza operações constantes.
+> Query: $O(1)$, pois só precisamos fazer dois acessos ao vetor em tempo constante.
 
 ```cpp
 #include <bits/stdc++.h>

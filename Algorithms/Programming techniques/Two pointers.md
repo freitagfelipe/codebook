@@ -11,7 +11,7 @@ title: Encontrar dois números que somam $K$ em um vetor.
 > Nessa adaptação como o vetor está ordenado, nos colocaremos um ponteiro no início e outro no fim, caso a soma dos elementos seja maior que o elemento procurado basta mover o ponteiro do fim para a esquerda e com isso diminuiremos a soma, caso o elemento procurado seja maior que a soma dos elementos basta mover o ponteiro do início para a dereita e com isso aumentaremos a soma, repetiremos esse processo até encontrar o elemento ou até que os ponteiros se encontrem, nesse caso o vetor não possui dois elementos que somem $k$.
 
 > [!note]- Complexidade
-> $O(n)$, pois os ponteiros vão um em direção ao outro, ou seja, no máximo dará $n$ iterações.
+> $O(n)$, pois os ponteiros vão um em direção ao outro, ou seja, no máximo dará $n$ iterações e todas as operações feitas dentro do laço são constantes.
 
 ```cpp
 #include <bits/stdc++.h>
