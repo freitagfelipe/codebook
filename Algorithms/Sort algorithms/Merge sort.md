@@ -5,7 +5,7 @@
 > O algoritmo de merge sorte funciona utilizando divisão e conquista para conseguir ordenar o vetor, primeiro ele o dividide até que tenha tamanho menor que dois que é o caso base dele, pois um vetor com um ou zero elementos já está ordenado, feito isso ele irá realizar a junção desses vetores de uma maneira em que a ordenação seja mantida, após todas as junções o vetor estará ordenado. As pré-condições para utilizar o algoritmo abaixo é que $start = 0$ e $end = |v| - 1$.
 
 > [!note]- Complexidade
-> $O(n \log n)$
+> $O(n \log n)$, $\log n$ que é o tamanho máximo da árvore de recursão e $n$ para o processo de merge dos vetores.
 
 ```cpp
 void merge(vector<int> &v, int start, int end) {
