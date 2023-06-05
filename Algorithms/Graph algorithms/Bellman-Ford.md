@@ -1,15 +1,11 @@
-```ad-hint
-title: Ciclos negativos
+> [!info] Objetivo
+> - Dado um grafo ele tem como objetivo encontrar o menor caminho de $s$ para todos os outros nós do grafo.
 
-- O algoritmo de Bellman-Ford consegue detectar se o grafo contém ciclos negativos.
-```
+>[!hint] Ciclo negativos
+> - O algoritmo de Bellman-Ford consegue detectar se o grafo contém ciclos negativos.
 
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O(VE)$
-```
+> [!note]- Complexidade
+> - $O(VE)$
 
 ```cpp
 struct Edge {
@@ -24,6 +20,7 @@ struct Edge {
     }
 };
 
+// MAXN is the largest possible number of nodes
 int n;
 int dist[MAXN];
 vector<Edge> edges;

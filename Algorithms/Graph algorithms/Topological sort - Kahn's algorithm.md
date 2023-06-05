@@ -1,17 +1,15 @@
-```ad-attention
-title: Restrição
+> [!info] Objetivo
+> - Realizar a ordenação topológica de um grafo, ou seja, uma ordem linear de seus nós em que cada nó vem antes de todos nós para os quais este tenha arestas de saída.
 
-- O gráfico deve ser um DAG para ter ordenação topológica.
-```
+> [!caution] Atenção
+> - O gráfico deve ser um DAG (Directed Acyclic Graph) para ter ordenação topológica.
+> - Um DAG pode ter mais de uma ordenação topológica.
 
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O(V + E)$
-```
+> [!note]- Complexidade
+> - $O(V + E)$
 
 ```cpp
+// MAXN is the largest possible number of nodes
 int n;
 int in_degree[MAXN];
 vector<int> g[MAXN];

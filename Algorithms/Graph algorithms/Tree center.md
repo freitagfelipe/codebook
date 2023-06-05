@@ -1,20 +1,14 @@
-```ad-info
-title: Objetivo
+> [!info] Objetivo
+> - Encontrar em um grafo acíclico e conexo, ou seja, uma árvore um ou dois vértices que minimizam a distância máxima entre ele e todos os outros vértices. Utiliza uma adaptação da [[Depth-first search (DFS)]].
 
-- Encontrar em um grafo acíclico e conexo, ou seja, uma árvore um ou dois vértices que minimizam a distância máxima entre ele e todos os outros vértices. Utiliza uma adaptação da [[Depth-first search (DFS)]].
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O(V)$
-```
+> [!note]- Complexidade
+> - $O(V)$
 
 ```cpp
 typedef pair<int, int> pii;
 typedef tuple<int, int, int> tiii;
 
+// MAXN is the largest possible number of nodes
 vector<int> g[MAXN];
 int parent[MAXN];
 

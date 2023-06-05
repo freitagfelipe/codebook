@@ -1,22 +1,19 @@
-```ad-attention
-title: Restrição
+> [!info] Objetivo
+> - Dado um grafo ele tem como objetivo encontrar o menor caminho de $s$ para todos os outros nós do grafo.
 
-- Não funciona com grafos que contém arestas com peso negativo, para isso se deve usar [[Bellman-Ford]] ou o [[Floyd-Warshall]].
-```
+> [!caution] Restrição
+> - Não funciona com grafos que contém arestas com peso negativo, para isso se deve usar [[Bellman-Ford]] ou o [[Floyd-Warshall]].
 
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O((V + E) \log V)$
-```
+> [!note]- Complexidade
+> - $O((V + E) \log V)$
 
 ```cpp
 typedef pair<int, int> pii;
 
+// MAXN is the largest possible number of nodes
 int n;
 int dist[MAXN];
-bool marked[MAXN];
+bitset<MAXN> marked;
 vector<pii> g[MAXN];
 
 void dijkstra(int s) {
@@ -52,25 +49,19 @@ void dijkstra(int s) {
 }
 ```
 
-```ad-attention
-title: Atenção
+> [!caution] Atenção
+> - Caso o grafo seja denso, ou seja, $E \approx V^2$, é melhor utilizar a adaptação abaixo.
 
-- Caso o grafo seja denso, ou seja, $E \approx V^2$, é melhor utilizar a adaptação abaixo.
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O(V^2 + E)$
-```
+> [!note]- Complexidade
+> - $O(V^2 + E)$
 
 ```cpp
 typedef pair<int, int> pii;
 
+// MAXN is the largest possible number of nodes
 int n;
 int dist[MAXN];
-bool marked[MAXN];
+bitset<MAXN> marked;
 vector<pii> g[MAXN];
 
 void dijkstra(int s) {

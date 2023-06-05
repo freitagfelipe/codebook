@@ -1,18 +1,18 @@
-```ad-note
-title: Complexidade
-collapse: true
+> [!info] Objetivo
+> - Fazer a travessia em uma matriz utilizando o mesmo princípio da [[Breadth-first search (BFS)]].
 
-- $O(nm)$
-```
+> [!note]- Complexidade
+> - $O(nm)$
 
 ```cpp
 typedef pair<int, int> pii;
 
+// MAXN is the largest possible number of rows and columns for a square matrix
 int l, c;
 int di[] = {1, 0, -1, 0};
 int dj[] = {0, 1, 0, -1};
 int board[MAXN][MAXN];
-bool visited[MAXN][MAXN];
+bitset<MAXN> visited[MAXN];
 
 bool is_cell_valid(int i, int j) {
     if (i < 0 || i >= l || j < 0 || j >= c) {
@@ -24,7 +24,7 @@ bool is_cell_valid(int i, int j) {
     return true;
 }
 
-void BFS(int ri, int rj) {
+void bfs(int ri, int rj) {
     queue<pii> q;
 
     q.push({ri, rj});

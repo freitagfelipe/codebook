@@ -1,11 +1,11 @@
-```ad-note
-title: Complexidade
-collapse: true
+> [!info] Objetivo
+> - Encontrar o menor caminho de todos os nós para todos os nós.
 
-- $O(n^3)$
-```
+> [!note]- Complexidade
+> - $O(n^3)$
 
 ```cpp
+// MAXN is the largest possible number of nodes
 int dp[MAXN][MAXN];
 int n, m;
 

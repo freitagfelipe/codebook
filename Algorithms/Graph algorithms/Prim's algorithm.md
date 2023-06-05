@@ -1,23 +1,20 @@
-```ad-attention
-title: Grafos esparsos
+> [!info] Objetivo
+> O algoritmo de Prim tem como objetivo dado um grafo bidirecional, encontrar a árvore geradora do grafo que tenha menor custo, ou seja, a Minimal Spanning Tree (MST) do grafo.
 
-- O algoritmo de Prim para Minimal Spanning Tree (MST) é melhor para grafos densos, caso o grafo seja esparso se deve usar o algoritmo de [[Kruskal]].
-```
+> [!caution] Grafos esparsos
+> - O algoritmo de Prim para Minimal Spanning Tree (MST) é melhor para grafos densos, caso o grafo seja esparso se deve usar o algoritmo de [[Kruskal's algorithm]].
 
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O((V + E) \log V)$
-```
+> [!note]- Complexidade
+> - $O((V + E) \log V)$
 
 ```cpp
 typedef pair<int, int> pii;
 
+// MAXN is the largest possible number of nodes
 int n;
 vector<pii> g[MAXN];
 int weight[MAXN];
-bool marked[MAXN];
+bitset<MAXN> marked;
 
 int prim() {
     for (int i {}; i < n; ++i) {
