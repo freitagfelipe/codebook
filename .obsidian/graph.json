@@ -15,7 +15,7 @@
       }
     },
     {
-      "query": "path:\"Algorithms/Data structures algorithms\"",
+      "query": "path:\"Algorithms/Data structures\"",
       "color": {
         "a": 1,
         "rgb": 14725458
@@ -32,21 +32,21 @@
       "query": "path:\"Algorithms/Algebra algorithms\"",
       "color": {
         "a": 1,
-        "rgb": 16449791
+        "rgb": 30592
       }
     },
     {
       "query": "path:\"Algorithms/Combinatorics algorithms\"",
       "color": {
         "a": 1,
-        "rgb": 16449791
+        "rgb": 4528966
       }
     },
     {
       "query": "path:\"Algorithms/Numerical methods\"\"",
       "color": {
         "a": 1,
-        "rgb": 16056575
+        "rgb": 27433
       }
     },
     {
@@ -68,6 +68,13 @@
       "color": {
         "a": 1,
         "rgb": 8257793
+      }
+    },
+    {
+      "query": "path:\"Algorithms/Utils/Bits utils\"",
+      "color": {
+        "a": 1,
+        "rgb": 8616703
       }
     },
     {
@@ -94,14 +101,14 @@
   ],
   "collapse-display": true,
   "showArrow": false,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1.50364583333333,
-  "lineSizeMultiplier": 1.29947916666667,
+  "textFadeMultiplier": 0.4,
+  "nodeSizeMultiplier": 1.73333333333333,
+  "lineSizeMultiplier": 1.50364583333333,
   "collapse-forces": true,
-  "centerStrength": 0.255208333333333,
+  "centerStrength": 0.265625,
   "repelStrength": 20,
-  "linkStrength": 0.5,
-  "linkDistance": 223,
-  "scale": 0.05330362903550505,
+  "linkStrength": 0.802083333333333,
+  "linkDistance": 500,
+  "scale": 0.04397080510168351,
   "close": true
 }
