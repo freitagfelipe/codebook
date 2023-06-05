@@ -1,30 +1,20 @@
-```ad-info
-title: Objetivo
+> [!info] Objetivo
+> - Calcular o coeficiente binomial, ou seja, $\binom{n}{k}$.
 
-- Calcular o coeficiente binomial, ou seja, $\binom{n}{k}$.
-```
+> [!caution] Atenção
+> - $\binom{n}{k}, \forall k$ tal que $k \leq n$.
+> - A segunda implementação só funciona se $m$ é primo e $m > n$.
 
-```ad-attention
-title: Atenção
-
-- $\binom{n}{k}, k \leq n$.
-- A segunda implementação só funciona se $m$ é primo e $m > n$.
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- Primeira implementação:
-	- Build: $O(n^2)$
-	- Query: $O(1)$
-
-- Segunda implementação:
-	- Build: $O(n)$
-	- Query: $O(1)$
-```
+> [!note]- Complexidade
+> - Primeira implementação:
+>	- Build: $O(n^2)$
+>	- Query: $O(1)$
+>- Segunda implementação:
+>	- Build: $O(n)$
+>	- Query: $O(1)$
 
 ```cpp
+// MAXN is the largest possible n
 int pascal_triangle[MAXN][MAXN];
 
 void build(int n, int m) {
@@ -48,6 +38,7 @@ int query(int n, int k) {
 typedef long long ll;
 typedef __int128_t vll;
 
+// MAXN is the largest possible n
 vll factorial[MAXN];
 ll factorial_modular_inverse[MAXN];
 ll modular_inverse[MAXN];
