@@ -1,18 +1,12 @@
-```ad-info
-title: Objetivo
+> [!info] Objetivo
+> - Calcular todos os números primos de um intervalo $[2, n]$. Uma versão em $O(n)$ que também calcula o menor fator primo pode ser encontrada em [[Linear sieve]].
 
-- Calcular todos os números primos de um intervalo $[2, n]$. Uma versão em $O(n)$ que também calcula o menor fator primo pode ser encontrada em [[Linear sieve]].
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- Build: $O(n \log \log n)$
-- Query: $O(1)$
-```
+> [!note]- Complexidade
+> - Build: $O(n \log \log n)$
+> - Query: $O(1)$
 
 ```cpp
+// MAXN is the largest possible interval
 int n;
 bool is_prime[MAXN];
 
@@ -32,18 +26,16 @@ void build() {
 	}
 }
 
-bool prime(int i) {
+bool is_prime(int i) {
 	return is_prime[i];
 }
 ```
 
-```ad-hint
-title: Adaptação
-
-- Podemos usar a adaptação abaixo do Crivo de Erastótenes para encontrar o menor fator primo de cada número de um intervalo $[2, n]$ com a mesma complexidade.
-```
+> [!hint] Adaptação
+> - Podemos usar a adaptação abaixo do Crivo de Erastótenes para encontrar o menor fator primo de cada número de um intervalo $[2, n]$ com a mesma complexidade.
 
 ```cpp
+// MAXN is the largest possible interval
 int n;
 int spf[MAXN];
 

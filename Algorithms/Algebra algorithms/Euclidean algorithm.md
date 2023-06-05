@@ -1,15 +1,8 @@
-```ad-info
-title: Objetivo
+> [!info] Objetivo
+> - Dados dois números $a, b$ encontrar o máximo divisor comum (mdc).
 
-- Dados dois números $a, b$ encontrar o máximo divisor comum (mdc).
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O(\log a + \log b)$ 
-```
+> [!note]- Complexidade
+> - $O(\log a + \log b)$ 
 
 ```cpp
 int gcd(int a, int b) {
@@ -21,11 +14,8 @@ int gcd(int a, int b) {
 }
 ```
 
-```ad-hint
-title: Encontrar o mmc
-
-- Utilizando a propriedade que envolve o máximo divisor comum (mdc) e o mínimo múltiplo comum (mmc) que é: $mmc(a, b) \cdot mdc(a, b) = a \cdot b$, ou seja, podemos concluir que $mmc(a, b) = \dfrac{a \cdot b}{mdc(a, b)}$. O código está logo abaixo.
-```
+> [!hint] Encontrar o mmc
+> - Utilizando a propriedade que envolve o máximo divisor comum (mdc) e o mínimo múltiplo comum (mmc) que é: $mmc(a, b) \cdot mdc(a, b) = a \cdot b$, ou seja, podemos concluir que $mmc(a, b) = \dfrac{a \cdot b}{mdc(a, b)}$. O código está logo abaixo.
 
 ```cpp
 int lcm(int a, int b) {

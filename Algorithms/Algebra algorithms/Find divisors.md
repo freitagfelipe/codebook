@@ -1,17 +1,10 @@
-```ad-info
-title: Objetivo
+> [!info] Objetivo
+> - O objetivo da implementação abaixo é encontrar todos os divisores de um número $n$.
 
-- O objetivo da implementação abaixo é encontrar todos os divisores de um número $n$.
-```
+> [!note]- Complexidade
+> - $O(\sqrt n)$
 
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O(\sqrt n)$
-```
-
-```cp
+```cpp
 vector<int> get_divisors(int n) {
 	vector<int> divisors;
 
@@ -29,28 +22,26 @@ vector<int> get_divisors(int n) {
 }
 ```
 
-```ad-info
-title: Objetivo
+> [!info] Objetivo
+> - O objetivo da implementação abaixo é encontrar todos os divisores de todos os números em um intervalo $[1, n]$.
 
-- O objetivo da implementação abaixo é encontrar todos os divisores de todos os números em um intervalo $[1, n]$.
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O(n \log n)$
-```
+> [!note]- Complexidade
+> - $O(n \log n)$
 
 ```cpp
+// MAXN is the largest possible interval
 vector<int> divisors[MAXN];
 
-void build(int r) {
+void build(int n) {
 	for (int i {1}; i <= n; ++i) {
 		for (int j {i}; j <= n; j += i) {
 			divisors[j].push_back(i);
 		}
 	}
+}
+
+vector<int> get_divisors(int x) {
+	return divisors[x];
 }
 ```
 

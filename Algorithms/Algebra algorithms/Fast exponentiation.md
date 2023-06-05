@@ -1,9 +1,8 @@
-```ad-note
-title: Complexidade
-collapse: true
+> [!info] Objetivo
+> - Realizar a exponenciação rápida de $b^e \text{ mod m}$.
 
-- $O(\log e)$
-```
+> [!note]- Complexidade
+> - $O(\log e)$
 
 ```cpp
 int fast_exponentiation(int b, int e, int m) {
@@ -23,11 +22,8 @@ int fast_exponentiation(int b, int e, int m) {
 }
 ```
 
-```ad-attention
-title: Limites grandes
-
-- Caso os limites dos número das entradas $a, b, m$ sejam muito grandes se torna necessário utilizar o algoritmo de [[Fast multiplication]]. Entretudo, isso aumentará a complexidade do algoritmo para $O(\log e + \log x)$.
-```
+> [!caution] Limites grandes
+> - Caso os limites dos número das entradas $a, b, m$ sejam muito grandes se torna necessário utilizar o algoritmo de [[Fast multiplication]]. Entretudo, isso aumentará a complexidade do algoritmo para $O(\log e + \log x)$.
 
 ```cpp
 typedef long long ll;

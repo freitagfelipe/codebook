@@ -1,9 +1,8 @@
-```ad-note
-title: Complexidade
-collapse: true
+> [!info] Objetivo
+> - Realizar a multiplicação entre $x$ e $y$ $mod m$ de maneira rápida.
 
-- $O(\log x)$
-```
+> [!note]- Complexidade
+> - $O(\log x)$
 
 ```cpp
 typedef long long ll;

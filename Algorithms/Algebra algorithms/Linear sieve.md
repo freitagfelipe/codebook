@@ -1,22 +1,17 @@
-```ad-info
-title: Objetivo
+> [!info] Objetivo
+> - Calcular todos os números primos, e seus menores fatores primos, de um intervalo $[2, n]$.
 
-- Calcular todos os números primos, e seus menores fatores primos, de um intervalo $[2, n]$.
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- 
-```
+> [!note]- Complexidade
+> - $O(n)$
 
 ```cpp
+// MAXN is the largest possible interval
 int n;
 int lpf[MAXN];
-vector<int> pr;
 
-void linear_sieve() {
+vector<int> linear_sieve() {
+	vector<int> pr;
+
 	for (int i {2}; i <= n; ++i) {
 		if (lpf[i] == 0) {
 			lpf[i] = i;
@@ -31,6 +26,12 @@ void linear_sieve() {
 			}
 		}
 	}
+
+	return pr;
+}
+
+int get_lpf(int n) {
+	return lpf[n];
 }
 ```
 

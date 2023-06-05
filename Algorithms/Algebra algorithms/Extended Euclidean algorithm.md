@@ -1,15 +1,8 @@
-```ad-info
-title: Objetivo
+> [!info] Objetivo
+> - Dados dois números $a, b$ calcular a identidade de Bézout, ou seja, dois números $x, y$ tais que $a \cdot x + b \cdot y = mdc(a, b)$.
 
-- Dados dois números $a, b$ calcular a identidade de Bézout, ou seja, dois números $x, y$ tais que $a \cdot x + b \cdot y = mdc(a, b)$.
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- Complexidade: $O(\log a + \log b)$
-```
+> [!note]- Complexidade
+> - $O(\log a + \log b)$
 
 ```cpp
 int gcd_extended(int a, int b, int &x, int &y) {
@@ -31,17 +24,13 @@ int gcd_extended(int a, int b, int &x, int &y) {
 }
 ```
 
-```ad-hint
-title: Resolver equações diofantinas lineares com duas variáveis
-
-- Utilizando o algoritmo de Euclides extendido podemos também resolver equações diofantinas lineares com duas variáveis. Esse tipo de equação tem o seguinte formato: $a \cdot x + b \cdot y = c$ onde $x, y \in \mathbb{Z}$. Supondo que exista uma solução para a equação todas as outras soluções são derivadas dela e seguem o seguinte formato:
-
-$$
-\begin{gathered}
-(x + k \cdot \dfrac{b}{gcd(a, b)}, y - k \cdot \dfrac{a}{gcd(a, b)})
-\end{gathered}
-$$
-```
+> [!hint] Resolver equações diofantinas lineares com duas variáveis
+> - Utilizando o algoritmo de Euclides extendido podemos também resolver equações diofantinas lineares com duas variáveis. Esse tipo de equação tem o seguinte formato: $a \cdot x + b \cdot y = c$ onde $x, y \in \mathbb{Z}$. Supondo que exista uma solução para a equação todas as outras soluções são derivadas dela e seguem o seguinte formato:
+> $$
+> \begin{gathered}
+> (x + k \cdot \dfrac{b}{gcd(a, b)}, y - k \cdot \dfrac{a}{gcd(a, b)})
+> \end{gathered}
+> $$
 
 ```cpp
 bool linear_diophantine_solver(int a, int b, int c, int &x, int &y) {
