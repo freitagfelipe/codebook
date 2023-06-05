@@ -1,18 +1,11 @@
-```ad-info
-title: Objetivo
-
-- Line sweep é uma técnica muito utilizada em várias áreas não só na geometria. Consiste basicamente em uma linha passando por um plano cartesiano seja na vertical ou na horizontal.
-```
+> [!info] Objetivo
+> - Line sweep é uma técnica muito utilizada em várias áreas não só na geometria. Consiste basicamente em uma linha passando por um plano cartesiano seja na vertical ou na horizontal.
 
 `````ad-example
 title: Exemplo com a questão [Wifi](https://neps.academy/br/exercise/210) da OBI 2018.
 
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O(n \log n)$
-```
+> [!note]- Complexidade
+> - $O(n \log n)$
 
 ```cpp
 #include <bits/stdc++.h>

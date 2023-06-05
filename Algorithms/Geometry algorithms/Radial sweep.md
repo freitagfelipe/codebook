@@ -1,15 +1,8 @@
-```ad-info
-title: Objetivo
+> [!info] Objetivo
+> - Se parece muito com a técnica de [[Line sweep]], porém ao invés de termos uma linha se movendo pelo eixo $x$ ou pelo eixo $y$, temos uma semirreta centrada na origem do plano sendo rotacionada no sentido horário ou anti-horário, a semirreta pode ser trocada também por uma reta. A implementação deste algoritmo utiliza o [[Point2D]] e suas funções [[Algorithms/Utils/Geometry utils/Point2D/Cross product|Cross product]] e [[Algorithms/Utils/Geometry utils/Point2D/Norm|Norm]]. O código apresentado mostra apenas como ordenar os eventos.
 
-- Se parece muito com a técnica de [[Line sweep]], porém ao invés de termos uma linha se movendo pelo eixo $x$ ou pelo eixo $y$, temos uma semirreta centrada na origem do plano sendo rotacionada no sentido horário ou anti-horário, a semirreta pode ser trocada também por uma reta. A implementação deste algoritmo utiliza o [[Point2D]] e suas funções de produto escalar e produto vetorial. O código apresentado mostra apenas como ordenar os eventos.
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O(n \log n)$
-```
+> [!note]- Complexidade
+> - $O(n \log n)$
 
 ```cpp
 template <typename T>
@@ -23,8 +16,11 @@ int region_value(const Point2D<T> &a) {
 
 template <typename T>
 bool cmp(const Point2D<T> &a, const Point2D<T> &b) {
-	if (region_value(a) != region_value(b)) {
-		return region_value(a) < region_value(b);
+	int a_region_value {region_value(a)};
+	int b_region_value {region_value(b)}
+
+	if (a_region_value != b_region_value) {
+		return a_region_value < b_region_value;
 	}
 
 	T cross_result {cross(a, b)};
@@ -33,7 +29,7 @@ bool cmp(const Point2D<T> &a, const Point2D<T> &b) {
 		return cross_result > 0;
 	}
 
-	return dot(a, a) < dot(b, b);
+	return norm(a) < norm(b);
 }
 ```
 
@@ -47,6 +43,7 @@ using namespace std;
 
 typedef long long ll;
 
+// MAXN is the largest possible number of points
 #define MAXN 3010
 
 template <typename T>
@@ -75,6 +72,11 @@ T dot(const Point2D<T> &a, const Point2D<T> &b) {
 }
 
 template <typename T>
+T norm(const Point2D<T> &a) {
+	return dot(a, a);
+}
+
+template <typename T>
 T cross(const Point2D<T> &a, const Point2D<T> &b) {
 	return a.x * b.y - a.y * b.x;
 }
@@ -100,7 +102,7 @@ bool cmp(const Point2D<T> &a, const Point2D<T> &b) {
 		return cross_result > 0;
 	}
 
-	return dot(a, a) < dot(b, b);
+	return norm(a) < norm(b);
 }
 
 Point2D<ll> points[MAXN], centralized_points[MAXN];
