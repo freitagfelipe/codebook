@@ -1,10 +1,9 @@
-```ad-note
-title: Complexidade
-collapse: true
+> [!objetivo] Objetivo
+> - Mostrar a implementação de uma priority queue.
 
-- Top: $O(1)$
-- Insert/remove: $O(\log n)$
-```
+> [!note]- Complexidade
+ > - Top: $O(1)$
+> - Insert/remove: $O(\log n)$
 
 ```cpp
 template <typename T>

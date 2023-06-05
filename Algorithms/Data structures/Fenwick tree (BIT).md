@@ -1,16 +1,9 @@
-```ad-info
-title: Objetivo
+> [!info] Objetivo
+> - É uma estrutura de dados que suporta consultas sobre intervalos e atualizações em apenas um índice ou atualizações em um intervalo e perguntas sobre um índice. Caso as duas operações sejam para fazer em intervalos a [[Segment tree with lazy propagation]] é uma escolha melhor.
 
-- É uma estrutura de dados que suporta consultas sobre intervalos e atualizações em apenas um índice ou atualizações em um intervalo e perguntas sobre um índice. Caso as duas operações sejam para fazer em intervalos a [[Segment tree with lazy propagation]] é uma escolha melhor.
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- Build: $O(n \log n)$
-- Query/update: $O(\log n)$
-```
+> [!note]- Complexidade
+> - Build: $O(n \log n)$
+> - Query/update: $O(\log n)$
 
 `````ad-example
 title: BIT com atualizações em índices e perguntas sobre um intervalo $[L, R]$.
@@ -22,6 +15,7 @@ title: BIT com atualizações em índices e perguntas sobre um intervalo $[L, R]
 
 using namespace std;
 
+// MAXN is the largest possible number of elements
 #define MAXN int(1e5)
 
 int n;
@@ -95,6 +89,7 @@ title: BIT com atualizações em intervalos $[L, R]$ e perguntas sobre um índic
 
 using namespace std;
 
+// MAXN is the largest possible number of elements
 #define MAXN int(1e5) * 3 + 10
 
 int n;

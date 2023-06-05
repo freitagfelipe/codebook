@@ -1,11 +1,11 @@
-```ad-note
-title: Complexidade
-collapse: true
+> [!info] Objetivo
+> - Gerenciar uma coleção de conjuntos disjuntos, onde cada conjunto contém elementos distintos. Ele fornece operações eficientes para realizar união (join/merge) de conjuntos e encontrar (find) a representação de um elemento dentro de um conjunto.
 
-- $O(\alpha(n)) \approx O(1)$
-```
+> [!note]- Complexidade
+> - $O(\alpha(n))$
 
 ```cpp
+// MAXN is the largest possible number of elements
 int p[MAXN];
 int weight[MAXN];
 

@@ -1,23 +1,13 @@
-```ad-info
-title: Objetivo
+> [!info] Objetivo
+> - Responder $Q$ perguntas de intervalo $[L, R]$ de maneira eficiente em um vetor $V$. Essas $Q$ perguntas podem, por exemplo, estar relacionada um dos seguintes assuntos: mínimo, máximo, etc.
 
-- Responder $Q$ perguntas de intervalo $[L, R]$ de maneira eficiente em um vetor $V$. Essas $Q$ perguntas podem, por exemplo, estar relacionada um dos seguintes assuntos: mínimo, máximo, etc.
-```
+> [!caution] Restrições
+> - O vetor não pode mudar durante as perguntas.
+> - A função utilizada na sparse table deve aceitar sobreposições, pois as vezes pode acontecer de os intervalos utilizados durante a query da sparse table não serem disjuntos. Caso a função utilizada não aceite sobreposições o que se deve fazer é dividir o intervalo nos maiores logs possíveis. 
 
-```ad-attention
-title: Restrições
-
-- O vetor não pode mudar durante as perguntas.
-- A função utilizada na sparse table deve aceitar sobreposições, pois as vezes pode acontecer de os intervalos utilizados durante a query da sparse table não serem disjuntos. Caso a função utilizada não aceite sobreposições o que se deve fazer é dividir o intervalo nos maiores logs possíveis. 
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- Build: $O(n \log n)$
-- Query: $O(1)$
-```
+> [!note]- Complexidade
+> - Build: $O(n \log n)$
+> - Query: $O(1)$
 
 ```cpp
 template <typename T>

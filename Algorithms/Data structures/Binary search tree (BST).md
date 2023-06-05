@@ -1,12 +1,11 @@
-```ad-note
-title: Complexidade
-collapse: true
+> [!info] Objetivo
+> - Mostrar a implementação de uma árvore de busca binária.
 
-- Search: $O(h)$
-- Insert: $O(h)$
-- Remove: $O(h)$
-- Find max/min key: $O(h)$
-```
+> [!note]- Complexidade
+> - Search: $O(h)$
+> - Insert: $O(h)$
+> - Remove: $O(h)$
+> - Find max/min key: $O(h)$
 
 ```cpp
 template <typename T>

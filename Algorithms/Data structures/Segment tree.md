@@ -1,23 +1,13 @@
-```ad-info
-title: Objetivo
+> [!info] Objetivo
+> - Fazer de maneira eficiente $Q$ operações que podem consistir em perguntar algo sobre um intervalo $[L, R]$ ou fazer um point update em um índice qualquer. Essas perguntas no intervalo podem, por exemplo, estar relacionada a um dos seguintes temas: mínimo, máximo, etc. A parte da estrutura que muda junto com a necessidade da questão é a classe Node.
 
-- Fazer de maneira eficiente $Q$ operações que podem consistir em perguntar algo sobre um intervalo $[L, R]$ ou fazer um point update em um índice qualquer. Essas perguntas no intervalo podem, por exemplo, estar relacionada a um dos seguintes temas: mínimo, máximo, etc. A parte da estrutura que muda junto com a necessidade da questão é a classe Node.
-```
+> [!caution] Atenção
+> - O conteúdo que a classe Node guarda depende do que a questão está pedindo, no exemplo abaixo ela quer a soma do intervalo $[L, R]$.
 
-```ad-hint
-title: Observação
-
-- O conteúdo que a classe Node guarda depende do que a questão está pedindo, no exemplo abaixo ela quer a soma do intervalo $[L, R]$.
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- Build: $O(n)$
-- Update: $O(\log n)$
-- Query: $O(\log n)$
-```
+> [!note]- Complexidade
+> - Build: $O(n)$
+> - Update: $O(\log n)$
+> - Query: $O(\log n)$
 
 `````ad-example
 title: Segment tree para fazer $Q$ operações de somar um valor $v$ em $v_i$ ou responder a soma de todos os elementos no intervalo $[L, R]$.
@@ -35,12 +25,12 @@ public:
         this->build(v, 1, 1, n);
     }
 
-    // target_node tem que pertencer ao intervalo [1..N]
+	// target_node has to be on the interval [1..N]
     void update(int target_node, T v) {
         this->update(1, 1, this->n, target_node, v);
     }
 
-    // Queries no intervalo [1..N]
+	// Accept queries on the interval [1..N]
     T query(int l, int r) {
         return this->query(1, 1, this->n, l, r).sum;
     }
@@ -62,9 +52,9 @@ private:
     vector<T> arr;
     vector<Node> tree;
 
-    // l pertence ao intervalo [1..N]
-    // Por isso precisamos fazer l - 1
-    // Para coincidir com o intervalo de v que vai de [0..N - 1]
+	// l has to be on the interval [1..N]
+	// Because of that we need to do l - 1
+	// To match the interval of v that goes from [0..N - 1]
     void build(int *v, int node, int l, int r) {
         if (l == r) {
             this->arr[l] = v[l - 1];
