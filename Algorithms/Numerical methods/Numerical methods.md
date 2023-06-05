@@ -1,3 +1,4 @@
-- [[Bisection method]]
+> [!summary] Índice
+> - [[Bisection method]]
 
 ---

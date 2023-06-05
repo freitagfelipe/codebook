@@ -1,15 +1,8 @@
-```ad-info
-title: Objetivo
+> [!info] Objetivo
+> - Dado um intervalo $[L, R]$, se $f(l) \cdot f(r) < 0$ encontrar a raíz de $f$ que está no intervalo.
 
-- Dado um intervalo $[L, R]$, se $f(l) \cdot f(r) < 0$ encontrar a raíz de $f$ que está no intervalo.
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O(80n)$
-```
+> [!note]- Complexidade
+> - $O(80 \cdot f(n))$
 
 ```cpp
 double f(double x) {
@@ -48,6 +41,9 @@ double bisection(double l, double r) {
 title: Encontrar a raíz quadrada de um número $n$.
 
 - Dado um número $n < 10^6$ encontre $x$ tal que $x = \sqrt n$. Essa raíz com certeza estará no intervalo $[0, 1000]$.
+
+> [!note]- Complexidade
+> - $O(80)$
 
 ```cpp
 #include <bits/stdc++.h>
