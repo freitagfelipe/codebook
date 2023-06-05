@@ -1,18 +1,11 @@
-```ad-info
-title: Objetivo
+> [!info]
+> - Encontrar a distância de edição entre duas sequẽncias que faça com que os conjuntos fiquem iguais.
 
-- Encontrar a distância de edição entre duas strings ou dois conjuntos numéricos que faça com que os conjuntos fiquem iguais.
-```
-
-```ad-note
-title: Complexidade
-collapse: true
-
-- $O(nm)$
-```
+> [!note]- Complexidade
+> - $O(nm)$
 
 ```cpp
-int edit_distance(string &a, string &b) {
+int edit_distance(const string &a, const string &b) {
     vector<vector<int>> tab(a.size() + 1, vector<int>(b.size() + 1, 0));
 
     for (int i {}; i <= a.size(); ++i) {

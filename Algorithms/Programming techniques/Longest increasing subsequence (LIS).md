@@ -1,18 +1,14 @@
-```ad-note
-title: Complexidade
-collapse: true
+> [!info] Objetivo
+> - Encontrar a maior subsequência crescente de um vetor.
 
-- $O(n \log n)$
-```
+> [!note]- Complexidade
+> - $O(n \log n)$
 
-```ad-hint
-title: Adaptação
-
-- Caso a questão peça para encontrar a maior subsequência não decrescente é só ao invés de procurar um $lower\_bound(v[i])$ procurar por um $upper\_bound(v[i])$.
-```
+> [!hint] Encontrar a maios subsequência não decrescente
+> - Caso a questão peça para encontrar a maior subsequência não decrescente é só ao invés de procurar um $lower\_bound(v[i])$ procurar por um $upper\_bound(v[i])$.
 
 ```cpp
-int LIS(vector<int> &v) {
+size_t lis(const vector<int> &v) {
 	vector<int> stacks;
 
 	for (int i {}; i < v.size(); ++i) {
@@ -29,14 +25,11 @@ int LIS(vector<int> &v) {
 }
 ```
 
-```ad-hint
-title: Encontrar a maior subsequência
-
-- O código abaixo pode ser utilizado para encontrar uma das LIS presentes na sequência.
-```
+> [!hint] Retornar a maior subsequência crescente
+> - O código abaixo pode ser utilizado para retornar a LIS encontrada no vetor.
 
 ```cpp
-vector<int> LIS(vector<int> &v) {
+vector<int> lis(const vector<int> &v) {
 	vector<int> stacks;
 	vector<int> p;
 	vector<int> pos(v.size());

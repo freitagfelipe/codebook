@@ -1,24 +1,14 @@
-```ad-info
-title: Objetivo
-
-- A técnica de três ponteiros pode ser usada de várias maneiras, mas sua utilização sempre consiste em usar três ponteiros para apontar para lugares de um vetor. Por se tratar de uma técnica é necessário adaptá-la de acordo com as necessidades.
-```
+> [!info] Objetivo
+> - A técnica de três ponteiros pode ser usada de várias maneiras, mas sua utilização sempre consiste em usar três ponteiros para apontar para lugares de um vetor. Por se tratar de uma técnica é necessário adaptá-la de acordo com as necessidades.
 
 `````ad-example
-title: Encontrar quantos intervalos em um vetor somam $k$.
+title: Exemplo com a questão [Soma](https://neps.academy/br/exercise/468) da OBI 2019 - primeira fase.
 
-```ad-note
-title: Complexidade
-collapse: true
+> [!caution] Restrição
+> - O vetor não pode conter números negativos, apenas números maiores ou iguais a zero. Caso o vetor contenha números negativos é necessário utilizar [[Prefix sum array (PSA)]].
 
-- $O(n)$
-```
-
-```ad-attention
-title: Restrição
-
-- O vetor não pode conter números negativos, apenas números maiores ou iguais a zero. Caso o vetor contenha números negativos é necessário utilizar [[Prefix sum array (PSA)]].
-```
+> [!note]- Complexidade
+> - $O(n)$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -27,6 +17,7 @@ using namespace std;
 
 typedef long long ll;
 
+// MAXN is the maximum size of the array
 #define MAXN 5 * int(1e5) + 10 
 
 int v[MAXN];

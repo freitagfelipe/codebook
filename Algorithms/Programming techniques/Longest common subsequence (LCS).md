@@ -1,12 +1,11 @@
-```ad-note
-title: Complexidade
-collapse: true
+> [!info] Objetivo
+> - Encontrar a maior subsequência comum entre dois vetores.
 
-- $O(nm)$
-```
+> [!note]- Complexidade
+> - $O(nm)$
 
 ```cpp
-size_t LCS(string &a, string &b) {
+size_t lcs(const string &a, const string &b) {
     vector<vector<int>> tab(a.size() + 1, vector<int>(b.size() + 1, 0));
 
     for (int i {}; i < a.size(); ++i) {
@@ -23,14 +22,11 @@ size_t LCS(string &a, string &b) {
 }
 ```
 
-```ad-hint
-title: Encontrar a maior subsequência comum
-
-- O código abaixo pode ser utilizado para encontrar uma das LCS presentes na sequência.
-```
+> [!hint] Retornar a maior subsequência comum
+> - O código abaixo pode ser utilizado para retornar a LCS.
 
 ```cpp
-string LCS(string &a, string &b) {
+string lcs(const string &a, const string &b) {
 	vector<vector<int>> tab(a.size() + 1, vector<int>(b.size() + 1, 0));
 
     for (int i {}; i < a.size(); ++i) {
@@ -65,14 +61,14 @@ string LCS(string &a, string &b) {
 }
 ```
 
-`````ad-hint
-title: Caso uma das sequências tenha apenas elementos destintos
-
-- Nesse caso a LCS pode ser feita por meio de uma [[Longest increasing subsequence (LIS)]] adaptada da seguinte maneira mostrada logo abaixo no exemplo. Com complexidade de uma [[Longest increasing subsequence (LIS)]].
-``````
+> [!hint] Encontrar a LCS utilizando uma LIS
+> - Caso umda das sequências tenha apenas elementos distintos a LCS pode ser calculada por meio de uma [[Longest increasing subsequence (LIS)]] como mostrado abaixo.
 
 ````ad-example
-title: LIS para encontrar LCS.
+title: Exemplo com a questão [Não é só mais um LCS](https://neps.academy/br/exercise/301).
+
+> [!note]- Complexidade
+> - $O(n \log n)$
 
 ```cpp
 #include <bits/stdc++.h>

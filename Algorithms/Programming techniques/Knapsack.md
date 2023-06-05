@@ -1,14 +1,15 @@
-```ad-note
-title: Complexidade
-collapse: true
+> [!info] Objetivo
+> - Resolver o problema da mochila, no qual nos é dado $n$ itens e cada item tem seu peso e valor, dito isso o objetivo é encontrar qual é o valor máximo que conseguimos ganhar carregando qualquer número de itens.
 
-- $O(ns)$
-```
+> [!note]- Complexidade
+> - $O(ns)$
 
 ```cpp
+// MAXN is the largest possible number of items
+// MAXW is the highest possible backpack weight
 int v[MAXN];
 int w[MAXN];
-int DP[MAXN + 1][MAXW + 1];
+int DP[MAXN][MAXW];
 
 int knapsack() {
     int n, s;
@@ -33,16 +34,15 @@ int knapsack() {
 }
 ```
 
-```ad-hint
-title: Adaptação
-
-- Utilizando a adaptação abaixo ao invés do espaço auxiliar ser $O(ns)$ ele se torna $O(s)$.
-```
+> [!hint] Melhoria no uso de memória
+> - Utilizando a adaptação abaixo ao invés do espaço auxiliar ser $O(ns)$ ele se tornará $O(s)$.
 
 ```cpp
+// MAXN is the largest possible number of items
+// MAXW is the highest possible backpack weight
 int v[MAXN];
 int w[MAXN];
-int DP[MAXW + 1];
+int DP[MAXW];
 
 int knapsack() {
     int n, s;
