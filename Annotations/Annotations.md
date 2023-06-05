@@ -1,7 +1,8 @@
--  [[Mathmatic annotations]]
--  [[Bit manipulation annotations]]
--  [[Graph annotations]]
-- [[Other annotations]]
-- [[Search strategies annotations]]
+> [!summary] Índice
+> -  [[Mathmatic annotations]]
+> -  [[Bit manipulation annotations]]
+> -  [[Graph annotations]]
+> - [[Search strategies annotations]]
+> - [[Tree annotations]]
 
 ---
