@@ -63,6 +63,7 @@ struct Point2D {
 > [!summary]  Funções que a utilizam
 > - [[Angle]]
 > - [[Clockwise]]
+> - [[Collinear]]
 > - [[Counter clockwise]]
 > - [[Cross product]]
 > - [[Distance between line and point]]
@@ -71,7 +72,7 @@ struct Point2D {
 > - [[Dot product]]
 > - [[Intersect]]
 > - [[Length]]
-> - [[Norm]]
+> - [[Algorithms/Utils/Geometry utils/Point2D/Norm|Norm]]
 > - [[Orientation]]
 > - [[Point in segment]]
 > - [[Projection]]

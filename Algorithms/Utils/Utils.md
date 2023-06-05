@@ -1,4 +1,5 @@
 > [!summary] Índice
-> [[Geometry utils]]
+> - [[Bits utils]]
+> - [[Geometry utils]]
 
 ---

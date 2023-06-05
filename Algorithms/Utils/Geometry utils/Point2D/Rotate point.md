@@ -1,3 +1,9 @@
+> [!info] Objetivo
+> - Rotacionar vetor $\vec{p}$ em $\theta$ graus utilizando [[Point2D]].
+
+> [!note]- Complexidade
+> - $O(1)$
+
 ```cpp
 template <typename T>
 Point2D<double> rotate_point(const Point2D<T> &p, double theta) {

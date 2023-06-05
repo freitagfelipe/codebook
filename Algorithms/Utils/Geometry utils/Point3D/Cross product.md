@@ -1,3 +1,9 @@
+> [!info] Objetivo
+> - Calcular o produto vetorial entre os vetores $\vec{a}$ e $\vec{b}$ utilizando [[Point3D]].
+
+> [!note]- Complexidade
+> - $O(1)$
+
 ```cpp
 template <typename T>
 Point3D<T> cross(Point3D<T> &a, Point3D<T> &b) {
