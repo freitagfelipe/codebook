@@ -18,6 +18,7 @@ bitset<MAXN> marked;
 
 int prim() {
     for (int i {}; i < n; ++i) {
+		// INF is an absurd weight
         weight[i] = INF;
     }
 

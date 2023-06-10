@@ -27,6 +27,7 @@ vector<Edge> edges;
 
 void bellman_ford(int s) {
     for (int i {}; i < n; ++i) {
+	    // INF is a distance that can represent the node as unreachable
         dist[i] = INF;
     }
 

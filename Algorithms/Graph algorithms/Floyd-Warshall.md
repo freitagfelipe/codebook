@@ -17,6 +17,7 @@ void floyd_warshall() {
             if (i == j) {
                 dp[i][j] = 0;
             } else {
+				// INF is a distance that can represent the node as unreachable
                 dp[i][j] = INF;
             }
         }

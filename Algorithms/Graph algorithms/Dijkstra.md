@@ -18,6 +18,7 @@ vector<pii> g[MAXN];
 
 void dijkstra(int s) {
     for (int i {}; i < n; ++i) {
+		// INF is a distance that can represent the node as unreachable
         dist[i] = INF;
     }
 
@@ -66,6 +67,7 @@ vector<pii> g[MAXN];
 
 void dijkstra(int s) {
     for (int i {}; i < n; ++i) {
+		// INF is a distance that can represent the node as unreachable
         dist[i] = INF;
     }
 
