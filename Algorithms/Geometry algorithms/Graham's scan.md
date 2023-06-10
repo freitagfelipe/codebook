@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Encontrar o fecho convexo, ou seja, o menor polígono convexo tal que ele contenha todos os pontos, assim como o [[Convex hull - Monotone chain]]. A implementação utiliza [[Point2D]] e suas funções [[Orientation]], [[Algorithms/Utils/Geometry utils/Point2D/Norm|Norm]], [[Collinear]] e [[Clockwise]].
+> - Encontrar o fecho convexo, ou seja, o menor polígono convexo tal que ele contenha todos os pontos, assim como o [[Monotone chain]]. A implementação utiliza [[Point2D]] e suas funções [[Orientation]], [[Algorithms/Utils/Geometry utils/Point2D/Norm|Norm]], [[Collinear]] e [[Clockwise]].
 
 > [!attention] Atenção
 > - A ponto base do algoritmo deve ser aquele com o menor $y$ e em caso de empate desempataremos pelo menor x.
