@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bd3dc9a493a2bab3",
+        "id": "eadf16a5e7b5d51d",
         "type": "tabs",
         "children": [
           {
-            "id": "a7bf204cf6260ddd",
+            "id": "1a27f1e51e21df4f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -147,14 +147,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "41e1ec0b5b78ddb9",
+  "active": "1a27f1e51e21df4f",
   "lastOpenFiles": [
+    "Contents.md",
+    "Algorithms/Graph algorithms/Graph algorithms.md",
     "Algorithms/Graph algorithms/Breadth-first search (BFS).md",
     "Algorithms/Graph algorithms/Connected components.md",
     "Algorithms/Graph algorithms/Kosaraju's algorithm.md",
-    "Contents.md",
-    "Algorithms/Graph algorithms/Graph algorithms.md",
-    "Algorithms/Graph algorithms/Articulation points NOT FINISHED YET.md",
+    "Algorithms/Graph algorithms/Find articulation points NOT FINISHED YET.md",
     "Algorithms/Graph algorithms/Lowest common ancestor (LCA).md",
     "Algorithms/Graph algorithms/Prim's algorithm.md",
     "Algorithms/Data structures/Segment tree.md",
