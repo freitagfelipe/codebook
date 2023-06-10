@@ -9,6 +9,8 @@
 bitset<MAXK> bits;
 
 void build(const vector<int> &v) {
+	bits[0] = true;
+
 	for (int n : v) {
 		bits |= (bits << n);
 	}
