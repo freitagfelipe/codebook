@@ -8,19 +8,19 @@
 ```cpp
 // MAXN is the largest possible interval
 int n;
-bool is_prime[MAXN];
+bool prime[MAXN];
 
 void build() {
 	for (int i {2}; i <= n; ++i) {
-		is_prime[i] = true;
+		prime[i] = true;
 	}
 
-	is_prime[0] = is_prime[1] = false;
+	prime[0] = prime[1] = false;
 
 	for (int i {2}; i * i <= n; ++i) {
-		if (is_prime[i]) {
+		if (prime[i]) {
 			for (int j {i * i}; j <= n; j += i) {
-				is_prime[j] = false;
+				prime[j] = false;
 			}
 		}
 	}
