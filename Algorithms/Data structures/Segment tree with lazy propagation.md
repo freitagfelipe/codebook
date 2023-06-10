@@ -35,10 +35,11 @@ public:
 private:
     struct Node {
         T sum;
-        T lazy {};
+        T lazy;
 
         Node(T s = 0) {
             this->sum = s;
+            this->lazy = 0;
         }
 
         Node operator+(const Node &other) {
