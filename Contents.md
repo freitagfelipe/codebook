@@ -45,7 +45,6 @@ flexGrow=1
 	- [ ] Segment tree 2D
 	- [x] Segment tree with lazy propagation
 	- [x] Sparse table
-	- [ ] Trie
 	- [x] Union-find
 
 ```
@@ -56,11 +55,11 @@ flexGrow=1
 
 - # Geometry algorithms
 	- [x] Area of a simple polygon - Shoelace
-	- [x] Convex hull - Graham's scan
-	- [x] Convex hull - Monotone chain
 	- [ ] D&C - nearest pair of points
+	- [x] Graham's scan
 	- [x] Line sweep
 	- [x] Line sweep - nearest pair of points
+	- [x] Monotone chain
 	- [x] Pick's theorem
 	- [x] Point in polygon
 	- [x] Radial sweep
@@ -79,21 +78,22 @@ flexGrow=1
 - # Graph algorithms
 	- [ ] 2-SAT
 	- [x] Bellman-Ford
-	- [ ] Bipartite graph
 	- [x] Breadth-first search (BFS)
 	- [x] Breadth-first search grid (BFS-grid)
-	- [ ] Connected component
+	- [x] Connected components
 	- [x] Depth-first search (DFS)
 	- [x] Depth-first search grid (DFS-grid)
 	- [x] Dijkstra
+	- [ ] Find articulation points
+	- [ ] Find bridge
 	- [x] Floyd-Warshall
 	- [ ] Ford-Fulkerson
+	- [x] Is graph bipartite
+	- [x] Kahn's algorithm
 	- [x] Kosaraju's algorithm
 	- [x] Kruskal's algorithm
-	- [ ] Lowest common ancestor (LCA)
+	- [x] Lowest common ancestor (LCA)
 	- [x] Prim's algorithm
-	- [x] Topological sort - DFS
-	- [x] Topological sort - Kahn's algorithm
 	- [x] Tree center
 	- [x] Tree diameter
 
@@ -138,6 +138,18 @@ flexGrow=1
 	- [x] Merge sort
 	- [x] Quick sort
 
+```
+````
+
+---
+
+````col
+```col-md
+flexGrow=1
+===
+
+- # String
+	- [x] Trie
 ```
 ````
 

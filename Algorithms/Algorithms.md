@@ -7,6 +7,7 @@
 > - [[Numerical methods]]
 > - [[Programming techniques]]
 > - [[Sort algorithms]]
+> - [[String]]
 > - [[Utils]]
 
 ---
