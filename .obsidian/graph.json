@@ -64,6 +64,13 @@
       }
     },
     {
+      "query": "path:Algorithms/String",
+      "color": {
+        "a": 1,
+        "rgb": 6046464
+      }
+    },
+    {
       "query": "path:\"Algorithms/Utils/Geometry utils\"",
       "color": {
         "a": 1,
@@ -109,6 +116,6 @@
   "repelStrength": 20,
   "linkStrength": 0.802083333333333,
   "linkDistance": 500,
-  "scale": 0.04397080510168351,
+  "scale": 0.047876347383589285,
   "close": true
 }

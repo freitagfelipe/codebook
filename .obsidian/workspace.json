@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f36fe2aa0a2760af",
+        "id": "bd3dc9a493a2bab3",
         "type": "tabs",
         "children": [
           {
-            "id": "0282dfc0f8888a57",
+            "id": "a7bf204cf6260ddd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algorithms/Combinatorics algorithms/Heap's algorithm.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -93,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms/Combinatorics algorithms/Heap's algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms/Combinatorics algorithms/Heap's algorithm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Algorithms/Combinatorics algorithms/Heap's algorithm.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -155,34 +147,35 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "0282dfc0f8888a57",
+  "active": "41e1ec0b5b78ddb9",
   "lastOpenFiles": [
-    "Algorithms/Combinatorics algorithms/Heap's algorithm.md",
-    "README.md",
-    "Contents.md",
-    "Algorithms/Data structures/Trie NOT FINISHED YET.md",
-    "Algorithms/Graph algorithms/Tree diameter.md",
-    "Algorithms/Graph algorithms/Untitled.md",
-    "Algorithms/Graph algorithms/Topological sort - Kahn's algorithm.md",
-    "Algorithms/Graph algorithms/Topological sort - DFS.md",
-    "Algorithms/Graph algorithms/Kruskal's algorithm.md",
-    "Algorithms/Graph algorithms/Floyd-Warshall.md",
-    "Algorithms/Graph algorithms/Dijkstra.md",
-    "Algorithms/Graph algorithms/Depth-first search grid (DFS-Grid).md",
-    "Algorithms/Graph algorithms/Depth-first search (DFS).md",
-    "Algorithms/Graph algorithms/Connected component NOT FINISHED YET.md",
-    "Algorithms/Graph algorithms/Breadth-first search grid (BFS-Grid).md",
     "Algorithms/Graph algorithms/Breadth-first search (BFS).md",
-    "Algorithms/Graph algorithms/Bipartite graph NOT FINISHED YET.md",
-    "Algorithms/Graph algorithms/Bellman-Ford.md",
-    "Algorithms/Graph algorithms/2-SAT NOT FINISHED YET.md",
-    "Algorithms/Graph algorithms/Graph algorithms.md",
+    "Algorithms/Graph algorithms/Connected components.md",
     "Algorithms/Graph algorithms/Kosaraju's algorithm.md",
-    "Algorithms/Graph algorithms/Ford-Fulkerson NOT FINISHED YET.md",
-    "Algorithms/Programming techniques/Kadane's algorithm.md",
-    "Algorithms/Programming techniques/Knapsack.md",
-    "Algorithms/Programming techniques/Levenshtein distance.md",
-    "Algorithms/Programming techniques/Longest common subsequence (LCS).md",
+    "Contents.md",
+    "Algorithms/Graph algorithms/Graph algorithms.md",
+    "Algorithms/Graph algorithms/Articulation points NOT FINISHED YET.md",
+    "Algorithms/Graph algorithms/Lowest common ancestor (LCA).md",
+    "Algorithms/Graph algorithms/Prim's algorithm.md",
+    "Algorithms/Data structures/Segment tree.md",
+    "Algorithms/Graph algorithms/Bellman-Ford.md",
+    "Algorithms/Data structures/Sparse table.md",
+    "Algorithms/Programming techniques/Subset sum.md",
+    "Algorithms/Algebra algorithms/Linear sieve.md",
+    "Algorithms/Algebra algorithms/Sieve of Eratosthenes.md",
+    "Algorithms/Data structures/Segment tree with lazy propagation.md",
+    "Algorithms/Data structures/Fenwick tree (BIT).md",
+    "Algorithms/Utils/Bits utils/Bits utils.md",
+    "Algorithms/Utils/Bits utils/Count setted bits.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Clockwise.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Cross product.md",
+    "Algorithms/String/Trie.md",
+    "Algorithms/String/String.md",
+    "Algorithms/Graph algorithms/Floyd-Warshall.md",
+    "Algorithms/Graph algorithms/2-SAT NOT FINISHED YET.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Orientation.md",
+    "Algorithms/Geometry algorithms/Monotone chain.md",
+    "Algorithms/String",
     "Algorithms/Utils/Bits utils",
     "Algorithms/Utils/Geometry utils/Point3D",
     "Algorithms/Utils/Geometry utils/Point2D",
@@ -192,7 +185,6 @@
     "Algorithms/Utils/Geometry utils",
     "Algorithms/Algebra algorithms",
     "Algorithms/Combinatorics algorithms",
-    "Algorithms/Mathematical algorithms/Untitled",
     "Assets/Círculo trigonométrico.png",
     "Assets/Identidades trigonométricas.png",
     "Assets/Triângulo retângulo.png",
