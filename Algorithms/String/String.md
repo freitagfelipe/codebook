@@ -1,0 +1,4 @@
+> [!summary] Índice
+> - [[Trie]]
+
+---

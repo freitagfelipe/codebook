@@ -8,7 +8,6 @@
 > - [[Segment tree 2D NOT FINISHED YET]]
 > - [[Segment tree with lazy propagation]]
 > - [[Sparse table]]
-> - [[Trie NOT FINISHED YET]]
 > - [[Union-find]]
 
 ---
