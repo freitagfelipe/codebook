@@ -84,8 +84,8 @@ flexGrow=1
 	- [x] Depth-first search (DFS)
 	- [x] Depth-first search grid (DFS-grid)
 	- [x] Dijkstra
-	- [ ] Find articulation points
-	- [ ] Find bridge
+	- [x] Find articulation points
+	- [x] Find bridges
 	- [x] Floyd-Warshall
 	- [ ] Ford-Fulkerson
 	- [x] Is graph bipartite
