@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "eadf16a5e7b5d51d",
+        "id": "d1da9978bcb732af",
         "type": "tabs",
         "children": [
           {
-            "id": "1a27f1e51e21df4f",
+            "id": "27e2665965c6a387",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -147,18 +147,21 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1a27f1e51e21df4f",
+  "active": "41e1ec0b5b78ddb9",
   "lastOpenFiles": [
+    "Algorithms/Graph algorithms/Find articulation points.md",
+    "Algorithms/Graph algorithms/Find bridges.md",
+    "Algorithms/Graph algorithms/Floyd-Warshall.md",
     "Contents.md",
+    "Algorithms/Graph algorithms/Tree center.md",
+    "Algorithms/Graph algorithms/Bellman-Ford.md",
+    "Algorithms/Graph algorithms/Connected components.md",
+    "Algorithms/Graph algorithms/Lowest common ancestor (LCA).md",
     "Algorithms/Graph algorithms/Graph algorithms.md",
     "Algorithms/Graph algorithms/Breadth-first search (BFS).md",
-    "Algorithms/Graph algorithms/Connected components.md",
     "Algorithms/Graph algorithms/Kosaraju's algorithm.md",
-    "Algorithms/Graph algorithms/Find articulation points NOT FINISHED YET.md",
-    "Algorithms/Graph algorithms/Lowest common ancestor (LCA).md",
     "Algorithms/Graph algorithms/Prim's algorithm.md",
     "Algorithms/Data structures/Segment tree.md",
-    "Algorithms/Graph algorithms/Bellman-Ford.md",
     "Algorithms/Data structures/Sparse table.md",
     "Algorithms/Programming techniques/Subset sum.md",
     "Algorithms/Algebra algorithms/Linear sieve.md",
@@ -171,10 +174,7 @@
     "Algorithms/Utils/Geometry utils/Point2D/Cross product.md",
     "Algorithms/String/Trie.md",
     "Algorithms/String/String.md",
-    "Algorithms/Graph algorithms/Floyd-Warshall.md",
     "Algorithms/Graph algorithms/2-SAT NOT FINISHED YET.md",
-    "Algorithms/Utils/Geometry utils/Point2D/Orientation.md",
-    "Algorithms/Geometry algorithms/Monotone chain.md",
     "Algorithms/String",
     "Algorithms/Utils/Bits utils",
     "Algorithms/Utils/Geometry utils/Point3D",
