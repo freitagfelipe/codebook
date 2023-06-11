@@ -39,11 +39,11 @@ void dijkstra(int s) {
 
         marked[curr] = true;
 
-        for (auto [w, v] : g[curr]) {
-            if (dist[curr] + w < dist[v]) {
-                dist[v] = dist[curr] + w;
+        for (auto [w, to] : g[curr]) {
+            if (dist[curr] + w < dist[to]) {
+                dist[to] = dist[curr] + w;
 
-                pq.push({dist[v], v});
+                pq.push({dist[to], to});
             }
         }
     }
@@ -88,8 +88,8 @@ void dijkstra(int s) {
 
         marked[curr] = true;
 
-        for (auto [w, v] : g[curr]) {
-            dist[v] = min(dist[v], dist[curr] + w);
+        for (auto [w, to] : g[curr]) {
+            dist[to] = min(dist[to], dist[curr] + w);
         }
     }
 }

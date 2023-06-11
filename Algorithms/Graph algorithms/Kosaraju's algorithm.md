@@ -10,24 +10,24 @@ int n;
 vector<int> g[MAXN], gt[MAXN], ts, component(MAXN, -1);
 bitset<MAXN> visited;
 
-void ts_dfs(int v) {
-	visited[v] = true;
+void ts_dfs(int u) {
+	visited[u] = true;
 
-    for (int u : g[v]) {
-        if (!visited[u]) {
-            ts_dfs(u);
+    for (int to : g[u]) {
+        if (!visited[to]) {
+            ts_dfs(to);
         }
     }
 
-    ts.push_back(v);
+    ts.push_back(u);
 }
 
-void component_dfs(int v, int c) {
-    component[v] = c;
+void component_dfs(int u, int c) {
+    component[u] = c;
 
-    for (int u : gt[v]) {
-        if (component[u] == -1) {
-            component_dfs(u, c);
+    for (int to : gt[u]) {
+        if (component[to] == -1) {
+            component_dfs(to, c);
         }
     }
 }
@@ -62,25 +62,25 @@ int n;
 vector<int> g[MAXN], gt[MAXN], ts, component(MAXN, -1), same_comp[MAXN];
 bitset<MAXN> visited;
 
-void ts_dfs(int v) {
-	visited[v] = true;
+void ts_dfs(int u) {
+	visited[u] = true;
 
-    for (int u : g[v]) {
-        if (!visited[u]) {
-            ts_dfs(u);
+    for (int to : g[u]) {
+        if (!visited[to]) {
+            ts_dfs(to);
         }
     }
 
-    ts.push_back(v);
+    ts.push_back(u);
 }
 
-void component_dfs(int v, int c) {
-	component[v] = c;
-    same_comp[c].push_back(v);
+void component_dfs(int u, int c) {
+	component[u] = c;
+    same_comp[c].push_back(u);
 
-    for (int u : gt[v]) {
-        if (component[u] == -1) {
-            component_dfs(u, c);
+    for (int to : gt[u]) {
+        if (component[to] == -1) {
+            component_dfs(to, c);
         }
     }
 }
@@ -105,10 +105,10 @@ vector<vector<int>> scc() {
 	vector<vector<int>> cg(comp);
 
 	for (int i {}; i < comp; ++i) {
-		for (int v : same_comp[i]) {
-			for (int neigh : g[v]) {
-				if (component[v] != component[neigh]) {
-					cg[i].push_back(component[neigh]);
+		for (int u : same_comp[i]) {
+			for (int to : g[u]) {
+				if (component[u] != component[to]) {
+					cg[i].push_back(component[to]);
 				}
 			}
 		}

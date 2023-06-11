@@ -9,14 +9,14 @@
 int color[MAXN];
 vector<int> g[MAXN];
 
-bool is_bipartite(int v, int c = 1) {
-	color[v] = c;
+bool is_bipartite(int u, int c = 1) {
+	color[u] = c;
 	bool ans {true};
 
-	for (int neigh : g[v]) {
-		if (color[neigh] == -1) {
-			ans &= is_bipartite(neigh, 1 - c, g);
-		} else if (color[neigh] != 1 - c) {
+	for (int to : g[u]) {
+		if (color[to] == -1) {
+			ans &= is_bipartite(to, 1 - c);
+		} else if (color[to] != 1 - c) {
 			return false;
 		}
 

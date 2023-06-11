@@ -5,7 +5,7 @@
 > O algoritmo de Kruskal é melhor para grafos esparsos, caso o grafo seja denso é melhor usar o algoritmo de [[Prim's algorithm]].
 
 > [!note]- Complexidade
-> $O(V + E \log E)$, gastaremos $V$ para inicializar o [[Union-find]] e $E \log E$ para ordenar a lista de arestas.
+> - $O(V + E \log E)$, gast
 
 ```cpp
 struct Edge {

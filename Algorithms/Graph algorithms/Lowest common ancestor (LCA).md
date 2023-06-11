@@ -12,21 +12,21 @@ int n, l, timer {};
 vector<int> g[MAXN], tin(MAXN), tout(MAXN);
 vector<vector<int>> up;
 
-void dfs(int v, int p) {
-    tin[v] = ++timer;
-    up[v][0] = p;
+void dfs(int u, int p) {
+    tin[u] = ++timer;
+    up[u][0] = p;
 
     for (int i {1}; i <= l; ++i) {
-        up[v][i] = up[up[v][i - 1]][i - 1];
+        up[u][i] = up[up[u][i - 1]][i - 1];
     }
 
-    for (int u : g[v]) {
-        if (u != p) {
-            dfs(u, v);
+    for (int to : g[u]) {
+        if (to != p) {
+            dfs(to, u);
         }
     }
 
-    tout[v] = ++timer;
+    tout[u] = ++timer;
 }
 
 // Checks if u is ancestor of v

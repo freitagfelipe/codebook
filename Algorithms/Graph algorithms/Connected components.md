@@ -9,12 +9,12 @@
 int n;
 vector<int> g[MAXN], component(MAXN, -1);
 
-void dfs(int v, int c) {
-	component[v] = c;
+void dfs(int u, int c) {
+	component[u] = c;
 
-	for (int u : g[v]) {
-		if (component[u] == -1) {
-			dfs(u, c);
+	for (int to : g[u]) {
+		if (component[to] == -1) {
+			dfs(to, c);
 		}
 	}
 }

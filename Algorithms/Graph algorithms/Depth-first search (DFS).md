@@ -9,12 +9,12 @@
 vector<int> g[MAXN];
 bitset<MAXN> visited;
 
-void dfs(int i) {
-    visited[i] = true;
+void dfs(int u) {
+    visited[u] = true;
 
-	for(int n : g[i]) {
-		if (!visited[n]) {
-			dfs(n);
+	for(int to : g[i]) {
+		if (!visited[to]) {
+			dfs(to);
 		}
 	}
 }

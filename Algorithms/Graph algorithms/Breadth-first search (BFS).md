@@ -9,10 +9,10 @@
 vector<int> g[MAXN];
 bitset<MAXN> visited;
 
-void bfs(int i) {
+void bfs(int s) {
 	queue<int> q;
 	
-	q.push(i);
+	q.push(s);
 	
 	while(!q.empty()) {
 		int curr {q.front()};
@@ -21,11 +21,11 @@ void bfs(int i) {
 
         visited[curr] = true;
 		
-		for(int n : g[curr]) {
-			if(!visited[n]) {
-				q.push(n);
+		for(int to : g[curr]) {
+			if(!visited[to]) {
+				q.push(to);
 
-                visited[n] = true;
+                visited[to] = true;
 			}
 		}
 	}
@@ -38,11 +38,11 @@ void bfs(int i) {
 ```cpp
 // MAXN is the largest possible number of nodes
 int n;
-vector<int> g[MAXN];
 int dist[MAXN];
+vector<int> g[MAXN];
 bitset<MAXN> visited;
 
-vector<int> bfs(int s) {
+void bfs(int s) {
 	for (int i {}; i < n; ++i) {
 		// INF is a distance that can represent the node as unreachable
 		dist[i] = INF;
@@ -61,17 +61,15 @@ vector<int> bfs(int s) {
 
 		visited[curr] = true;
 
-		for (int n : g[curr]) {
-			if (!visited[n]) {
-				q.push(n);
+		for (int to : g[curr]) {
+			if (!visited[to]) {
+				q.push(to);
 
-				dist[n] = dist[curr] + 1;
-				visited[n] = true;
+				dist[to] = dist[curr] + 1;
+				visited[to] = true;
 			}
 		}
 	}
-
-	return dist;
 }
 ```
 

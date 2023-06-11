@@ -42,11 +42,11 @@ int prim() {
         marked[curr] = true;
         mst_cost += weight[curr];
 
-        for (auto [w, v] : g[curr]) {
-            if (w < weight[v]) {
-                weight[v] = w;
+        for (auto [w, to] : g[curr]) {
+            if (w < weight[to]) {
+                weight[to] = w;
 
-                pq.push({weight[v], v});
+                pq.push({weight[to], to});
             }
         }
     }

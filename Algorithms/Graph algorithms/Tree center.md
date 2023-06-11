@@ -12,14 +12,14 @@ typedef tuple<int, int, int> tiii;
 vector<int> g[MAXN];
 int parent[MAXN];
 
-pii dfs(int curr, int d = 0, int p = -1) {
-    pii most_distant {curr, d};
+pii dfs(int u, int d = 0, int p = -1) {
+    pii most_distant {u, d};
 
-	parent[curr] = p;
+	parent[u] = p;
 
-    for (int neigh : g[curr]) {
-        if (neigh != p) {
-            pii result {dfs(neigh, d + 1, curr)};
+    for (int to : g[u]) {
+        if (to != p) {
+            pii result {dfs(to, d + 1, u)};
 
             if (result.second > most_distant.second) {
                 most_distant = result;

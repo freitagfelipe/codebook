@@ -16,8 +16,8 @@ vector<int> g[MAXN];
 
 vector<int> topological_sort() {
     for (int i {}; i < n; ++i) {
-        for (int v : g[i]) {
-            ++in_degree[v];
+        for (int to : g[i]) {
+            ++in_degree[to];
         }
     }
 
@@ -38,9 +38,9 @@ vector<int> topological_sort() {
 
         ans.push_back(curr);
 
-        for (int v : g[curr]) {
-            if (--in_degree[v] == 0) {
-                q.push(v);
+        for (int to : g[curr]) {
+            if (--in_degree[to] == 0) {
+                q.push(to);
             }
         }
     }
