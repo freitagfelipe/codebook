@@ -42,7 +42,7 @@ vector<Point2D<T>> grahams_scan(vector<Point2D<T>> &points, bool include_colline
         hull.push_back(pt);
     }
 
-    return move(hull);
+    return hull;
 }
 ```
 
