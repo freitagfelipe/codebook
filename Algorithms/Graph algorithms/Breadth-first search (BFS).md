@@ -13,13 +13,13 @@ void bfs(int s) {
 	queue<int> q;
 	
 	q.push(s);
+
+	visited[s] = true;
 	
 	while(!q.empty()) {
 		int curr {q.front()};
 
 		q.pop();
-
-        visited[curr] = true;
 		
 		for(int to : g[curr]) {
 			if(!visited[to]) {
@@ -53,13 +53,12 @@ void bfs(int s) {
 	q.push(s);
 
 	dist[s] = 0;
+	visited[s] = true;
 
 	while (!q.empty()) {
 		int curr {q.front()};
 
 		q.pop();
-
-		visited[curr] = true;
 
 		for (int to : g[curr]) {
 			if (!visited[to]) {
