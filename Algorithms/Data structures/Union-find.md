@@ -1,13 +1,14 @@
 > [!info] Objetivo
-> - Gerenciar uma coleção de conjuntos disjuntos, onde cada conjunto contém elementos distintos. Ele fornece operações eficientes para realizar união (join/merge) de conjuntos e encontrar (find) a representação de um elemento dentro de um conjunto.
+> - Gerenciar uma coleção de conjuntos disjuntos, onde cada conjunto contém elementos distintos. Ele fornece operações eficientes para realizar união de conjuntos e encontrar a representação de um elemento dentro de um conjunto.
 
 > [!note]- Complexidade
-> - $O(\alpha(n))$
+> - Build: $O(n)$
+> - Find/merge: $O(\alpha(n))$
 
 ```cpp
 // MAXN is the largest possible number of elements
 int p[MAXN];
-int weight[MAXN];
+int h[MAXN];
 
 int find(int x) {
     if (p[x] == x) {
@@ -25,15 +26,21 @@ void join(int x, int y) {
         return;
     }
 
-    if (weight[x] == weight[y]) {
-        p[x] = y;
-
-        ++weight[y];
-    } else if (weight[x] > weight[y]) {
-        p[y] = x;
-    } else {
-        p[x] = y;
+    if (h[x] < h[y]) {
+        swap(x, y);
     }
+
+    p[y] = x;
+
+    if (h[x] == h[y]) {
+        ++h[x];
+    }
+}
+
+void build(int n) {
+	for (int i {}; i < n; ++i) {
+		p[i] = i;
+	}
 }
 ```
 
