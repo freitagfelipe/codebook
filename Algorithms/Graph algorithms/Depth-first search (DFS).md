@@ -12,7 +12,7 @@ bitset<MAXN> visited;
 void dfs(int u) {
     visited[u] = true;
 
-	for(int to : g[i]) {
+	for(int to : g[u]) {
 		if (!visited[to]) {
 			dfs(to);
 		}
