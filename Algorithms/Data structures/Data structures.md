@@ -9,5 +9,6 @@
 > - [[Segment tree with lazy propagation]]
 > - [[Sparse table]]
 > - [[Union-find]]
+> - [[Union-find with rollback]]
 
 ---
