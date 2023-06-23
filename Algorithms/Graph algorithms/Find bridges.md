@@ -6,8 +6,8 @@
 
 ```cpp
 struct Edge {
-    int v;
     int u;
+    int v;
 
 	Edge(int u, int v) {
 		this->u = u;
