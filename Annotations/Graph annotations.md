@@ -1,8 +1,8 @@
 ## Definições
 
-- Grafos bidirecionais: aqueles que as arestas são mão dupla.
-- Grafos direcionados: aqueles que as arestas possuem apenas um sentido de direção.
-- Grafo completo: aquele que para todos os vértices $v, u \in V$ existe uma aresta ligando $u$ a $v$.
+- Grafos bidirecionais: aqueles que as arestas podem ser utilizadas tanto no sentido $(u, v)$ quando no sentido $(v, u)$.
+- Grafos direcionados: aqueles que as arestas possuem apenas um sentido de direção, ou seja, uma aresta $(u, v)$ só pode ser utilizada no sentido de $u$ para $v$.
+- Grafo completo: aquele que para todos os vértices $v, u \in G(V)$ existe uma aresta ligando $u$ a $v$.
 - Sub-grafo: um grafo $G' = (V', E')$ é dito um sub-grafo de $G = (V, E)$ se, e somente se, $V' \subset V \text{ e } E' \subset E$.
 - Conexidade: um grafo é dito conexo se para todos os vértices $u, v \in V$ existir um caminho de um para o outro.
 - Componente conexa: é um conjunto (máximo) de vértices tal que o sub-grafo gerado por eles é conexo.
