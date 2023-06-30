@@ -1,65 +1,54 @@
 > [!info] Objetivo
 > - Fazer de maneira eficiente $Q$ operações que podem consistir em perguntar algo sobre um intervalo $[L, R]$ ou fazer um point update em um índice qualquer. Essas perguntas no intervalo podem, por exemplo, estar relacionada a um dos seguintes temas: mínimo, máximo, etc. A parte da estrutura que muda junto com a necessidade da questão é a classe Node.
 
-> [!caution] Atenção
-> - O conteúdo que a classe Node guarda depende do que a questão está pedindo, no exemplo abaixo ela quer a soma do intervalo $[L, R]$.
-
 > [!note]- Complexidade
 > - Build: $O(n)$
 > - Update: $O(\log n)$
 > - Query: $O(\log n)$
 
-`````ad-example
-title: Segment tree para fazer $Q$ operações de somar um valor $v$ em $v_i$ ou responder a soma de todos os elementos no intervalo $[L, R]$.
-
 ```cpp
-template <typename T>
+// T is the type that the Node will store
+// U is the type that the array will store
+template <typename T, typename U>
 class SegmentTree {
 public:
-    void build(int n, int *v) {
+    void build(int n, U *v) {
         this->n = n;
 
         this->arr.resize(n + 1);
-        this->tree.resize(4 * n);
+        this->tree.resize(n * 4);
 
         this->build(v, 1, 1, n);
     }
 
 	// target_node has to be on the interval [1..N]
-    void update(int target_node, T v) {
+    void update(int target_node, U v) {
         this->update(1, 1, this->n, target_node, v);
     }
 
 	// Accept queries on the interval [1..N]
     T query(int l, int r) {
-        return this->query(1, 1, this->n, l, r).sum;
+        return this->query(1, 1, this->n, l, r).minv;
     }
-
 private:
     struct Node {
-        T sum;
+		// Node variables and constructor initialization
 
-        Node(T s = 0) {
-            this->sum = s;
-        }
-
-        Node operator+(const Node &other) {
-            return Node(this->sum + other.sum);
+        Node operator+(const Node &o) {
+            // Node merge logic
         }
     };
 
     int n;
-    vector<T> arr;
+    vector<U> arr;
     vector<Node> tree;
 
 	// l has to be on the interval [1..N]
 	// Because of that we need to do l - 1
 	// To match the interval of v that goes from [0..N - 1]
-    void build(int *v, int node, int l, int r) {
+    void build(U *v, int node, int l, int r) {
         if (l == r) {
-            this->arr[l] = v[l - 1];
-
-            this->tree[node].sum = v[l - 1];
+	        // Build tree and arr logic
 
             return;
         }
@@ -72,11 +61,9 @@ private:
         this->tree[node] = this->tree[node * 2] + this->tree[node * 2 + 1];
     }
 
-    void update(int node, int l, int r, int target_node, T v) {
+    void update(int node, int l, int r, int target_node, U v) {
         if (l == r) {
-            this->arr[target_node] += v;
-
-            this->tree[node].sum += v;
+            // Update tree and arr logic
 
             return;
         }
@@ -96,7 +83,7 @@ private:
         if (r_target < l || r < l_target) {
             return Node();
         } else if (l_target <= l && r <= r_target) {
-            return tree[node];
+            return this->tree[node];
         }
 
         int mid {(l + r) / 2};
@@ -105,6 +92,5 @@ private:
     }
 };
 ```
-`````
 
 ---
