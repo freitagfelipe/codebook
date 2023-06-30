@@ -30,7 +30,7 @@ void dfs(int i, int j) {
         int nj {j + dj[k]};
 
         if (is_cell_valid(ni, nj)) {
-            DFS(ni, nj);
+            dfs(ni, nj);
         }
     }
 }
