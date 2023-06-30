@@ -14,17 +14,33 @@
 
 ```cpp
 template <typename T>
-T calculate_area(const vector<Point2D<T>> &polygon) {
+double calculate_area(const vector<Point2D<T>> &polygon) {
 	T ans {};
 
-	for (int i {}; i < polygon.size(); ++i) {
+	for (int i {}; i < (int) polygon.size(); ++i) {
 		Point2D<T> q {i ? polygon[i - 1] : polygon.back()};
 		Point2D<T> p {polygon[i]};
 
 		ans += (p.y + q.y) * (p.x - q.x);
 	}
 
-	return abs(ans / 2); // use fabs in cases where T is double or float
+	return abs(ans) / 2; // use fabs in cases where T is double or float
+}
+```
+
+```cpp
+template <typename T>
+T calculate_two_times_area(const vector<Point2D<T>> &polygon) {
+	T ans {};
+
+	for (int i {}; i < (int) polygon.size(); ++i) {
+		Point2D<T> q {i ? polygon[i - 1] : polygon.back()};
+		Point2D<T> p {polygon[i]};
+
+		ans += (p.y + q.y) * (p.x - q.x);
+	}
+
+	return abs(ans); // use fabs in cases where T is double or float
 }
 ```
 

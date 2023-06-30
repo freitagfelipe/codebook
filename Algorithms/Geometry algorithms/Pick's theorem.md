@@ -9,7 +9,7 @@ template <typename T>
 ll calculate_lattice_points_in_edges(const vector<Point2D<T>> &polygon) {
     ll ans {};
 
-    for (int i {}; i < polygon.size(); ++i) {
+    for (int i {}; i < (int) polygon.size(); ++i) {
 		Point2D<T> q {i ? polygon[i - 1] : polygon.back()};
 		Point2D<T> p {polygon[i]};
 
@@ -27,10 +27,10 @@ ll calculate_lattice_points_in_edges(const vector<Point2D<T>> &polygon) {
 
 template <typename T>
 ll calculate_lattice_points_inside_polygon(const vector<Point2D<T>> &polygon) {
-    T area {calculate_area(polygon)};
+	T area {calculate_two_times_area(polygon)};
     ll lattice_points_in_edge {calculate_lattice_points_in_edges(polygon)};
 
-    return (2 * area - lattice_points_in_edge + 2) / 2; 
+    return (area - lattice_points_in_edge + 2) / 2; 
 }
 ```
 
