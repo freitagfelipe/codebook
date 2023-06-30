@@ -17,7 +17,7 @@ struct Edge {
 
 int n, timer {};
 // MAXN is the largest possible number of nodes
-vector<int> g[MAXN], tin, low;
+vector<int> g[MAXN], tin(MAXN, 0), low(MAXN, 0);
 vector<Edge> bridges;
 bitset<MAXN> visited;
 
