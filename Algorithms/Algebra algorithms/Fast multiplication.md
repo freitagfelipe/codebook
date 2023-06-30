@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Realizar a multiplicação entre $x$ e $y$ $mod m$ de maneira rápida.
+> - Realizar a multiplicação entre $x$ e $y$ $mod$ $m$ de maneira rápida.
 
 > [!note]- Complexidade
 > - $O(\log x)$

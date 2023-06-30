@@ -26,7 +26,7 @@ vector<int> get_divisors(int n) {
 > - O objetivo da implementação abaixo é encontrar todos os divisores de todos os números em um intervalo $[1, n]$.
 
 > [!note]- Complexidade
-> - $O(n \log n)$
+> - $O(n \sqrt n)$
 
 ```cpp
 // MAXN is the largest possible interval

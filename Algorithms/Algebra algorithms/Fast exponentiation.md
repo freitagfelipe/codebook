@@ -10,7 +10,7 @@ int fast_exponentiation(int b, int e, int m) {
         return 1 % m; 
     }
 
-    long long int answer {fast_exponentiation(b, e / 2, m)};
+    int answer {fast_exponentiation(b, e / 2, m)};
 
     answer = (answer * answer) % m;
 
