@@ -24,20 +24,20 @@ void floyd_warshall() {
     }
 
     for (int i {}; i < m; ++i) {
-        int x, y, w;
+        int u, v, w;
 
-        cin >> x >> y >> w;
+        cin >> u >> v >> w;
 
-        dp[x][y] = w;
-        dp[y][x] = w;
+        dp[u][v] = w;
+        dp[v][u] = w;
     }
 
     for (int k {}; k < n; ++k) {
         for (int i {}; i < n; ++i) {
             for (int j {}; j < n; ++j) {
-                if (dp[i][k] + dp[k][j] < dp[i][j]) {
-                    dp[i][j] = dp[i][k] + dp[k][j];
-                }
+	            if (dp[i][k] < INF && dp[k][j] < INF) {
+		            dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j]);
+	            }
             }
         }
     }
