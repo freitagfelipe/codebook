@@ -5,38 +5,42 @@
 > - $O(n \log n)$
 
 ```cpp
-typedef pair<int, int> pii;
+template <typename T>
+using ptt = pair<T, T>;
 
 template <typename T>
 double find_minimum_distance(vector<Point2D<T>> points) {
+	typedef ptt<T> ptt;
+
+	int n {(int) points.size()};
+
 	// Sort them according to their x-coordinates in ascending order
 	sort(points.begin(), points.end());
 
-	int first_active_point {};
-	set<pii> active_points;
+	int fp {};
+	set<ptt> active_points;
 
-	double answer {distance_between_points(points[0], points[1])};
+	double ans {distance_between_points(points[0], points[1])};
 
-	for (int i {}; i < points.size(); ++i) {
-		while (points[i].x - points[first_active_point].x > answer) {
-			active_points.erase({points[first_active_point].y, first_active_point});
+	for (int i {}; i < n; ++i) {
+		while (fp < i && points[i].x - points[fp].x >= ans) {
+			active_points.erase({points[fp].y, fp});
 
-			++first_active_point;
+			++fp;
 		}
 
-		pii search_point {points[i].y - answer, 0};
-		set<pii>::iterator it {active_points.lower_bound(search_point)};
+		auto it {active_points.lower_bound({points[i].y - ans, 0})};
 
-		while (it != active_points.end() && it->first <= points[i].y + answer) {
-			answer = min(answer, distance_between_points(points[i], points[it->second]));
-
+		while (it != active_points.end() && it->first < points[i].y + ans) {
+			ans = min(ans, distance_between_points(points[i], points[it->second]));
+			
 			++it;
 		}
 
 		active_points.insert({points[i].y, i});
 	}
 
-	return answer;
+	return ans;
 }
 ```
 
