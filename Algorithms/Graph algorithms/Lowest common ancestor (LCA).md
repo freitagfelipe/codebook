@@ -2,14 +2,14 @@
 > - Tem como objetivo dado uma árvore responder perguntas sobre o menor ancestral comum entre dois vértices $v$ e $u$.
 
 > [!note]- Complexidade
-> - Build: $O(n \log n)$
-> - Query: $O(\log n)$
+> - Build: $O((V + E) \log V)$
+> - Query: $O(\log V)$
 
 ```cpp
 // L is the ceil(log(n))
 int n, l, timer {};
 // MAXN is the largest possible number of nodes
-vector<int> g[MAXN], tin(MAXN), tout(MAXN);
+vector<int> g[MAXN], tin(MAXN, 0), tout(MAXN, 0);
 vector<vector<int>> up;
 
 void dfs(int u, int p) {

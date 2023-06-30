@@ -6,8 +6,7 @@
 
 ```cpp
 // MAXN is the largest possible number of nodes
-int color[MAXN];
-vector<int> g[MAXN];
+vector<int> g[MAXN], color(MAXN, -1);
 
 bool is_bipartite(int u, int c = 1) {
 	color[u] = c;
