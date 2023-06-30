@@ -36,8 +36,8 @@ int get_region(const vector<Point2D<T>> &points, const Point2D<T> &t, bool inclu
 }
 
 template <typename T>
-bool inside_polygon(const vector<Point2D<T>> &points, const Point2D<T> &t, bool include_collinear = false) {
-    if (points.size() < 3) {
+bool point_in_polygon(const vector<Point2D<T>> &points, const Point2D<T> &t, bool include_collinear = false) {
+    if (include_collinear && points.size() < 3) {
         return point_in_segment(points[0], points[1], t);
     }
 
