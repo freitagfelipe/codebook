@@ -11,17 +11,17 @@
 size_t lis(const vector<int> &v) {
 	vector<int> stacks;
 
-	for (int i {}; i < v.size(); ++i) {
-		vector<int>::iterator it {lower_bound(stacks.begin(), stacks.end(), v[i])};
+	for (int num : v) {
+		vector<int>::iterator it {lower_bound(stacks.begin(), stacks.end(), num)};
 
 		if (it == stacks.end()) {
-			stacks.push_back(v[i]);
+			stacks.push_back(num);
 		} else {
-			*it = v[i];
+			*it = num;
 		}
 	}
 
-	return v.size();
+	return stacks.size();
 }
 ```
 
@@ -59,7 +59,6 @@ vector<int> lis(const vector<int> &v) {
     int i {pos[int(stacks.size()) - 1]};
 
     while (i >= 0) {
-
         lis.push_back(v[i]);
 
         i = p[i];

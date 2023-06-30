@@ -5,11 +5,11 @@
 > - $O(nm)$
 
 ```cpp
-size_t lcs(const string &a, const string &b) {
-    vector<vector<int>> tab(a.size() + 1, vector<int>(b.size() + 1, 0));
+int lcs(const string &a, const string &b) {
+    vector<vector<int>> tab(a.size() + 1, vector<int>(b.size() + 1));
 
-    for (int i {}; i < a.size(); ++i) {
-        for (int j {}; j < b.size(); ++j) {
+    for (int i {}; i < (int) a.size(); ++i) {
+        for (int j {}; j < (int) b.size(); ++j) {
             if (a[i] != b[j]) {
                 tab[i + 1][j + 1] = max(tab[i + 1][j], tab[i][j + 1]);
             } else {
@@ -27,10 +27,10 @@ size_t lcs(const string &a, const string &b) {
 
 ```cpp
 string lcs(const string &a, const string &b) {
-	vector<vector<int>> tab(a.size() + 1, vector<int>(b.size() + 1, 0));
+	vector<vector<int>> tab(a.size() + 1, vector<int>(b.size() + 1));
 
-    for (int i {}; i < a.size(); ++i) {
-        for (int j {}; j < b.size(); ++j) {
+    for (int i {}; i < (int) a.size(); ++i) {
+        for (int j {}; j < (int) b.size(); ++j) {
             if (a[i] != b[j]) {
                 tab[i + 1][j + 1] = max(tab[i + 1][j], tab[i][j + 1]);
             } else {

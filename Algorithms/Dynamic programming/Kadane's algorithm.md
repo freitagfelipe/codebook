@@ -22,7 +22,7 @@ int kadane(const vector<int> &v) {
 > O algoritmo de Kadane pode ser adaptado para encontrar o início e o fim da sequência como mostrado logo abaixo.
 
 > [!note]- Complexidade
-> $O(n)$
+> - $O(n)$
 
 ```cpp
 typedef pair<int, int> pii;
