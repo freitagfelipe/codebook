@@ -42,11 +42,9 @@ vector<int> get_center() {
 
 	vector<int> path;
 
-	while (x != y) {
-        path.push_back(y);
-
-        y = parent[y];
-    }
+	for (; x != y; y = parent[y]) {
+		path.push_back(y);
+	}
 
     path.push_back(x);
 

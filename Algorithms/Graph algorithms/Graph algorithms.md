@@ -9,6 +9,7 @@
 > - [[Dijkstra]]
 > - [[Find articulation points]]
 > - [[Find bridges]]
+> - [[Find cycle]]
 > - [[Floyd-Warshall]]
 > - [[Ford-Fulkerson NOT FINISHED YET]]
 > - [[Is graph bipartite]]
