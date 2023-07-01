@@ -46,9 +46,29 @@ flexGrow=1
 	- [x] Segment tree with lazy propagation
 	- [x] Sparse table
 	- [x] Union-find
+	- [x] Union-find with rollback
 
 ```
 
+```col-md
+flexGrow=1
+===
+
+- # Dynamic programming
+	- [ ] Coin change
+	- [x] Kadane's algorithm
+	- [x] Knapsack
+	- [x] Levenshtein distance
+	- [x] Longest common subsequence (LCS)
+	- [x] Longest increasing subsequence (LIS)
+	- [x] Subset sum
+
+```
+````
+
+---
+
+````col
 ```col-md
 flexGrow=1
 ===
@@ -66,11 +86,7 @@ flexGrow=1
 	- [x] Triangle area
 
 ```
-````
 
----
-
-````col
 ```col-md
 flexGrow=1
 ===
@@ -86,6 +102,7 @@ flexGrow=1
 	- [x] Dijkstra
 	- [x] Find articulation points
 	- [x] Find bridges
+	- [x] Find cycle
 	- [x] Floyd-Warshall
 	- [ ] Ford-Fulkerson
 	- [x] Is graph bipartite
@@ -98,15 +115,6 @@ flexGrow=1
 	- [x] Tree diameter
 
 ```
-
-```col-md
-flexGrow=1
-===
-
-- # Numerical methods
-	- [x] Bisection method
-
-```
 ````
 
 ---
@@ -116,20 +124,29 @@ flexGrow=1
 flexGrow=1
 ===
 
-- # Técnicas de programação
-	- [x] Binary search
-	- [x] Kadane's algorithm
-	- [x] Knapsack
-	- [x] Levenshtein distance
-	- [x] Longest common subsequence (LCS)
-	- [x] Longest increasing subsequence (LIS)
-	- [x] Prefix sum array
-	- [ ] Prefix sum array 2D
-	- [x] Subset sum
-	- [x] Tree pointers
-	- [x] Two pointers
+- # Numerical methods
+	- [x] Bisection method
+
 ```
 
+```col-md
+flexGrow=1
+===
+
+- # Programming techniques
+	- [x] Binary search
+	- [x] Inversions count
+	- [x] Prefix sum array
+	- [ ] Prefix sum array 2D
+	- [x] Tree pointers
+	- [x] Two pointers
+
+```
+````
+
+---
+
+````col
 ```col-md
 flexGrow=1
 ===
@@ -139,17 +156,18 @@ flexGrow=1
 	- [x] Quick sort
 
 ```
-````
 
----
-
-````col
 ```col-md
 flexGrow=1
 ===
 
 - # String
+	- [x] Hashing
+	- [x] KMP
+	- [x] Manacher
+	- [ ] Palindromic tree
 	- [x] Trie
+
 ```
 ````
 
