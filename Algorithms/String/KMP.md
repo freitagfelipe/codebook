@@ -27,6 +27,9 @@ vector<int> kmp(const string &s) {
 > [!hint] Calcular matches de um padrão em um texto
 > - Verificar em quais posições ocorrem o match do padrão $s$ no texto $t$. Além dessa implementação também seria possível adaptar a função de prefixo passando a string $s + \# + t$ e em todo momento que $pi[i] = |s|$ nós encontramos um match.
 
+> [!note]- Complexidade
+> - $O(|s| + |t|)$
+
 ```cpp
 vector<int> ocurrences(const string &s, const string &t) {
 	vector<int> pi {kmp(s + "#")}, matches;
@@ -51,6 +54,9 @@ vector<int> ocurrences(const string &s, const string &t) {
 
 > [!hint] Contando aparições de prefixos
 > - Dado uma string $s$ de tamanho $n$ o problema é contar quantas vezes o prefixo $s[0..i]$ aparece na string $s$.
+
+> [!note]- Complexidade
+> - $O(n)$
 
 ```cpp
 vector<int> count_prefixes(const string &s) {
@@ -78,6 +84,9 @@ vector<int> count_prefixes(const string &s) {
 > [!hint] Comprimindo strings
 > - Dado uma string $s$ queremos encontrar uma string $t$ de tamanho mínimo tal que $s$ possa ser representada por uma concatenação de uma ou mais cópias de $t$.
 
+> [!note]- Complexidade
+> - $O(n)$
+
 ```cpp
 string compress(const string &s) {
 	int n {(int) s.size()};
@@ -95,6 +104,9 @@ string compress(const string &s) {
 
 > [!hint] Autômato de KMP
 > - Utilizando o autômato conseguimos descobrir os próximos valores de $j$ em tempo constante e resolver alguns problemas que não seriam possíveis sem ele.
+
+> [!note]- Complexidade
+> - $O(K \cdot n)$
 
 ```cpp
 #define K 26
