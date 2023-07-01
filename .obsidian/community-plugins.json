@@ -1,9 +1,9 @@
 [
-  "obsidian-discordrpc",
   "cm-editor-syntax-highlight-obsidian",
   "obsidian-emoji-toolbar",
   "obsidian-columns",
   "url-into-selection",
   "templater-obsidian",
-  "obsidian-admonition"
+  "obsidian-admonition",
+  "obsidian-discordrpc"
 ]
