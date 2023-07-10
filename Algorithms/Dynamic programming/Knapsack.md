@@ -54,10 +54,10 @@ int knapsack() {
     }
 
     for (int i {1}; i <= n; ++i) {
-        for (int j {s}; j >= 0; --j) {
-            if (w[i] <= j) {
-                DP[j] = max(DP[j], DP[j - w[i]] + v[i]);
-            }
+        auto [pi, wi] = make_pair(v[i], w[i]);
+
+        for (int j {s}; j >= wi; --j) {
+            DP[j] = max(DP[j], DP[j - wi] + pi);
         }
     }
 
