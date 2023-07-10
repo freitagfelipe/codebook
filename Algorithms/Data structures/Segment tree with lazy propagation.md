@@ -6,26 +6,23 @@
 > - Update: $O(\log n)$
 > - Query: $O(\log n)$
 
-`````ad-example
-title: Segment tree with lazy propagation para fazer $Q$ operações de somar $x$ em cada valor de um intervalo $[L, R]$ ou responder qual a soma de um intervalo $[L, R]$.
-
 ```cpp
-template <typename T>
+template <typename T, typename U>
 class SegmentTree {
 public:
-    void build(int n, int *v) {
-        this->n = n;
+	void build(int n, U *v) {
+		this->n = n;
 
-        this->arr.resize(n + 1);
-        this->tree.resize(4 * n);
+		this->arr.resize(n + 1);
+		this->tree.resize(n * 4);
 
-        this->build(v, 1, 1, n);
-    }
+		this->build(v, 1, 1, n);
+	}
 
 	// l and r has to be on the interval [1..N]
-    void update(int l, int r, T v) {
-        this->update(1, 1, this->n, l, r, v);
-    }
+	void update(int l, int r, U v) {
+		this->update(1, 1, this->n, l, r, v);
+	}
 
 	// Accept queries on the interval [1..N]
     T query(int l, int r) {
@@ -33,32 +30,33 @@ public:
     }
 
 private:
-    struct Node {
-        T sum;
-        T lazy;
+	struct Node {
+		T lazy;
+		// Node variables and constructor initialization
 
-        Node(T s = 0) {
-            this->sum = s;
-            this->lazy = 0;
+		void add_lazy(T v) {
+			// Lazy aggregation logic
+		}
+
+		T apply_lazy() {
+			// Lazy application logic and reset
+		}
+
+		Node operator+(const Node &o) {
+            // Node merge logic
         }
+	};
 
-        Node operator+(const Node &other) {
-            return Node(this->sum + other.sum);
-        }
-    };
-
-    int n;
-    vector<T> arr;
-    vector<Node> tree;
+	int n;
+	vector<U> arr;
+	vector<Node> tree;
 
 	// l has to be on the interval [1..N]
 	// Because of that we need to do l - 1
 	// To match the interval of v that goes from [0..N - 1]
-    void build(int *v, int node, int l, int r) {
+	void build(int *v, int node, int l, int r) {
         if (l == r) {
-            this->arr[l] = v[l - 1];
-
-            this->tree[node].sum = v[l - 1];
+            // Build tree and arr logic
 
             return;
         }
@@ -71,22 +69,20 @@ private:
         this->tree[node] = this->tree[node * 2] + this->tree[node * 2 + 1];
     }
 
-    void lazy_propagation(int node, int l, int r) {
+	void lazy_propagation(int node, int l, int r) {
         if (this->tree[node].lazy == 0) {
             return;
         }
 
-        this->tree[node].sum += (r - l + 1) * this->tree[node].lazy;
+		T lazy {this->tree[node].apply_lazy()};
 
         if (l < r) {
-            this->tree[node * 2].lazy += this->tree[node].lazy;
-            this->tree[node * 2 + 1].lazy += this->tree[node].lazy;
+	        this->tree[node * 2].add_lazy(lazy);
+	        this->tree[node * 2 + 1].add_lazy(lazy);
         }
-
-        this->tree[node].lazy = 0;
     }
 
-    void update(int node, int l, int r, int p, int q, T v) {
+	void update(int node, int l, int r, int p, int q, T v) {
         this->lazy_propagation(node, l, r);
 
         if (q < l || r < p) {
@@ -94,7 +90,7 @@ private:
         }
 
         if (p <= l && r <= q) {
-            this->tree[node].lazy += v;
+	        this->tree[node].add_lazy(v);
 
             this->lazy_propagation(node, l, r);
 
@@ -109,7 +105,7 @@ private:
         this->tree[node] = this->tree[node * 2] + this->tree[node * 2 + 1];
     }
 
-    Node query(int node, int l, int r, int p, int q) {
+	Node query(int node, int l, int r, int p, int q) {
         if (q < l || r < p) {
             return Node();
         }
@@ -126,6 +122,5 @@ private:
     }
 };
 ```
-`````
 
 ---
