@@ -62,7 +62,7 @@ string lcs(const string &a, const string &b) {
 ```
 
 > [!hint] Encontrar a LCS utilizando uma LIS
-> - Caso umda das sequências tenha apenas elementos distintos a LCS pode ser calculada por meio de uma [[Longest increasing subsequence (LIS)]] como mostrado abaixo.
+> - Caso uma das sequências tenha apenas elementos distintos a LCS pode ser calculada por meio de uma [[Longest increasing subsequence (LIS)]] como mostrado abaixo.
 
 ````ad-example
 title: Exemplo com a questão [Não é só mais um LCS](https://neps.academy/br/exercise/301).
