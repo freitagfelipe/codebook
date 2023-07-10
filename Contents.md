@@ -55,7 +55,7 @@ flexGrow=1
 ===
 
 - # Dynamic programming
-	- [ ] Coin change
+	- [x] Coin change
 	- [x] Kadane's algorithm
 	- [x] Knapsack
 	- [x] Levenshtein distance
@@ -100,6 +100,7 @@ flexGrow=1
 	- [x] Depth-first search (DFS)
 	- [x] Depth-first search grid (DFS-grid)
 	- [x] Dijkstra
+	- [ ] Eulerian path
 	- [x] Find articulation points
 	- [x] Find bridges
 	- [x] Find cycle
@@ -161,7 +162,7 @@ flexGrow=1
 flexGrow=1
 ===
 
-- # String
+- # String algorithms
 	- [x] Hashing
 	- [x] KMP
 	- [x] Manacher
