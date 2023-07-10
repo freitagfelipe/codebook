@@ -1,5 +1,5 @@
 > [!summary] 
-> - [[Coin change NOT FINISHED YET]]
+> - [[Coin change]]
 > - [[Kadane's algorithm]]
 > - [[Knapsack]]
 > - [[Levenshtein distance]]
