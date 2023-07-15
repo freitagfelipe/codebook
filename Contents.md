@@ -39,7 +39,7 @@ flexGrow=1
 	- [x] Binary heap
 	- [x] Binary search tree
 	- [x] Fenwick tree (BIT)
-	- [ ] Fenwick tree (BIT) 2D
+	- [x] Fenwick tree (BIT) 2D
 	- [ ] Red-black tree
 	- [x] Segment tree
 	- [ ] Segment tree 2D
