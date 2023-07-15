@@ -7,6 +7,9 @@
 > - Query: $O(\log n)$
 
 ```cpp
+#define L(x) (x << 1)
+#define R(x) (L(x) | 1)
+
 // T is the type that the Node will store
 // U is the type that the array will store
 template <typename T, typename U>
@@ -28,11 +31,14 @@ public:
 
 	// Accept queries on the interval [1..N]
     T query(int l, int r) {
-        return this->query(1, 1, this->n, l, r).minv;
+	    // Return the property in the node that is the answer
     }
+
 private:
     struct Node {
-		// Node variables and constructor initialization
+		// Node variables
+
+		Node() = default;
 
         Node operator+(const Node &o) {
             // Node merge logic
@@ -55,10 +61,10 @@ private:
 
         int mid {(l + r) / 2};
 
-        this->build(v, node * 2, l, mid);
-        this->build(v, node * 2 + 1, mid + 1, r);
+        this->build(v, L(node), l, mid);
+        this->build(v, R(node), mid + 1, r);
 
-        this->tree[node] = this->tree[node * 2] + this->tree[node * 2 + 1];
+        this->tree[node] = this->tree[L(node)] + this->tree[R(node)];
     }
 
     void update(int node, int l, int r, int target_node, U v) {
@@ -71,24 +77,30 @@ private:
         int mid {(l + r) / 2};
 
         if (target_node <= mid) {
-            this->update(node * 2, l, mid, target_node, v);
+            this->update(L(node), l, mid, target_node, v);
         } else {
-            this->update(node * 2 + 1, mid + 1, r, target_node, v);
+            this->update(R(node), mid + 1, r, target_node, v);
         }
 
-        this->tree[node] = this->tree[node * 2] + this->tree[node * 2 + 1];
+        this->tree[node] = this->tree[L(node)] + this->tree[R(node)];
     }
 
     Node query(int node, int l, int r, int l_target, int r_target) {
-        if (r_target < l || r < l_target) {
-            return Node();
-        } else if (l_target <= l && r <= r_target) {
-            return this->tree[node];
-        }
+		if (l == l_target && r == r_target) {
+			return this->tree[node];
+		}
 
-        int mid {(l + r) / 2};
+		int mid {(l + r) / 2};
 
-        return this->query(node * 2, l, mid, l_target, r_target) + this->query(node * 2 + 1, mid + 1, r, l_target, r_target);
+		if (r_target <= mid) {
+			return this->query(L(node), l, mid, l_target, r_target);
+		}
+
+		if (l_target > mid) {
+			return this->query(R(node), mid + 1, r, l_target, r_target);
+		}
+
+        return this->query(L(node), l, mid, l_target, mid) + this->query(R(node), mid + 1, r, mid + 1, r_target);
     }
 };
 ```

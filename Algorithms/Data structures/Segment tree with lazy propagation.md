@@ -7,6 +7,11 @@
 > - Query: $O(\log n)$
 
 ```cpp
+#define L(x) (x << 1)
+#define R(x) (L(x) | 1)
+
+// T is the type that the Node will store
+// U is the type that the array will store
 template <typename T, typename U>
 class SegmentTree {
 public:
@@ -26,7 +31,7 @@ public:
 
 	// Accept queries on the interval [1..N]
     T query(int l, int r) {
-        return this->query(1, 1, this->n, l, r).sum;
+	    // Return the property in the Node that is the answer
     }
 
 private:
@@ -63,10 +68,10 @@ private:
 
         int mid {(l + r) / 2};
 
-        this->build(v, node * 2, l, mid);
-        this->build(v, node * 2 + 1, mid + 1, r);
+        this->build(v, L(node), l, mid);
+        this->build(v, R(node), mid + 1, r);
 
-        this->tree[node] = this->tree[node * 2] + this->tree[node * 2 + 1];
+        this->tree[node] = this->tree[L(node)] + this->tree[R(node)];
     }
 
 	void lazy_propagation(int node, int l, int r) {
@@ -77,8 +82,8 @@ private:
 		T lazy {this->tree[node].apply_lazy()};
 
         if (l < r) {
-	        this->tree[node * 2].add_lazy(lazy);
-	        this->tree[node * 2 + 1].add_lazy(lazy);
+	        this->tree[L(node)].add_lazy(lazy);
+	        this->tree[R(node)].add_lazy(lazy);
         }
     }
 
@@ -99,26 +104,30 @@ private:
 
         int mid {(l + r) / 2};
 
-        this->update(node * 2, l, mid, p, q, v);
-        this->update(node * 2 + 1, mid + 1, r, p, q, v);
+        this->update(L(node), l, mid, p, q, v);
+        this->update(R(node), mid + 1, r, p, q, v);
 
-        this->tree[node] = this->tree[node * 2] + this->tree[node * 2 + 1];
+        this->tree[node] = this->tree[L(node)] + this->tree[R(node)];
     }
 
-	Node query(int node, int l, int r, int p, int q) {
-        if (q < l || r < p) {
-            return Node();
-        }
-
+	Node query(int node, int l, int r, int l_target, int r_target) {
         this->lazy_propagation(node, l, r);
-        
-        if (p <= l && r <= q) {
-            return tree[node];
-        }
+
+		if (l == l_target && r == r_target) {
+			return this->tree[node];
+		}
 
         int mid {(l + r) / 2};
+    
+		if (r_target <= mid) {
+			return this->query(L(node), l, mid, l_target, r_target);
+		}
 
-        return this->query(node * 2, l, mid, p, q) + this->query(node * 2 + 1, mid + 1, r, p, q);
+		if (l_target > mid) {
+			return this->query(R(node), mid + 1, r, l_target, r_target);
+		}
+
+        return this->query(L(node), l, mid, l_target, mid) + this->query(R(node), mid + 1, r, mid + 1, r_target);
     }
 };
 ```
