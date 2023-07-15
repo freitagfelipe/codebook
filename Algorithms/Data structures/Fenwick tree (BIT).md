@@ -17,7 +17,7 @@ int query(int idx) {
 }
 
 int range_query(int l, int r) {
-	return query(r) - query(l - 1);
+	// Do the query for r and remove the excess with the query for l - 1
 }
 
 void update(int idx, int k) {
