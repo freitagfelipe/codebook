@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8a084d23a5ee5ea7",
+        "id": "f55d75f4252c7aaa",
         "type": "tabs",
         "children": [
           {
-            "id": "26aee64b9601a458",
+            "id": "ca2b116b3b46a455",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -89,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Contents.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Contents.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Contents.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -151,37 +147,37 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "41e1ec0b5b78ddb9",
+  "active": "ca2b116b3b46a455",
   "lastOpenFiles": [
-    "README.md",
-    "Algorithms/String/Manacher.md",
-    "Algorithms/String/KMP.md",
-    "Algorithms/Graph algorithms/Is graph bipartite.md",
-    "Algorithms/Graph algorithms/Kahn's algorithm.md",
-    "Algorithms/Data structures/Union-find.md",
-    "Algorithms/Graph algorithms/Kruskal's algorithm.md",
-    "Algorithms/Graph algorithms/Lowest common ancestor (LCA).md",
-    "Algorithms/Graph algorithms/Floyd-Warshall.md",
-    "Algorithms/Graph algorithms/Bellman-Ford.md",
-    "Algorithms/Graph algorithms/Find cycle.md",
+    "Algorithms/Geometry algorithms/Monotone chain.md",
     "Contents.md",
-    "Algorithms/Graph algorithms/Kosaraju's algorithm.md",
-    "Algorithms/Graph algorithms/Find bridges.md",
-    "Algorithms/Graph algorithms/Find articulation points.md",
+    "README.md",
+    "Algorithms/Data structures/Data structures.md",
+    "Algorithms/Data structures/Fenwick tree (BIT) 2D.md",
+    "Algorithms/Data structures/Fenwick tree (BIT).md",
     "Algorithms/Graph algorithms/Dijkstra.md",
-    "Algorithms/Graph algorithms/Depth-first search grid (DFS-Grid).md",
-    "Algorithms/Graph algorithms/Depth-first search (DFS).md",
-    "Algorithms/Graph algorithms/Connected components.md",
-    "Algorithms/Graph algorithms/Breadth-first search grid (BFS-Grid).md",
-    "Algorithms/Graph algorithms/Breadth-first search (BFS).md",
-    "Algorithms/Graph algorithms/Tree center.md",
-    "Algorithms/Graph algorithms/Graph algorithms.md",
+    "Algorithms/Algebra algorithms/Find divisors.md",
+    "Algorithms/Data structures/Segment tree.md",
+    "Algorithms/Data structures/Segment tree with lazy propagation.md",
+    "Algorithms/Geometry algorithms/Pick's theorem.md",
+    "Algorithms/Geometry algorithms/Point in polygon.md",
+    "Algorithms/Data structures/Segment tree 2D NOT FINISHED YET.md",
     "Algorithms/Programming techniques/Inversions count.md",
-    "Algorithms/Dynamic programming/Longest increasing subsequence (LIS).md",
     "Algorithms/Dynamic programming/Longest common subsequence (LCS).md",
+    "Algorithms/Geometry algorithms/Line sweep.md",
+    "Algorithms/Numerical methods/Bisection method.md",
+    "Algorithms/Programming techniques/Binary search.md",
+    "Algorithms/Data structures/Binary heap.md",
+    "Algorithms/Data structures/Binary search tree (BST).md",
+    "Algorithms/Data structures/Red-black tree NOT FINISHED YET.md",
+    "Algorithms/Data structures/Sparse table.md",
+    "Algorithms/Dynamic programming/Knapsack.md",
+    "Algorithms/Dynamic programming/Coin change.md",
+    "Algorithms/Programming techniques/Programming techniques.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Norm.md",
     "Algorithms/Dynamic programming",
     "Untitled",
-    "Algorithms/String",
+    "Algorithms/String algorithms",
     "Algorithms/Utils/Bits utils",
     "Algorithms/Utils/Geometry utils/Point3D",
     "Algorithms/Utils/Geometry utils/Point2D",
