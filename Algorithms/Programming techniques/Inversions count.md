@@ -1,5 +1,5 @@
 > [!note] Objetivo
-> - Tem como objetivo determinar o número de pares $(i, j)$, com $i < j$, de uma sequência, tal que $a_i < a_j$. O algoritmo irá usar uma adaptação do [[Merge sort]].
+> - Tem como objetivo determinar o número de pares $(i, j)$, com $i < j$, de uma sequência, tal que $a_i > a_j$. O algoritmo irá usar uma adaptação do [[Merge sort]].
 
 > [!note]- Complexidade
 > - $O(n \log n)$
