@@ -44,10 +44,10 @@ private:
 		}
 
 		T apply_lazy() {
-			// Lazy application logic and reset
+			// Lazy application logic and reset the lazyness
 		}
 
-		Node operator+(const Node &o) {
+		Node operator+(const Node &o) const {
             // Node merge logic
         }
 	};
@@ -87,14 +87,14 @@ private:
         }
     }
 
-	void update(int node, int l, int r, int p, int q, T v) {
+	void update(int node, int l, int r, int l_target, int r_target, T v) {
         this->lazy_propagation(node, l, r);
 
-        if (q < l || r < p) {
+        if (r_target < l || r < l_target) {
             return;
         }
 
-        if (p <= l && r <= q) {
+        if (l_target <= l && r <= r_target) {
 	        this->tree[node].add_lazy(v);
 
             this->lazy_propagation(node, l, r);
@@ -104,8 +104,8 @@ private:
 
         int mid {(l + r) / 2};
 
-        this->update(L(node), l, mid, p, q, v);
-        this->update(R(node), mid + 1, r, p, q, v);
+        this->update(L(node), l, mid, l_target, r_target, v);
+        this->update(R(node), mid + 1, r, l_target, r_target, v);
 
         this->tree[node] = this->tree[L(node)] + this->tree[R(node)];
     }
