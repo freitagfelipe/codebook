@@ -40,9 +40,9 @@ flexGrow=1
 	- [x] Binary search tree
 	- [x] Fenwick tree (BIT)
 	- [x] Fenwick tree (BIT) 2D
-	- [ ] Red-black tree
+	- [x] Red-black tree
 	- [x] Segment tree
-	- [ ] Segment tree 2D
+	- [x] Segment tree 2D
 	- [x] Segment tree with lazy propagation
 	- [x] Sparse table
 	- [x] Union-find
@@ -56,6 +56,7 @@ flexGrow=1
 
 - # Dynamic programming
 	- [x] Coin change
+	- [x] Digit DP
 	- [x] Kadane's algorithm
 	- [x] Knapsack
 	- [x] Levenshtein distance
@@ -75,10 +76,9 @@ flexGrow=1
 
 - # Geometry algorithms
 	- [x] Area of a simple polygon - Shoelace
-	- [ ] D&C - nearest pair of points
 	- [x] Graham's scan
 	- [x] Line sweep
-	- [x] Line sweep - nearest pair of points
+	- [x] Nearest pair of points
 	- [x] Monotone chain
 	- [x] Pick's theorem
 	- [x] Point in polygon
@@ -136,9 +136,10 @@ flexGrow=1
 
 - # Programming techniques
 	- [x] Binary search
+	- [x] Coordinate compression
 	- [x] Inversions count
 	- [x] Prefix sum array
-	- [ ] Prefix sum array 2D
+	- [x] Prefix sum matrix
 	- [x] Tree pointers
 	- [x] Two pointers
 

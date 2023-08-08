@@ -2,7 +2,7 @@
 > - [[Binary search]]
 > - [[Inversions count]]
 > - [[Prefix sum array]]
-> - [[Prefix sum array 2D NOT FINISHED YET]]
+> - [[Prefix sum matrix]]
 > - [[Two pointers]]
 > - [[Tree pointers]]
 

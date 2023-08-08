@@ -1,5 +1,6 @@
 > [!summary] 
 > - [[Coin change]]
+> - [[Digit DP]]
 > - [[Kadane's algorithm]]
 > - [[Knapsack]]
 > - [[Levenshtein distance]]
