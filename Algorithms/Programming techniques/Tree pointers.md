@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - A técnica de três ponteiros pode ser usada de várias maneiras, mas sua utilização sempre consiste em usar três ponteiros para apontar para lugares de um vetor. Por se tratar de uma técnica é necessário adaptá-la de acordo com as necessidades.
+> - A técnica de três ponteiros pode ser usada de várias maneiras, mas sua utilização sempre consiste em usar três ponteiros para apontar para lugares de um vetor. Por se tratar de uma técnica é necessário adaptá-la de acordo com as necessidades. Uma adaptação pode ser vista logo abaixo.
 
 `````ad-example
 title: Exemplo com a questão [Soma](https://neps.academy/br/exercise/468) da OBI 2019 - primeira fase.
