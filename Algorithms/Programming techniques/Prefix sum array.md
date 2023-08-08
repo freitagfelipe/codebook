@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - A técnica de soma de prefixo é uma técnica que pode ser adaptada de várias maneiras.
+> - A técnica de soma de prefixo é uma técnica que pode ser adaptada de várias maneiras algumas adaptações estão mostradas logo abaixo.
 
 ````ad-example
 title: Dado um vetor responder várias perguntas sobre qual é a soma do intervalo $[L, R]$.
