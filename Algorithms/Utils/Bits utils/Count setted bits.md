@@ -1,16 +1,20 @@
 > [!info] Objetivo
-> - Contar quantos bits ligados o número $n$ possui.
+> - Contar quantos bits ligados o número $n$ possui usando [[Least Significant Bit (LSB)]].
 
 > [!note]- Complexidade
 > - $O(\log n)$
 
 ```cpp
 int count_setted_bits(int n) {
-    if (n == 0) {
-        return 0;
-    }
+	int ans {};
 
-    return (n & 1) + count_setted_bits(n >> 1);
+	while (n != 0) {
+		++ans;
+
+		n -= n & -n;
+	}
+
+    return ans;
 }
 ```
 
