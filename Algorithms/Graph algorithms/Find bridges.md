@@ -38,7 +38,7 @@ void dfs(int u, int p = -1) {
 
             low[u] = min(low[u], low[to]);
 
-            if (low[to] > tin[to]) {
+            if (low[to] > tin[u]) {
                 bridges.emplace_back(u, to);
             }
         }
