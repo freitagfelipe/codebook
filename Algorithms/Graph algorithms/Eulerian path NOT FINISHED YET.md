@@ -7,7 +7,7 @@
 > 	- Eulerian path: exatamente dois vértices possuem grau ímpar.
 > - Grafos direcionados:
 > 	- Eulerian cycle: todos os vértices possuem um grau de entrada e de saída par.
-> 	- Eulerian path: no máximo um vértice possui $out\_degree - in_degree = 1$ e no máximo um vértice possui $in\_degree - out\_degree = 1$ e todos os outros vértices possuem possuem grau de entrada igual ao grau de saída.
+> 	- Eulerian path: no máximo um vértice possui $out\_degree - in\_degree = 1$ e no máximo um vértice possui $in\_degree - out\_degree = 1$ e todos os outros vértices possuem possuem grau de entrada igual ao grau de saída.
 > - Independente de sobre qual grafo estamos falando é necessário que todos os vértices com um grau diferente de zero estejam na mesma componente.
 
 > [!note]- Complexidade
