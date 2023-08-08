@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - A técnica de dois ponteiros pode ser usada de algumas maneiras por se tratar de uma técnica, mas sua utilização sempre consiste em usar dois ponteiros para apontar para lugares de um vetor.
+> - A técnica de dois ponteiros pode ser usada de algumas maneiras por se tratar de uma técnica, mas sua utilização sempre consiste em usar dois ponteiros para apontar para lugares de um vetor. Algumas adaptações podem ser vistas logo abaixo.
 
 `````ad-example
 title: Exemplo com a questão [Soma das casas](https://neps.academy/br/exercise/524) da OBI 2012 - segunda fase.
