@@ -2,7 +2,7 @@
 > - Dado um conjunto de moedas ilimitadas dizer se um troco qualquer pode ser feito ou não.
 
 > [!note]- Complexidade
-> - $O(xn)$
+> - $O(kn)$
 
 ```cpp
 // MAXK is the maximum value that the change can have
