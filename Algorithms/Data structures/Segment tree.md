@@ -40,7 +40,7 @@ private:
 
 		Node() = default;
 
-        Node operator+(const Node &o) {
+        Node operator+(const Node &o) const {
             // Node merge logic
         }
     };
@@ -67,7 +67,7 @@ private:
         this->tree[node] = this->tree[L(node)] + this->tree[R(node)];
     }
 
-    void update(int node, int l, int r, int target_node, U v) {
+    void update(int node, int l, int r, int target, U v) {
         if (l == r) {
             // Update tree and arr logic
 
@@ -76,10 +76,10 @@ private:
 
         int mid {(l + r) / 2};
 
-        if (target_node <= mid) {
-            this->update(L(node), l, mid, target_node, v);
+        if (target <= mid) {
+            this->update(L(node), l, mid, target, v);
         } else {
-            this->update(R(node), mid + 1, r, target_node, v);
+            this->update(R(node), mid + 1, r, target, v);
         }
 
         this->tree[node] = this->tree[L(node)] + this->tree[R(node)];
