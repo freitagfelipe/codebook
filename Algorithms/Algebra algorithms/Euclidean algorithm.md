@@ -2,15 +2,15 @@
 > - Dados dois números $a, b$ encontrar o máximo divisor comum (mdc).
 
 > [!note]- Complexidade
-> - $O(\log a + \log b)$ 
+> - $O(\log min(a, b))$ 
 
 ```cpp
 int gcd(int a, int b) {
-    if (a == 0) {
-       return b; 
+    if (b == 0) {
+       return a; 
     }
 
-    return gcd(b % a, a);
+    return gcd(b, a % b);
 }
 ```
 
