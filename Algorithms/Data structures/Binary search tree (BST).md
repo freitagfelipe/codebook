@@ -19,47 +19,47 @@ public:
         this->free(this->root);
     }
 
-    bool search(T v) {
+    bool search(const T &v) const {
         return this->search(this->root, v);
     }
 
-    void insert(T v) {
+    void insert(const T &v) {
         this->insert(this->root, v);
     }
 
-    void remove(T v) {
+    void remove(const T &v) {
         this->remove(this->root, v);
     }
 
-    T minimun_key() {
+    T minimum_key() const {
         if (this->root == nullptr) {
-            std::runtime_error("bst size == 0");
+            std::runtime_error("BST size == 0");
         }
 
-        return this->minimun_key(this->root);
+        return this->minimum_key(this->root);
     }
 
-    T maximun_key() {
+    T maximum_key() const {
         if (this->root == nullptr) {
-            std::runtime_error("bst size == 0");
+            std::runtime_error("BST size == 0");
         }
 
-        return this->maximun_key(this->root);
+        return this->maximum_key(this->root);
     }
 
-    void print_inorder() {
+    void print_inorder() const {
         this->print_inorder(this->root);
     }
 
-    void print_preorder() {
+    void print_preorder() const {
         this->print_preorder(this->root);
     }
 
-    void print_postorder() {
+    void print_postorder() const {
         this->print_postorder(this->root);
     }
 
-    bool empty() {
+    bool empty() const {
         return this->root == nullptr;
     }
 
@@ -78,7 +78,7 @@ private:
 
     Node *root;
 
-    bool search(Node *node, T v) {
+    bool search(const Node *node, const T &v) const {
         if (node == nullptr) {
             return false;
         } else if (node->key == v) {
@@ -92,7 +92,7 @@ private:
         return this->search(node->right, v);
     }
 
-    void insert(Node *&node, T v) {
+    void insert(Node *&node, const T &v) {
         if (node == nullptr) {
             node = new Node(v);
         }
@@ -104,7 +104,7 @@ private:
         }
     }
 
-    void remove(BST::Node *&node, T v) {
+    void remove(Node *&node, const T &v) {
         if (node == nullptr) {
             return;
         }
@@ -116,7 +116,7 @@ private:
                 return;
             }
 
-            node->key = this->minimun_key(node->right);
+            node->key = this->minimum_key(node->right);
 
             this->remove(node->right, node->key);
 
@@ -130,23 +130,23 @@ private:
         }
     }
 
-    T minimun_key(Node *node) {
+    T minimum_key(const Node *node) const {
         if (node->left == nullptr) {
             return node->key;
         }
 
-        return this->minimun_key(node->left);
+        return this->minimum_key(node->left);
     }
 
-    T maximun_key(Node *node) {
+    T maximum_key(const Node *node) const {
         if (node->right == nullptr) {
             return node->key;
         }
 
-        return this->maximun_key(node->right);
+        return this->maximum_key(node->right);
     }
 
-    void print_inorder(Node *node) {
+    void print_inorder(const Node *node) const {
         if (node == nullptr) {
             return;
         }
@@ -158,7 +158,7 @@ private:
         this->print_inorder(node->right);
     }
 
-    void print_preorder(Node *node) {
+    void print_preorder(const Node *node) const {
         if (node == nullptr) {
             return;
         }
@@ -169,7 +169,7 @@ private:
         this->print_preorder(node->right);
     }
 
-    void print_postorder(Node *node) {
+    void print_postorder(const Node *node) const {
         if (node == nullptr) {
             return;
         }
