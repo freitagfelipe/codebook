@@ -9,22 +9,17 @@
 vector<int> g[MAXN], color(MAXN, -1);
 
 bool is_bipartite(int u, int c = 1) {
-	color[u] = c;
-	bool ans {true};
+    color[u] = c;
 
-	for (int to : g[u]) {
-		if (color[to] == -1) {
-			ans &= is_bipartite(to, 1 - c);
-		} else if (color[to] != 1 - c) {
-			return false;
-		}
+    for (int to : g[u]) {
+        if (color[to] == -1 && !is_bipartite(to, 1 - c)) {
+            return false;
+        } else if (color[to] == c) {
+            return false;
+        }
+    }
 
-		if (!ans) {
-			return false;
-		}
-	}
-
-	return true;
+    return true;
 }
 ```
 
