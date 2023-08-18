@@ -37,13 +37,15 @@ public:
 private:
 	struct Node {
 		T lazy;
-		// Node variables and constructor initialization
+		// Node variables
+
+		Node() = default;
 
 		void add_lazy(T v) {
 			// Lazy aggregation logic
 		}
 
-		T apply_lazy() {
+		T apply_lazy(int interval_size) {
 			// Lazy application logic and reset the lazyness
 		}
 
@@ -79,7 +81,7 @@ private:
             return;
         }
 
-		T lazy {this->tree[node].apply_lazy()};
+		T lazy {this->tree[node].apply_lazy(r - l + 1)};
 
         if (l < r) {
 	        this->tree[L(node)].add_lazy(lazy);
