@@ -27,7 +27,7 @@ void build() {
 }
 
 bool is_prime(int i) {
-	return is_prime[i];
+	return prime[i];
 }
 ```
 
