@@ -12,7 +12,7 @@ ll DP[MAXN][MAXSUM][2][2];
 // Remember that lower and upper must have the same number of digits
 // If they are different you need to put 0s in lower's left
 ll solver(int idx, ll sum, bool can_low, bool can_high, const string &lower, const string &upper) {
-	if (idx == upper.size()) {
+	if (idx == (int) upper.size()) {
 		return sum;
 	}
 
