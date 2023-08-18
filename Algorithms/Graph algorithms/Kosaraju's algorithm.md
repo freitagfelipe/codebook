@@ -56,6 +56,9 @@ int scc() {
 > [!hint] Montando o grafo condensado
 > - O código abaixo mostrará como montar o grafo condensado.
 
+> [!note]- Complexidade
+> - $O(n \log n)$
+
 ```cpp
 // MAXN is the largest possible number of nodes
 int n;
