@@ -7,7 +7,7 @@
 > - [[Depth-first search (DFS)]]
 > - [[Depth-first search grid (DFS-Grid)]]
 > - [[Dijkstra]]
-> - [[Eulerian path NOT FINISHED YET]]
+> - [[Eulerian path]]
 > - [[Find articulation points]]
 > - [[Find bridges]]
 > - [[Find cycle]]

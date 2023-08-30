@@ -100,7 +100,7 @@ flexGrow=1
 	- [x] Depth-first search (DFS)
 	- [x] Depth-first search grid (DFS-grid)
 	- [x] Dijkstra
-	- [ ] Eulerian path
+	- [x] Eulerian path
 	- [x] Find articulation points
 	- [x] Find bridges
 	- [x] Find cycle
@@ -138,6 +138,7 @@ flexGrow=1
 	- [x] Binary search
 	- [x] Coordinate compression
 	- [x] Inversions count
+	- [x] Next greater
 	- [x] Prefix sum array
 	- [x] Prefix sum matrix
 	- [x] Tree pointers
