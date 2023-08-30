@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Tem como objetivo dado uma árvore responder perguntas sobre o menor ancestral comum entre dois vértices $v$ e $u$.
+> - Tem como objetivo dado uma árvore responder perguntas sobre o menor ancestral comum entre dois vértices $v$ e $u$, mas pode ser adaptado para responder consultas de mínimo, máximo, soma das arestas, etc.
 
 > [!note]- Complexidade
 > - Build: $O((V + E) \log V)$
@@ -48,6 +48,25 @@ int lca(int u, int v) {
     }
 
     return up[u][0];
+}
+
+// This function will climb the vertex u until it reaches the vertex v
+int go(int u, int v) {
+    for (int i {l}; i >= 0; --i) {
+        if (tin[v] < up[u][l]) {
+            // answer some question based on a computation made
+            // in the build function
+            
+            u = up[u][l];
+        }
+    }
+}
+
+// You can use this function to answer queries of min, max, etc
+int query(int u, int v) {
+	int lca_ans {lca(u, v)};
+
+	// Return the ans based on something related with the go(u, lca_ans) and go(v, lca_ans)
 }
 
 void build(int root) {
