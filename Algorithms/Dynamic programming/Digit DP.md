@@ -2,11 +2,13 @@
 > - O objetivo da técnica Digit DP é otimizar o processamento de problemas que envolvem dígitos em números grandes, permitindo resolver tais problemas de forma eficiente através do armazenamento de estados intermediários. Abaixo está um exemplo para somar todos os dígitos de todos os números no intervalo $[L, R]$.
 
 > [!note]- Complexidade
-> - TODO
+> - $O(MAXN * MAXSUM)$
 
 ```cpp
 typedef long long ll;
 
+// MAXN is the max number of digits
+// MAXSUM is the max sum possible of the digits
 ll DP[MAXN][MAXSUM][2][2];
 
 // Remember that lower and upper must have the same number of digits
