@@ -53,8 +53,8 @@ int lca(int u, int v) {
 // This function will climb the vertex u until it reaches the vertex v
 int go(int u, int v) {
     for (int i {l}; i >= 0; --i) {
-        if (tin[v] < up[u][l]) {
-            // answer some question based on a computation made
+        if (tin[v] < up[u][i]) {
+            // Answer some question based on a computation made
             // in the build function
             
             u = up[u][l];
