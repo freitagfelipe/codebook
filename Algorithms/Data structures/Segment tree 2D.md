@@ -10,20 +10,25 @@
 #define R(x) (L(x) | 1)
 
 // T is the type that the Node will store
-// U is the type that the array will store
+// U is the type of the operations of update
 template <typename T, typename U>
 class SegmentTree2D {
 public:
-	// Pass the matrix with &mat[0][0]
-    void build(int n, int m, U *mat) {
+	SegmentTree2D(int n, int m) {
         this->n = n;
         this->m = m;
 
-		this->mat.assign(n + 1, vector<U>(m + 1));
-		this->tree.assign(n * 4, vector<Node>(4 * m));
+		this->tree.assign(n * 4, vector<Node>(m * 4));
+	}
+
+	SegmentTree2D(const vector<vector<U>> &mat) {
+        this->n = (int) mat.size();
+        this->m = (int) mat[0].size();
+
+		this->tree.assign(n * 4, vector<Node>(m * 4));
 
         this->build_x(mat, 1, 1, n);
-    }
+	}
 
 	// x and y has to be on the interval [1..N]
     void update(int x, int y, U v) {
@@ -48,7 +53,6 @@ private:
 
     int n;
     int m;
-    vector<vector<U>> mat;
     vector<vector<Node>> tree;
 
 	// lx and ly has to be on the interval [1..N]

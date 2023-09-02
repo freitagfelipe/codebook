@@ -11,14 +11,19 @@
 #define R(x) (L(x) | 1)
 
 // T is the type that the Node will store
-// U is the type that the array will store
+// U is the type of the operations of update
 template <typename T, typename U>
 class SegmentTree {
 public:
-	void build(int n, U *v) {
+	SegmentTree(int n) {
 		this->n = n;
+		
+		this->tree.resize(n * 4);
+	}
 
-		this->arr.resize(n + 1);
+	SegmentTree(const vector<U> &v) {
+		this->n = (int) v.size();
+
 		this->tree.resize(n * 4);
 
 		this->build(v, 1, 1, n);
@@ -55,13 +60,12 @@ private:
 	};
 
 	int n;
-	vector<U> arr;
 	vector<Node> tree;
 
 	// l has to be on the interval [1..N]
 	// Because of that we need to do l - 1
 	// To match the interval of v that goes from [0..N - 1]
-	void build(int *v, int node, int l, int r) {
+	void build(const vector<U> &v, int node, int l, int r) {
         if (l == r) {
             // Build tree and arr logic
 
