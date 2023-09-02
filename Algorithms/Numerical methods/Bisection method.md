@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Dado um intervalo $[L, R]$, se $f(l) \cdot f(r) < 0$ encontrar a raíz de $f$ que está no intervalo.
+> - Dado uma função $f(x)$ e um intervalo $[L, R]$, se $f(l) \cdot f(r) < 0$ e $f(x)$ é contínuo, tem como objetivo encontrar a raíz da função que está no intervalo.
 
 > [!note]- Complexidade
 > - $O(80 \cdot f(n))$
