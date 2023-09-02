@@ -3,6 +3,7 @@
 > - [[Binary search tree (BST)]]
 > - [[Fenwick tree (BIT)]]
 > - [[Fenwick tree (BIT) 2D]]
+> - [[Persistent segment tree]]
 > - [[Red-black tree]]
 > - [[Segment tree]]
 > - [[Segment tree 2D]]

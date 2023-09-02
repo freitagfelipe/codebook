@@ -40,6 +40,7 @@ flexGrow=1
 	- [x] Binary search tree
 	- [x] Fenwick tree (BIT)
 	- [x] Fenwick tree (BIT) 2D
+	- [x] Persistent segment tree
 	- [x] Red-black tree
 	- [x] Segment tree
 	- [x] Segment tree 2D
