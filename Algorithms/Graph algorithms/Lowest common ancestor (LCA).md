@@ -66,6 +66,12 @@ int go(int u, int v) {
 int query(int u, int v) {
 	int lca_ans {lca(u, v)};
 
+	if (lca_ans == u) {
+        return go(v, lca_ans);
+    } else if (lca_ans == v) {
+        return go(u, lca_ans);
+    }
+
 	// Return the ans based on something related with the go(u, lca_ans) and go(v, lca_ans)
 }
 
