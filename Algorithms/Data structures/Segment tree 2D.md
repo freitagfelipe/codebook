@@ -14,6 +14,7 @@
 template <typename T, typename U>
 class SegmentTree2D {
 public:
+	// This constructor can be used when the build step is not required
 	SegmentTree2D(int n, int m) {
         this->n = n;
         this->m = m;
@@ -25,9 +26,9 @@ public:
         this->n = (int) mat.size();
         this->m = (int) mat[0].size();
 
-		this->tree.assign(n * 4, vector<Node>(m * 4));
+		this->tree.assign(this->n * 4, vector<Node>(this->m * 4));
 
-        this->build_x(mat, 1, 1, n);
+        this->build_x(mat, 1, 1, this->n);
 	}
 
 	// x and y has to be on the interval [1..N]
