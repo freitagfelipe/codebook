@@ -15,18 +15,19 @@
 template <typename T, typename U>
 class SegmentTree {
 public:
+	// This constructor can be used when the build step is not required
 	SegmentTree(int n) {
         this->n = n;
 
-        this->tree.resize(n * 4);
+        this->tree.resize(this->n * 4);
 	}
 
 	SegmentTree(const vector<U> &v) {
         this->n = (int) v.size();
 
-        this->tree.resize(n * 4);
+        this->tree.resize(this->n * 4);
 
-        this->build(v, 1, 1, n);
+        this->build(v, 1, 1, this->n);
 	}
 
 	// target_node has to be on the interval [1..N]
