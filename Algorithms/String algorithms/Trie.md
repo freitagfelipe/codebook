@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Mostrar a implementação de uma Trie.
+> - Armazenar e buscar de maneira eficiente palavras, onde cada nó da árvore representa um caractere e o caminho até uma folha é formado pelos prefixos da palavra e as folhas a palavra em si.
 
 > [!note]- Complexidade
 > - Insert: $O(n)$
