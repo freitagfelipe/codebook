@@ -15,18 +15,19 @@
 template <typename T, typename U>
 class SegmentTree {
 public:
+	// This constructor can be used when the build step is not required
 	SegmentTree(int n) {
 		this->n = n;
 		
-		this->tree.resize(n * 4);
+		this->tree.resize(this->n * 4);
 	}
 
 	SegmentTree(const vector<U> &v) {
 		this->n = (int) v.size();
 
-		this->tree.resize(n * 4);
+		this->tree.resize(this->n * 4);
 
-		this->build(v, 1, 1, n);
+		this->build(v, 1, 1, this->n);
 	}
 
 	// l and r has to be on the interval [1..N]
@@ -41,7 +42,7 @@ public:
 
 private:
 	struct Node {
-		T lazy;
+		T lazy {};
 		// Node variables
 
 		Node() = default;
@@ -50,7 +51,7 @@ private:
 			// Lazy aggregation logic
 		}
 
-		T apply_lazy(int interval_size) {
+		T apply_lazy(int l, int r) {
 			// Lazy application logic and reset the lazyness
 		}
 
@@ -81,11 +82,14 @@ private:
     }
 
 	void lazy_propagation(int node, int l, int r) {
+		// Set the right-hand side to something
+		// that can represent that the lazy does not
+		// need to be propagated
         if (this->tree[node].lazy == 0) {
             return;
         }
 
-		T lazy {this->tree[node].apply_lazy(r - l + 1)};
+		T lazy {this->tree[node].apply_lazy(l, r)};
 
         if (l < r) {
 	        this->tree[L(node)].add_lazy(lazy);
