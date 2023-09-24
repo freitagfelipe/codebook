@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "38169983fed45881",
+        "id": "47941123529f5c9f",
         "type": "tabs",
         "children": [
           {
-            "id": "4db0e3e7721c3bb0",
+            "id": "67a2c4329287dd60",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -128,6 +128,16 @@
               "type": "outline",
               "state": {}
             }
+          },
+          {
+            "id": "9b9fe498cf6b1a4c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
           }
         ]
       }
@@ -147,34 +157,34 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4db0e3e7721c3bb0",
+  "active": "67a2c4329287dd60",
   "lastOpenFiles": [
     "Contents.md",
-    "Algorithms/Data structures/Persistent segment tree.md",
-    "Algorithms/Data structures/Segment tree 2D.md",
-    "Algorithms/Data structures/Binary search tree (BST).md",
-    "Algorithms/Numerical methods/Bisection method.md",
-    "Algorithms/Graph algorithms/Lowest common ancestor (LCA).md",
-    "Algorithms/Data structures/Segment tree.md",
-    "Algorithms/Geometry algorithms/Radial sweep.md",
-    "Algorithms/Geometry algorithms/Nearest pair of points.md",
-    "Algorithms/Graph algorithms/Eulerian path.md",
-    "Algorithms/Data structures/Segment tree with lazy propagation.md",
-    "README.md",
-    "Algorithms/Data structures/Fenwick tree (BIT).md",
+    "Algorithms/String algorithms/String algorithms.md",
+    "Palindromic tree NOT FINISHED YET.md",
+    "Algorithms/Graph algorithms/Graph algorithms.md",
+    "Algorithms/String algorithms/Palindromic tree NOT FINISHED YET.md",
     "Algorithms/Data structures/Binary heap.md",
     "Algorithms/Data structures/Data structures.md",
-    "Algorithms/Programming techniques/Programming techniques.md",
-    "Algorithms/Programming techniques/Next greater.md",
-    "Annotations/Mathmatic annotations/Geometry annotations.md",
-    "Annotations/Mathmatic annotations/Algebra annotations.md",
-    "Annotations/Tree annotations.md",
-    "Annotations/Search strategies annotations.md",
-    "Annotations/Bit manipulation annotations.md",
-    "Algorithms/Graph algorithms/Bellman-Ford.md",
-    "Algorithms/Dynamic programming/Coin change.md",
-    "Algorithms/Dynamic programming/Digit DP.md",
-    "Algorithms/Dynamic programming/Kadane's algorithm.md",
+    "Algorithms/Graph algorithms/2-SAT NOT FINISHED YET.md",
+    "Algorithms/Graph algorithms/Ford-Fulkerson NOT FINISHED YET.md",
+    "Algorithms/Data structures/Treap NOT FINISHED YET.md",
+    "Algorithms/Geometry algorithms/Monotone chain.md",
+    "Algorithms/Geometry algorithms/Geometry algorithms.md",
+    "Algorithms/Data structures/Binary search tree (BST).md",
+    "Algorithms/Data structures/Persistent segment tree.md",
+    "Algorithms/Data structures/Merge sort tree.md",
+    "Algorithms/Data structures/Fenwick tree (BIT) 2D.md",
+    "Algorithms/Data structures/Fenwick tree (BIT).md",
+    "Algorithms/Data structures/Red-black tree.md",
+    "Algorithms/Data structures/Union-find with rollback.md",
+    "Algorithms/String algorithms/Trie.md",
+    "Algorithms/String algorithms/Manacher.md",
+    "Algorithms/String algorithms/KMP.md",
+    "Algorithms/String algorithms/Hashing.md",
+    "Algorithms/Graph algorithms/Tree diameter.md",
+    "Algorithms/Data structures/Segment tree with lazy propagation.md",
+    "Algorithms/Data structures/Sparse table.md",
     "Algorithms/Dynamic programming",
     "Untitled",
     "Algorithms/String algorithms",
