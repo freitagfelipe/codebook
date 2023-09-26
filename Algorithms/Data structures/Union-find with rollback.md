@@ -4,6 +4,7 @@
 > [!note]- Complexidade
 > - Build: $O(n)$
 > - Find/merge: $O(\log n)$
+> - Rollback: $O(t)$
 
 ```cpp
 // MAXN is the largest possible number of elements
