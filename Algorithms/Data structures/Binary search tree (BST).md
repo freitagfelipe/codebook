@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Mostrar a implementação de uma árvore de busca binária.
+> - Organizar os dados de uma maneira em que seja possível fazer operações de inserção, remoção, etc. Basicamente para cada nó $i$ todos os filhos a esquerda de $i$ são menores e todos os filhos a direita de $i$ são maiores.
 
 > [!note]- Complexidade
 > - Search: $O(h)$
@@ -33,7 +33,7 @@ public:
 
     T minimum_key() const {
         if (this->root == nullptr) {
-            std::runtime_error("BST size == 0");
+            runtime_error("BST size == 0");
         }
 
         return this->minimum_key(this->root);
@@ -41,7 +41,7 @@ public:
 
     T maximum_key() const {
         if (this->root == nullptr) {
-            std::runtime_error("BST size == 0");
+            runtime_error("BST size == 0");
         }
 
         return this->maximum_key(this->root);
@@ -111,7 +111,7 @@ private:
 
         if (node->key == v) {
             if (node->left == nullptr || node->right == nullptr) {
-                delete std::exchange(node, node->left != nullptr ? node->left : node->right);
+                delete exchange(node, node->left != nullptr ? node->left : node->right);
 
                 return;
             }
