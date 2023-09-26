@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - O objetivo da [[Segment tree]] continua o mesmo, mas agora com a adição de persistência que permite que novas versões da estrutura sejam criados e permite que versões passadas sejam consultadas sem perder as informações da versão atual.
+> - O objetivo da [[Segment tree]] continua o mesmo, mas agora com a adição de persistência que permite que novas versões da estrutura sejam criados e permite que versões passadas sejam consultadas e alteradas sem perder as informações da versão atual.
 
 > [!note]- Complexidade
 > - Build: $O(n)$
