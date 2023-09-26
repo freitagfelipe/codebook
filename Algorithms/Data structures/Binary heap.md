@@ -1,5 +1,5 @@
 > [!objetivo] Objetivo
-> - Mostrar a implementação de uma priority queue.
+> - Armazenar valores ordenáveis de maneira rápida, por se tratar de uma árvore balanceada, e responder consultas de mínimo e máximo em tempo constante.
 
 > [!note]- Complexidade
  > - Top: $O(1)$
@@ -21,7 +21,7 @@ public:
 
     void pop() {
         if (this->tree.size() == 1) {
-            throw std::runtime_error("Binary heap size == 0");
+            throw runtime_error("Binary heap size == 0");
         }
 
         swap(this->tree[1], this->tree.back());
@@ -33,7 +33,7 @@ public:
 
     T top() {
         if (this->tree.size() == 1) {
-            throw std::runtime_error("Binary heap size == 0");
+            throw runtime_error("Binary heap size == 0");
         }
 
         return this->tree[1];
