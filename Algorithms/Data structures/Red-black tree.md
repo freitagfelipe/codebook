@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Mostrar a implementação de uma árvore rubro-negra.
+> - A árvore rubro negra implementa a mesma ideia da [[Binary search tree (BST)]] só que ela é balanceada, fazendo com que as consultas na estrutura sejam bem rápidas.
 
 > [!caution] Restrições da estrutura
 > - Cada nó tem uma cor: vermelho ou preto.
@@ -59,7 +59,7 @@ public:
 
     T minimum_key() const {
         if (this->root == this->null) {
-            std::runtime_error("Red black tree size == 0");
+            runtime_error("Red black tree size == 0");
         }
 
         return this->minimum_key(this->root);
@@ -67,7 +67,7 @@ public:
 
     T maximum_key() const {
         if (this->root == this->null) {
-            std::runtime_error("Red black tree size == 0");
+            runtime_error("Red black tree size == 0");
         }
 
         return this->maximum_key(this->root);
@@ -115,7 +115,7 @@ public:
 
         Node *grandparent() {
             if (this->parent == nullptr) {
-                std::runtime_error("Call grandparent but parent is nullptr");
+                runtime_error("Call grandparent but parent is nullptr");
             }
 
             return this->parent->parent;
@@ -123,7 +123,7 @@ public:
 
         Node *sibling() {
             if (this->parent == nullptr) {
-                std::runtime_error("Call grandparent but parent is nullptr");
+                runtime_error("Call grandparent but parent is nullptr");
             }
 
             if (this->is_left_child()) {
@@ -135,7 +135,7 @@ public:
 
         Node *uncle() {
             if (this->parent == nullptr) {
-                std::runtime_error("Call grandparent but parent is nullptr");
+                runtime_error("Call grandparent but parent is nullptr");
             }
 
             return this->parent->sibling();
@@ -200,7 +200,7 @@ public:
             if (node->left == this->null || node->right == this->null) {
                 typename Node::Color old_color {node->color};
 
-                delete std::exchange(node, node->left != this->null ? node->left : node->right);
+                delete exchange(node, node->left != this->null ? node->left : node->right);
 
                 node->parent = parent;
 
