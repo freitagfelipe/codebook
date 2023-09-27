@@ -40,12 +40,14 @@ flexGrow=1
 	- [x] Binary search tree
 	- [x] Fenwick tree (BIT)
 	- [x] Fenwick tree (BIT) 2D
+	- [x] Merge sort tree
 	- [x] Persistent segment tree
 	- [x] Red-black tree
 	- [x] Segment tree
 	- [x] Segment tree 2D
 	- [x] Segment tree with lazy propagation
 	- [x] Sparse table
+	- [x] Stack query
 	- [x] Union-find
 	- [x] Union-find with rollback
 
@@ -56,7 +58,6 @@ flexGrow=1
 ===
 
 - # Dynamic programming
-	- [x] Coin change
 	- [x] Digit DP
 	- [x] Kadane's algorithm
 	- [x] Knapsack
@@ -77,7 +78,6 @@ flexGrow=1
 
 - # Geometry algorithms
 	- [x] Area of a simple polygon - Shoelace
-	- [x] Graham's scan
 	- [x] Line sweep
 	- [x] Nearest pair of points
 	- [x] Monotone chain
@@ -93,10 +93,10 @@ flexGrow=1
 ===
 
 - # Graph algorithms
-	- [ ] 2-SAT
 	- [x] Bellman-Ford
 	- [x] Breadth-first search (BFS)
 	- [x] Breadth-first search grid (BFS-grid)
+	- [x] Checking bipartiteness online
 	- [x] Connected components
 	- [x] Depth-first search (DFS)
 	- [x] Depth-first search grid (DFS-grid)
@@ -106,7 +106,6 @@ flexGrow=1
 	- [x] Find bridges
 	- [x] Find cycle
 	- [x] Floyd-Warshall
-	- [ ] Ford-Fulkerson
 	- [x] Is graph bipartite
 	- [x] Kahn's algorithm
 	- [x] Kosaraju's algorithm
@@ -169,7 +168,6 @@ flexGrow=1
 	- [x] Hashing
 	- [x] KMP
 	- [x] Manacher
-	- [ ] Palindromic tree
 	- [x] Trie
 
 ```

@@ -1,8 +1,8 @@
 > [!summary] Índice
-> - [[2-SAT NOT FINISHED YET]]
 > - [[Bellman-Ford]]
 > - [[Breadth-first search (BFS)]]
 > - [[Breadth-first search grid (BFS-Grid)]]
+> - [[Checking bipartiteness online]]
 > - [[Connected components]]
 > - [[Depth-first search (DFS)]]
 > - [[Depth-first search grid (DFS-Grid)]]
@@ -12,7 +12,6 @@
 > - [[Find bridges]]
 > - [[Find cycle]]
 > - [[Floyd-Warshall]]
-> - [[Ford-Fulkerson NOT FINISHED YET]]
 > - [[Is graph bipartite]]
 > - [[Kahn's algorithm]]
 > - [[Kosaraju's algorithm]]
