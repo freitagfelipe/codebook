@@ -10,15 +10,13 @@ using ptt = pair<T, T>;
 
 template <typename T>
 double find_minimum_distance(vector<Point2D<T>> points) {
-	typedef ptt<T> ptt;
-
 	int n {(int) points.size()};
 
 	// Sort them according to their x-coordinates in ascending order
 	sort(points.begin(), points.end());
 
 	int fp {};
-	set<ptt> active_points;
+	set<ptt<T>> active_points;
 
 	double ans {distance_between_points(points[0], points[1])};
 
