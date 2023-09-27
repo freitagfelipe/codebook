@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Encontrar o fecho convexo, ou seja, o menor polígono convexo tal que ele contenha todos os pontos, assim como o [[Graham's scan]]. A implementação utiliza o [[Point2D]] e as suas funções [[Clockwise]], [[Counter clockwise]] e [[Orientation]].
+> - Encontrar o fecho convexo, ou seja, o menor polígono convexo tal que ele contenha todos os pontos. A implementação utiliza o [[Point2D]] e as suas funções [[Clockwise]] e [[Counter clockwise]].
 
 > [!caution] Restrição
 > - É necessário que os pontos estejam ordenados o menor para o maior $x$ e em caso de empate desempataremos pelo menor $y$.
@@ -54,7 +54,7 @@ vector<Point2D<T>> monotone_chain(vector<Point2D<T>> &points, bool include_colli
 		return up;
 	}
 
-	vector<Point2D<T>> convex_hull {move(up)};
+	vector<Point2D<T>> convex_hull {up};
 
 	for (int i {(int) down.size() - 2}; i > 0; --i) {
 		convex_hull.push_back(down[i]);
