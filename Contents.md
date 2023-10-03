@@ -165,6 +165,7 @@ flexGrow=1
 ===
 
 - # String algorithms
+	- [x] Aho-Corasick
 	- [x] Hashing
 	- [x] KMP
 	- [x] Manacher
