@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "14930f2e019fec4a",
+        "id": "85d9e2de9792dbbc",
         "type": "tabs",
         "children": [
           {
-            "id": "a6222efa11f7beb4",
+            "id": "ab785394d0e0bef4",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -89,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms/Geometry algorithms/Monotone chain.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms/Geometry algorithms/Monotone chain.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Algorithms/Geometry algorithms/Monotone chain.md"
-              }
+              "state": {}
             }
           },
           {
@@ -163,18 +159,25 @@
   },
   "active": "41e1ec0b5b78ddb9",
   "lastOpenFiles": [
-    "Algorithms/Geometry algorithms/Geometry algorithms.md",
-    "Contents.md",
+    "Algorithms/Geometry algorithms/Nearest pair of points.md",
+    "Algorithms/Geometry algorithms/Point in polygon.md",
+    "Algorithms/Geometry algorithms/Pick's theorem.md",
     "Algorithms/Geometry algorithms/Monotone chain.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Counter clockwise.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Collinear.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Orientation.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Point in segment.md",
+    "Algorithms/Geometry algorithms/Area of ​​a simple polygon - Shoelace.md",
+    "Algorithms/Geometry algorithms/Geometry algorithms.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Clockwise.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Dot product.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Norm.md",
+    "Contents.md",
     "Algorithms/String algorithms/Manacher.md",
     "Algorithms/String algorithms/Rabin-Karp.md",
     "Algorithms/String algorithms/KMP.md",
     "Algorithms/String algorithms/Aho-Corasick.md",
-    "Algorithms/Utils/Geometry utils/Point2D/Orientation.md",
-    "Algorithms/Utils/Geometry utils/Point2D/Clockwise.md",
     "Algorithms/Utils/Geometry utils/Point2D/Cross product.md",
-    "Algorithms/Utils/Geometry utils/Point2D/Counter clockwise.md",
-    "Algorithms/Utils/Geometry utils/Point2D/Collinear.md",
     "Algorithms/Algorithms.md",
     "Algorithms/String algorithms/Hashing.md",
     "Algorithms/String algorithms/String algorithms.md",
@@ -182,13 +185,6 @@
     "Algorithms/Data structures/Segment tree with lazy propagation.md",
     "Algorithms/Data structures/Segment tree.md",
     "Algorithms/Data structures/Persistent segment tree.md",
-    "Algorithms/Data structures/Sparse table.md",
-    "Algorithms/Data structures/Segment tree 2D.md",
-    "Palindromic tree NOT FINISHED YET.md",
-    "Algorithms/Graph algorithms/Graph algorithms.md",
-    "Algorithms/String algorithms/Palindromic tree NOT FINISHED YET.md",
-    "Algorithms/Data structures/Binary heap.md",
-    "Algorithms/Data structures/Data structures.md",
     "Algorithms/Dynamic programming",
     "Untitled",
     "Algorithms/String algorithms",
