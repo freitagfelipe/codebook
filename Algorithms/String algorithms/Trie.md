@@ -89,7 +89,7 @@ public:
 
             int c {this->get_id(ch)};
 
-            if (this->trie[v].next[ch] == -1) {
+            if (this->trie[v].next[c] == -1) {
                 return false;
             }
 
