@@ -1,6 +1,9 @@
 > [!info] Objetivo
 > - Dado um conjunto de pontos, o problema é encontrar o par de pontos como menor distância dentre todos os outros. Esta implementação utiliza [[Line sweep]] e do fato que temos um número constante de pontos ativos durante o processamento dos eventos. Ademais, a implementação utiliza o [[Point2D]] e sua função [[Distance between points]].
 
+> [!caution] Restrição
+> - Os pontos devem estar ordenados pelo menor $x$.
+
 > [!note]- Complexidade
 > - $O(n \log n)$
 
