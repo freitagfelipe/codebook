@@ -16,7 +16,7 @@ int orientation(const Point2D<T> &a, const Point2D<T> &b, const Point2D<T> &c) {
         return 1; // ccw
     }
 
-    return 0;
+    return 0; // collinear
 }
 ```
 
