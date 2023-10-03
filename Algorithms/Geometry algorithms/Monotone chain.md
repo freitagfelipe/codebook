@@ -18,11 +18,27 @@ vector<Point2D<T>> monotone_chain(vector<Point2D<T>> &points, bool include_colli
 	// In case of a tie, we will break the tie by the lowest y
 	sort(points.begin(), points.end());
 
-	vector<Point2D<T>> up, down;
-
+    int n {(int) points.size()};
     Point2D<T> p1 {points[0]}, p2 {points.back()};
 
-    int n {(int) points.size()};
+    // This treat the case where all the input points are collinear and return the input
+    // In reverse order, that would be what Graham's Scan algorithm would return
+	for (int i {1}; i < n - 1; ++i) {
+        if (!collinear(p1, points[i], p2)) {
+            break;
+        }
+
+        if (i + 1 == n - 1) {
+            vector<Point2D<T>> hull {points};
+
+            reverse(hull.begin(), hull.end());
+
+            return hull;
+        }
+	}
+
+	vector<Point2D<T>> up, down;
+
     up.push_back(p1);
     down.push_back(p1);
 
@@ -47,12 +63,6 @@ vector<Point2D<T>> monotone_chain(vector<Point2D<T>> &points, bool include_colli
             down.push_back(points[i]);
         }
     }
-
-	if (include_collinear && up.size() == points.size()) {
-		reverse(up.begin(), up.end());
-
-		return up;
-	}
 
 	vector<Point2D<T>> convex_hull {up};
 
