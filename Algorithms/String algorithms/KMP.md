@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Calcular de maneira eficiente o array de prefixo e alguns outros usos que serão mostrados ao longo da página.
+> - Calcular de maneira eficiente o array de prefixo.
 
 > [!note]- Complexidade
 > - $O(n)$
@@ -106,7 +106,7 @@ string compress(const string &s) {
 > - Utilizando o autômato conseguimos descobrir os próximos valores de $j$ em tempo constante e resolver alguns problemas que não seriam possíveis sem ele.
 
 > [!note]- Complexidade
-> - $O(K \cdot n)$
+> - $O(k \cdot n)$
 
 ```cpp
 #define K 26
