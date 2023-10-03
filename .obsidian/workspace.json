@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "47941123529f5c9f",
+        "id": "14930f2e019fec4a",
         "type": "tabs",
         "children": [
           {
-            "id": "67a2c4329287dd60",
+            "id": "a6222efa11f7beb4",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -89,6 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Algorithms/Geometry algorithms/Monotone chain.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Algorithms/Geometry algorithms/Monotone chain.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +128,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Algorithms/Geometry algorithms/Monotone chain.md"
+              }
             }
           },
           {
@@ -157,34 +161,34 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "67a2c4329287dd60",
+  "active": "41e1ec0b5b78ddb9",
   "lastOpenFiles": [
+    "Algorithms/Geometry algorithms/Geometry algorithms.md",
     "Contents.md",
+    "Algorithms/Geometry algorithms/Monotone chain.md",
+    "Algorithms/String algorithms/Manacher.md",
+    "Algorithms/String algorithms/Rabin-Karp.md",
+    "Algorithms/String algorithms/KMP.md",
+    "Algorithms/String algorithms/Aho-Corasick.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Orientation.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Clockwise.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Cross product.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Counter clockwise.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Collinear.md",
+    "Algorithms/Algorithms.md",
+    "Algorithms/String algorithms/Hashing.md",
     "Algorithms/String algorithms/String algorithms.md",
+    "Algorithms/String algorithms/Trie.md",
+    "Algorithms/Data structures/Segment tree with lazy propagation.md",
+    "Algorithms/Data structures/Segment tree.md",
+    "Algorithms/Data structures/Persistent segment tree.md",
+    "Algorithms/Data structures/Sparse table.md",
+    "Algorithms/Data structures/Segment tree 2D.md",
     "Palindromic tree NOT FINISHED YET.md",
     "Algorithms/Graph algorithms/Graph algorithms.md",
     "Algorithms/String algorithms/Palindromic tree NOT FINISHED YET.md",
     "Algorithms/Data structures/Binary heap.md",
     "Algorithms/Data structures/Data structures.md",
-    "Algorithms/Graph algorithms/2-SAT NOT FINISHED YET.md",
-    "Algorithms/Graph algorithms/Ford-Fulkerson NOT FINISHED YET.md",
-    "Algorithms/Data structures/Treap NOT FINISHED YET.md",
-    "Algorithms/Geometry algorithms/Monotone chain.md",
-    "Algorithms/Geometry algorithms/Geometry algorithms.md",
-    "Algorithms/Data structures/Binary search tree (BST).md",
-    "Algorithms/Data structures/Persistent segment tree.md",
-    "Algorithms/Data structures/Merge sort tree.md",
-    "Algorithms/Data structures/Fenwick tree (BIT) 2D.md",
-    "Algorithms/Data structures/Fenwick tree (BIT).md",
-    "Algorithms/Data structures/Red-black tree.md",
-    "Algorithms/Data structures/Union-find with rollback.md",
-    "Algorithms/String algorithms/Trie.md",
-    "Algorithms/String algorithms/Manacher.md",
-    "Algorithms/String algorithms/KMP.md",
-    "Algorithms/String algorithms/Hashing.md",
-    "Algorithms/Graph algorithms/Tree diameter.md",
-    "Algorithms/Data structures/Segment tree with lazy propagation.md",
-    "Algorithms/Data structures/Sparse table.md",
     "Algorithms/Dynamic programming",
     "Untitled",
     "Algorithms/String algorithms",
