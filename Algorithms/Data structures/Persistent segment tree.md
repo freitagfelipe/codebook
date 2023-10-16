@@ -12,13 +12,6 @@
 template <typename T, typename U>
 class PersistentSegmentTree {
 public:
-	// This constructor can be used when the build step is not required
-	PersistentSegmentTree(int n) {
-        this->n = n;
-
-        this->states.push_back(Node());
-    }
-
     PersistentSegmentTree(const vector<U> &v) {
         this->n = (int) v.size();
 
@@ -146,10 +139,6 @@ private:
 
     Node query(int node, int l, int r, int l_target, int r_target) {
         if (l == l_target && r == r_target) {
-            if (node == -1) {
-                return Node();
-            }
-
             return this->nodes[node];
         }
 
