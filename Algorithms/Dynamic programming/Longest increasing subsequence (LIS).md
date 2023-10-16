@@ -28,6 +28,9 @@ size_t lis(const vector<int> &v) {
 > [!hint] Retornar a maior subsequência crescente
 > - O código abaixo pode ser utilizado para retornar a LIS encontrada no vetor.
 
+> [!note]- Complexidade
+> - $O(n \log n)$
+
 ```cpp
 vector<int> lis(const vector<int> &v) {
 	vector<int> stacks;
