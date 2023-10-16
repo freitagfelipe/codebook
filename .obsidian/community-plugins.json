@@ -1,9 +1,8 @@
 [
   "cm-editor-syntax-highlight-obsidian",
-  "obsidian-emoji-toolbar",
-  "obsidian-columns",
   "url-into-selection",
-  "templater-obsidian",
   "obsidian-admonition",
-  "obsidian-discordrpc"
+  "obsidian-discordrpc",
+  "dataview",
+  "find-unlinked-files"
 ]

@@ -1,1 +1,10 @@
-{}
+{
+  "find-unlinked-files:find-unresolved-link": [
+    {
+      "modifiers": [
+        "Meta"
+      ],
+      "key": "."
+    }
+  ]
+}
