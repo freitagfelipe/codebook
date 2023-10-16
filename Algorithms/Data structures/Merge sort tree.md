@@ -3,7 +3,7 @@
 
 > [!note]- Complexidade
 > - Build: $O(n \log n)$
-> - Less/greater/equal than queries: $O(\log^2 n)$
+> - Less/greater/equal than: $O(\log^2 n)$
 
 ```cpp
 typedef long long ll;
