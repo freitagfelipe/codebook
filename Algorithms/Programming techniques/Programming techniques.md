@@ -5,6 +5,5 @@
 > - [[Prefix sum array]]
 > - [[Prefix sum matrix]]
 > - [[Two pointers]]
-> - [[Tree pointers]]
 
 ---

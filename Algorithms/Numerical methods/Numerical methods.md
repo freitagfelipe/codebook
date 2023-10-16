@@ -1,4 +1,0 @@
-> [!summary] Índice
-> - [[Bisection method]]
-
----
