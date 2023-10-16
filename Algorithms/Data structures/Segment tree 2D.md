@@ -3,7 +3,8 @@
 
 > [!note]- Complexidade
 > - Build: $O(nm)$
-> - Query/update: $O(\log n \cdot \log m)$
+> - Query: $O(\log n \cdot \log m)$
+> - Update: $O(\log n \cdot \log m)$
 
 ```cpp
 #define L(x) (x << 1)
@@ -59,7 +60,7 @@ private:
 	// lx and ly has to be on the interval [1..N]
 	// Because of that we need to do lx - 1, ly - 1
 	// To match the interval of mat that goes from [0..N - 1] in both dimensions
-    void build_y(U *mat, int nodex, int lx, int rx, int nodey, int ly, int ry) {
+    void build_y(const vector<vector<U>> &mat, int nodex, int lx, int rx, int nodey, int ly, int ry) {
         if (ly == ry && lx == rx) {
 	        // Build tree and mat logic
 
