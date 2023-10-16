@@ -9,15 +9,15 @@ vector<int> get_prime_factor(int n) {
 	vector<int> prime_factor;
 
 	for (int i {2}; i * i <= n; ++i) {
-		if (n % i != 0) {
-			continue;
-		}
+	    if (n % i != 0) {
+	        continue;
+	    }
 
-		prime_factor.push_back(i);
+	    while (n % i == 0) {
+	        prime_factor.push_back(i);
 
-		while (n % i == 0) {
-			n /= i;
-		}
+	        n /= i;
+	    }
 	}
 
 	if (n > 1) {
