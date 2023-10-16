@@ -62,7 +62,7 @@ int go(int u, int v) {
     }
 }
 
-// You can use this function to answer queries of min, max, etc
+// You can use this function to answer queries on a path of min, max, etc
 int query(int u, int v) {
 	int lca_ans {lca(u, v)};
 
