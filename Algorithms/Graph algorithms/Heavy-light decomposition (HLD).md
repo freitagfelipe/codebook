@@ -1,4 +1,4 @@
-> [!note] Objetivo
+> [!info] Objetivo
 > - Tem como objetivo dividir uma árvore em vários caminhos para que consultas e atualizações a respeito de caminhos de uma árvore e/ou sub-árvores sejam feitas de maneira eficiente.
 
 > [!note]- Complexidade

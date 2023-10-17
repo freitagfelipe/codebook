@@ -1,4 +1,4 @@
-> [!note] Objetivo
+> [!info] Objetivo
 > - Tornar false um bit na posição $k$.
 
 > [!note]- Complexidade

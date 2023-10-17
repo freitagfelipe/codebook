@@ -1,4 +1,4 @@
-> [!note] Objetivo
+> [!info] Objetivo
 > - Checar se o bit na posição $k$ está ativo.
 
 > [!note]- Complexidade

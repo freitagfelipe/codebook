@@ -1,4 +1,4 @@
-> [!note] Objetivo
+> [!info] Objetivo
 > - Verificar se $x$ é uma potência de dois.
 
 > [!note]- Complexidade

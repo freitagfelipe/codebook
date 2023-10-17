@@ -1,4 +1,4 @@
-> [!note] Objetivo
+> [!info] Objetivo
 > - Uma máscara de bits é a representação de um subconjunto feita a partir da representação binária de um número. Os métodos a seguir podem ser utilizados nela.
 
 > [!note]- Complexidade

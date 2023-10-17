@@ -1,4 +1,4 @@
-> [!note] Objetivo
+> [!info] Objetivo
 > - Verificar se um ponto $c$ está no segmento formados pelos pontos $a$ e $b$ utilizando [[Point2D]] e [[Orientation]].
 
 > [!note]- Complexidade
