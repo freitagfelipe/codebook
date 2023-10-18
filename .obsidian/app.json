@@ -4,5 +4,8 @@
   "rightToLeft": false,
   "defaultViewMode": "preview",
   "readableLineLength": false,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [
+    "Contents"
+  ]
 }
