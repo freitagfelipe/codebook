@@ -53,9 +53,9 @@ private:
         bool leaf;
         int p;
         char pch;
-        int suff_link;
-        int end_link;
-        int match;
+        int suff_link {-1};
+        int end_link {-1};
+        int match {-1};
 
         Node(int p = -1, char ch = '$') {
             fill(begin(next), end(next), -1);
@@ -64,11 +64,9 @@ private:
             this->leaf = false;
             this->p = p;
             this->pch = ch;
-            this->suff_link = -1;
-            this->end_link = -1;
-            this->match = -1;
         }
     };
+
 
     vector<Node> trie;
 
