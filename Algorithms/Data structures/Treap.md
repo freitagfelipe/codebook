@@ -9,13 +9,14 @@
 ```cpp
 #define PTreapNull -1
 
+typedef long long ll;
 typedef int PTreap;
 
 mt19937 rng((int) chrono::steady_clock::now().time_since_epoch().count());
 
 template <typename T = int>
 struct Treap {
-    int priority;
+    ll priority;
     array<int, 2> children {PTreapNull, PTreapNull};
     int subtree_size {1};
     T data {};

@@ -8,13 +8,14 @@
 ```cpp
 #define IPTreapNull -1
 
+typedef long long ll;
 typedef int IPTreap;
 
 mt19937 rng((int) chrono::steady_clock::now().time_since_epoch().count());
 
 template <typename T = int>
 struct ITreap {
-    int priority;
+    ll priority;
     array<int, 2> children {IPTreapNull, IPTreapNull};
     int subtree_size {1};
     T data {};
