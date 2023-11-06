@@ -1,27 +1,14 @@
 > [!info] Objetivo
-> - Gerar todas as permutações de um conjunto.
+> - Dado um conjunto de inteiros $v$, tem como objetivo calcular todas as permutações desse conjunto.
 
 > [!note]- Complexidade
 > - $O(n \cdot n!)$
 
 ```cpp
-ostream &operator<<(ostream &os, const vector<int> &v) {
-	int c {};
-
-	for (int n : v) {
-		if (c++ > 0) {
-			os << " ";
-		}
-
-		os << n;
-	}
-
-	return os;
-}
-
-void heap_permutation(vector<int> &v, int size) {
+template <typename T>
+void heap_permutation(vector<T> &v, int size) {
     if (size == 1) {
-        cout << v << '\n';
+	    // Do something with the permutation
 
         return;
     }

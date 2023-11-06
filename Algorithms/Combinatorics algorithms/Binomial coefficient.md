@@ -1,31 +1,46 @@
 > [!info] Objetivo
-> - Calcular o coeficiente binomial, ou seja, $\binom{n}{k}$.
-
-> [!caution] Atenção
-> - $\binom{n}{k}, \forall k$ tal que $k \leq n$.
+> - Dado dois inteiros $n$ e $k$, tem como objetivo calcular o $\binom{n}{k}$.
 
 > [!note]- Complexidade
-> - Build: $O(n^2)$
-> - Query: $O(1)$
+> - $O(k)$
 
 ```cpp
-// MAXN is the largest possible n
-int pascal_triangle[MAXN][MAXN];
+ll binom(int n, int k) {
+	ll res {1};
+	
+	for (int i {1}; i <= k; ++i) {
+		res = (res * (n - k + i)) / i;
+	}
+	
+	return res;
+}
+```
 
-void build(int n, int m) {
-	pascal_triangle[0][0] = 1;
+---
+
+> [!info] Objetivo
+> - Dado um inteiro $n$, tem como objetivo calcular até a n-ésima linhas do triângulo de pascal.
+
+> [!note]- Complexidade
+> - $O(n^2)$
+
+```cpp
+vector<vector<int>> build(int n) {
+	vector<vector<int>> pascal_triangle(n + 1);
+	
+	pascal_triangle[0].push_back(1);
 
 	for (int i {1}; i <= n; ++i) {
-		pascal_triangle[i][0] = pascal_triangle[i][i] = 1;
+		pascal_triangle[i].push_back(1);
 
 		for (int j {1}; j < i; ++j) {
-			pascal_triangle[i][j] = pascal_triangle[i - 1][j - 1] + pascal_triangle[i - 1][j];
+			pascal_triangle[i].push_back(pascal_triangle[i - 1][j - 1] + pascal_triangle[i - 1][j]);
 		}
+		
+		pascal_triangle[i].push_back(1);
 	}
-}
 
-int query(int n, int k) {
-	return pascal_triangle[n][k];
+	return pascal_triangle;
 }
 ```
 
