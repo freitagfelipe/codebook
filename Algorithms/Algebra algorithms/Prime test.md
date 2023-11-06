@@ -1,5 +1,5 @@
 > [!Info] Objetivo
-> O algoritmo tem como objetivo descobrir se um número é primo ou não.
+> Dado um número $n$, tem como objetivo responser se $n$ é ou não primo.
 
 > [!note]- Complexidade
 > - $O(\sqrt n)$

@@ -7,7 +7,6 @@
 > - [[Fibonacci]]
 > - [[Find divisors]]
 > - [[Find modular inverse]]
-> - [[Linear sieve]]
 > - [[Prime factor]]
 > - [[Prime test]]
 > - [[Sieve of Eratosthenes]]

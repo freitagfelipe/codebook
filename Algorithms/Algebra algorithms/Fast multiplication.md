@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Realizar a multiplicação entre $x$ e $y$ $mod$ $m$ de maneira rápida.
+> - Dado os números $x$, $y$ e $m$, tem como objetivo calcular de maneira rápida $(x \cdot y) \text{ mod m}$.
 
 > [!note]- Complexidade
 > - $O(\log x)$

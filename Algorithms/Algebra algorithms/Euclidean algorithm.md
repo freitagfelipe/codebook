@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Dados dois números $a, b$ encontrar o máximo divisor comum (mdc).
+> - Dados dois números $a$ e $b$, tem como objetivo encontrar o máximo divisor comum (mdc).
 
 > [!note]- Complexidade
 > - $O(\log min(a, b))$ 
@@ -15,7 +15,7 @@ int gcd(int a, int b) {
 ```
 
 > [!hint] Encontrar o mmc
-> - Utilizando a propriedade que envolve o máximo divisor comum (mdc) e o mínimo múltiplo comum (mmc) que é: $mmc(a, b) \cdot mdc(a, b) = a \cdot b$, ou seja, podemos concluir que $mmc(a, b) = \dfrac{a \cdot b}{mdc(a, b)}$. O código está logo abaixo.
+> - Utilizando a propriedade que envolve o máximo divisor comum (mdc) e o mínimo múltiplo comum (mmc) que é: $mmc(a, b) \cdot mdc(a, b) = a \cdot b$, podemos concluir que $mmc(a, b) = \dfrac{a \cdot b}{mdc(a, b)}$. Com isso, conseguimos computar o $mmc(a, b)$ com a mesma complexidade do $mdc(a, b)$.
 
 ```cpp
 int lcm(int a, int b) {

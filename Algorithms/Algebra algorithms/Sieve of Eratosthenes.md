@@ -1,60 +1,48 @@
 > [!info] Objetivo
-> - Calcular todos os números primos de um intervalo $[2, n]$. Uma versão em $O(n)$ que também calcula o menor fator primo pode ser encontrada em [[Linear sieve]].
+> - Dado um número $r$, tem como objetivo calcular todos os números primos do intervalo $[2, r]$
 
 > [!note]- Complexidade
 > - Build: $O(n \log \log n)$
 > - Query: $O(1)$
 
 ```cpp
-// MAXN is the largest possible interval
-int n;
-bool prime[MAXN];
+vector<bool> build(int r) {
+	vector<bool> is_prime(r + 1, true);
 
-void build() {
-	for (int i {2}; i <= n; ++i) {
-		prime[i] = true;
-	}
+	is_prime[0] = is_prime[1] = false;
 
-	prime[0] = prime[1] = false;
-
-	for (int i {2}; i * i <= n; ++i) {
-		if (prime[i]) {
-			for (int j {i * i}; j <= n; j += i) {
-				prime[j] = false;
+	for (int i {2}; i * i <= r; ++i) {
+		if (is_prime[i]) {
+			for (int j {i * i}; j <= r; j += i) {
+				is_prime[j] = false;
 			}
 		}
 	}
-}
 
-bool is_prime(int i) {
-	return prime[i];
+	return is_prime;
 }
 ```
 
 > [!hint] Adaptação
-> - Podemos usar a adaptação abaixo do Crivo de Erastótenes para encontrar o menor fator primo de cada número de um intervalo $[2, n]$ com a mesma complexidade.
+> - O Crivo de Erastótenes pode ser adaptado para encontrar o menor fator primo de cada número no intervalo $[1, r]$ com a mesma complexidade.
 
 ```cpp
-// MAXN is the largest possible interval
-int n;
-int spf[MAXN];
-
-void build() {
-	for (int i {2}; i <= n; ++i) {
+vector<int> build(int r) {
+	vector<int> spf(r + 1);
+	
+	for (int i {2}; i <= r; ++i) {
 		spf[i] = i;
 	}
 
-	for (int i {2}; i * i <= n; ++i) {
+	for (int i {2}; i * i <= r; ++i) {
 		if (spf[i] == i) {
-			for (int j {i * i}; j <= n; j += i) {
+			for (int j {i * i}; j <= r; j += i) {
 				spf[j] = min(spf[j], i);
 			}
 		}
 	}
-}
 
-int get_spf(int i) {
-	return spf[i];
+	return spf;
 }
 ```
 

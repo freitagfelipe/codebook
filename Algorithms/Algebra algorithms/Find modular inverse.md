@@ -1,23 +1,21 @@
 > [!info] Objetivo
-> - O objetivo das duas implementações abaixo é encontrar o inverso modular de um número. Podemos usar o [[Extended Euclidean algorithm]] para encontrá-lo ou o [[Fast exponentiation]].
-
-> [!caution] Atenção
-> - O algoritmo apresentado supõe que já foi verificado se o número possui inverso modular, ou seja, $mdc(a, m) = 1$.
+> - Dado um número $a$ e um número $m$, tem como objetivo encontrar o inverso modular de $a$, ou seja, encontrar um número $x$, tal que $a \cdot x \equiv 1 \text{ mod m}$. O algoritmo utiliza o [[Extended Euclidean algorithm]] durante o cálculo.
 
 > [!note]- Complexidade
-> - $O(\log a + \log b)$
+> - $O(\log min(a, b))$ 
 
 ```cpp
+// It will return -1 if the modular inverse don't exists
 int get_modular_inverse(int a, int m) {
 	int modular_inverse, y;
 
 	int gcd {gcd_extended(a, m, modular_inverse, y)};
 
-	modular_inverse %= m;
-
-	if (modular_inverse < 0) {
-		inv += m;
+	if (gcd != 1) {
+		return -1;
 	}
+
+	modular_inverse = (modular_inverse % m + m) % m;
 
 	return modular_inverse;
 }

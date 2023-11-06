@@ -1,18 +1,14 @@
 > [!info] Objetivo
-> - Encontrar a fatoração prima de um número $n$. Você também pode adaptar o [[Sieve of Eratosthenes]] ou o [[Linear sieve]] para atingir o mesmo resultado.
+> - Dado um número $n$, tem como objetivo encontrar a fatoração prima de $n$. Ademais, também é possível adaptar o [[Sieve of Eratosthenes]] para atingir o mesmo objetivo.
 
 > [!note]- Complexidade
-> - $O(\log n)$
+> - $O(\sqrt n)$
 
 ```cpp
 vector<int> get_prime_factor(int n) {
 	vector<int> prime_factor;
 
 	for (int i {2}; i * i <= n; ++i) {
-	    if (n % i != 0) {
-	        continue;
-	    }
-
 	    while (n % i == 0) {
 	        prime_factor.push_back(i);
 
