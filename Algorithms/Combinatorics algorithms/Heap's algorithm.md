@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Dado um conjunto de inteiros $v$, tem como objetivo calcular todas as permutações desse conjunto.
+> - Tem como objetivo calcular todas as permutações desse conjunto.
 
 > [!note]- Complexidade
 > - $O(n \cdot n!)$

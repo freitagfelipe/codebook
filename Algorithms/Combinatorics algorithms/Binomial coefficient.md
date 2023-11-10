@@ -1,10 +1,12 @@
 > [!info] Objetivo
-> - Dado dois inteiros $n$ e $k$, tem como objetivo calcular o $\binom{n}{k}$.
+> - Tem como objetivo calcular o $\binom{n}{k}$.
 
 > [!note]- Complexidade
 > - $O(k)$
 
 ```cpp
+typedef long long ll;
+
 ll binom(int n, int k) {
 	ll res {1};
 	
@@ -19,7 +21,7 @@ ll binom(int n, int k) {
 ---
 
 > [!info] Objetivo
-> - Dado um inteiro $n$, tem como objetivo calcular até a n-ésima linhas do triângulo de pascal.
+> - Tem como objetivo calcular até a n-ésima linhas do triângulo de pascal.
 
 > [!note]- Complexidade
 > - $O(n^2)$
