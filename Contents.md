@@ -7,7 +7,6 @@
 	- [x] [[Fibonacci]]
 	- [x] [[Find divisors]]
 	- [x] [[Find modular inverse]]
-	- [x] [[Linear sieve]]
 	- [x] [[Prime factor]]
 	- [x] [[Prime test]]
 	- [x] [[Sieve of Eratosthenes]]
@@ -68,6 +67,7 @@
 	- [x] [[Bellman-Ford]]
 	- [x] [[Breadth-first search (BFS)]]
 	- [x] [[Breadth-first search grid (BFS-Grid)]]
+	- [x] [[Centroid decomposition]]
 	- [x] [[Checking bipartiteness online]]
 	- [x] [[Connected components]]
 	- [x] [[Depth-first search (DFS)]]
@@ -80,6 +80,7 @@
 	- [x] [[Find bridges]]
 	- [x] [[Find cycle]]
 	- [x] [[Floyd-Warshall]]
+	- [x] [[Functional graph]]
 	- [x] [[Heavy-light decomposition (HLD)]]
 	- [x] [[Is graph bipartite]]
 	- [x] [[Kahn's algorithm]]
@@ -100,7 +101,6 @@
 	- [x] [[Next greater]]
 	- [x] [[Prefix sum array]]
 	- [x] [[Prefix sum matrix]]
-	- [x] [[Two pointers]]
 
 ---
 
