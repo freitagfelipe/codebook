@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - A técnica tem como objetivo dado um vetor, calcular para cada $v_i$ o maior elemento após ele. Por se tratar de uma técnica é necessário adaptar dependendo da questão.
+> - Dado um conjunto de elementos $v$, tem como objetivo calcular para cada $v_i$ o maior elemento após ele.
 
 > [!note]- Complexidade
 > - $O(n)$

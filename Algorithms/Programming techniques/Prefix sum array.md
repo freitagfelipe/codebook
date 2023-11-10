@@ -1,99 +1,33 @@
 > [!info] Objetivo
-> - A técnica de soma de prefixo é uma técnica que pode ser adaptada de várias maneiras algumas adaptações estão mostradas logo abaixo.
-
-````ad-example
-title: Dado um vetor responder várias perguntas sobre qual é a soma do intervalo $[L, R]$.
-
-> [!hint] Alterações no vetor
-> Caso seja necessário fazer alterações no vetor além de dizer qual a soma do intervalo, vale a pena olhar a [[Fenwick tree (Binary Indexed Tree)]].
+> -  A técnica de PSA tem como objetivo calcular a soma de todos os prefixos de $v$. Caso seja necessário realizar atualizações alguma estrutura de dados deve se utilizada como, por exemplo, a [[Fenwick tree (BIT)]].
 
 > [!note]- Complexidade
 > - Build: $O(n)$
 > - Query: $O(1)$
 
-```cpp
-#include <bits/stdc++.h>
-
-using namespace std;
-
-// MAXN is the maximum size of the array
-#define MAXN 100001
-
-int v[MAXN];
-int psa[MAXN];
-
-int main() {
-    int n, q;
-
-    cin >> n >> q;
-
-    for (int i {}; i < n; ++i) {
-        cin >> v[i];
-    }
-
-    psa[0] = v[0]
-
-    for (int i {1}; i < n; ++i) {
-        psa[i] = v[i] + psa[i - 1];
-    }
-
-    for (int i {}; i < q; ++i) {
-        int l, r;
-
-        cin >> l >> r;
-
-        if (l == 0) {
-            cout << psa[r] << '\n';
-        } else {
-            cout << psa[r] - psa[l - 1] << '\n';
-        }
-    }
-
-    return 0;
-}
-```
-````
-
-````ad-example
-title: Dado um vetor responder quantos intervalos de $V$ somam $K$.
-
-> [!note]- Complexidade
-> - $O(n)$
+> [!hint] Outras operações
+> - A técnica também pode ser alterada para outras operações, mas para utilizar a função de consulta de intervalo deve ser possível desfazer essa operação como, por exemplo, operações de xor. Contudo, operações que não possuem tal propriedade ainda podem ser utilizadas, desde que todas as consultas tenham $l = 1$, um exemplo de operação assim é a de $max$.
 
 ```cpp
-#include <bits/stdc++.h>
+vector<int> psa;
 
-using namespace std;
+void build(const vector<int> &v) {
+	psa.assign(v.size() + 1, 0);
 
-typedef long long ll;
+	for (int i {}; i < (int) v.size(); ++i) {
+		psa[i + 1] = psa[i] + v[i];
+	}
+}
 
-int main() {
-    int n, k;
+// 1-indexed
+int query(int idx) {
+	return psa[idx];
+}
 
-    cin >> n >> k;
-
-    unordered_map<ll, ll> freq;
-    ll sum {}, ans {};
-
-    freq[0] = 1;
-
-    for (int i {}; i < n; ++i) {
-        int v;
-
-        cin >> v;
-
-        sum += v;
-
-        ans += freq[sum - k];
-
-        ++freq[sum];
-    }
-
-    cout << ans << '\n';
-
-    return 0;
+// 1-indexed
+int range_query(int l, int r) {
+	return query(r) - query(l - 1);
 }
 ```
-````
 
 ---

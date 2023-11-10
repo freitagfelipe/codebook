@@ -1,55 +1,35 @@
 > [!info] Objetivo
-> - A técnica de soma de prefixo é uma técnica que pode ser adaptada de várias maneiras. Uma adaptação pode ser vista logo abaixo.
+> - A técnica PSM tem como objetivo calcular a soma de todas as submatrizes que são prefixos de $m$. Caso seja necessário realizar atualizações alguma estrutura de dados deve se utilizada como, por exemplo, a [[Fenwick tree (BIT) 2D]].
 
 > [!note]- Complexidade
-
-`````ad-example
-title: Exemplo com a questão [Calculando Somas I](https://neps.academy/br/exercise/1876).
-
-> [!note]- Complexidade
-> - Build: $O(nm)$
+> - Build: $O(n^2)$
 > - Query: $O(1)$
 
+> [!hint] Outras operações
+> - A técnica também pode ser alterada para outras operações, mas para utilizar a função de consulta de intervalo deve ser possível desfazer essa operação como, por exemplo, operações de xor. Contudo, operações que não possuem tal propriedade ainda podem ser utilizadas, desde que todas as consultas tenham $l = 1$, um exemplo de operação assim é a de $max$.
+
 ```cpp
-#include <bits/stdc++.h>
+vector<vector<int>> psm;
 
-using namespace std;
+void build(const vector<vector<int>> &mat) {
+	psm.assign(mat.size() + 1, vector<int>(mat[0].size() + 1));
 
-typedef long long ll;
-
-#define MAXN int(1e3) + 10
-
-ll PSM[MAXN][MAXN];
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    int n, q;
-
-    cin >> n >> q;
-
-    for (int i {1}; i <= n; ++i) {
+	for (int i {1}; i <= n; ++i) {
         for (int j {1}; j <= n; ++j) {
-            int x;
-
-            cin >> x;   
-
-            PSM[i][j] = PSM[i - 1][j] + PSM[i][j - 1] - PSM[i - 1][j - 1] + x;
+            PSM[i][j] = PSM[i - 1][j] + PSM[i][j - 1] - PSM[i - 1][j - 1] + mat[i - 1][j - 1];
         }
     }
+}
 
-    while (q--) {
-        int xi, yi, xe, ye;
+// 1-indexed
+int query(int x, int y) {
+	return psm[x][y];
+}
 
-        cin >> xi >> yi >> xe >> ye;
-
-        cout << PSM[xe][ye] - PSM[xi - 1][ye] - PSM[xe][yi - 1] + PSM[xi - 1][yi - 1] << '\n';
-    }
-
-    return 0;
+// 1-indexed
+int range_query(int xi, int yi, int xe, int ye) {
+	return query(xe, ye) - query(xi - 1, ye) - query(xe, yi - 1) + query(xi - 1, yi - 1);
 }
 ```
-`````
 
 ---

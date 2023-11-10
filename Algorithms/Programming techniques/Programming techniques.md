@@ -5,6 +5,5 @@
 > - [[Next greater]]
 > - [[Prefix sum array]]
 > - [[Prefix sum matrix]]
-> - [[Two pointers]]
 
 ---

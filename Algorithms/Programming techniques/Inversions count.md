@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Tem como objetivo determinar o número de pares $(i, j)$, com $i < j$, de uma sequência, tal que $a_i > a_j$. O algoritmo irá usar uma adaptação do [[Merge sort]]. Também é possível resolver esse problema utilizando [[Fenwick tree (BIT)]] junto da técnica de  [[Coordinate compression]] se necessário.
+> - Tem como objetivo determinar o número de pares $(i, j)$, com $i < j$, de uma sequência, tal que $a_i > a_j$. O algoritmo abaixo irá usar uma adaptação do [[Merge sort]]. Ademais, também é possível resolver esse problema utilizando [[Fenwick tree (BIT)]], mas provavelmente será necessário utilizar a técnica de  [[Coordinate compression]] se o intervalo dos números do vetor for muito grande.
 
 > [!note]- Complexidade
 > - $O(n \log n)$
