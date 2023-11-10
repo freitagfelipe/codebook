@@ -1,8 +1,5 @@
 > [!info] Objetivo
-> - O algoritmo apresentado abaixo tem como objetivo descobrir se um ponto $t$ qualquer está dentro ou estritamente dentro de um polígono.
-
-> [!info] Primeira implementação
-> - Utiliza [[Point2D]] e suas funções [[Clockwise]], [[Point in segment]].
+> - Tem como objetivo descobrir se um ponto $t$ está dentro, fora ou em cima de uma aresta de um polígono convexo. Ademais, utiliza o [[Point2D]] e suas funções [[Clockwise]] e [[Point in segment]]
 
 > [!caution] Restrição
 > - O polígono precisa ser convexo.
@@ -65,10 +62,12 @@ int point_in_polygon(const vector<Point2D<T>> &points, const Point2D<T> &t, bool
 }
 ```
 
-> [!info] Segunda implementação
-> - Utiliza [[Point2D]] e suas funções [[Counter clockwise]] e [[Collinear]].
+---
 
-> [!info]- Complexidade
+> [!info] Objetivo
+> - Tem como objetivo descobrir se um ponto $t$ está dentro, fora ou em cima de uma aresta de um polígono. Ademais, utiliza o [[Point2D]] e suas funções [[Collinear]] e [[Counter clockwise]].
+
+> [!note]- Complexidade
 > - $O(n)$
 
 ```cpp

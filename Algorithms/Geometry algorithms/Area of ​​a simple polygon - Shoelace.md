@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Calcular a área de um polígono simples e cíclico, ou seja, os segmentos consecutivos que o formam não são colineares, não se cruzam e se tocam apenas nas extremidades e existe uma circunferência que intercepta seus vértices. A implementação utiliza o [[Point2D]] e utiliza a Shoelace formula utilizando trapézios, que é dada por:
+> - Tem como objetivo calcular a área desse polígono. Ademais, a implementação utiliza o [[Point2D]] e para calcular a área ele utiliza a fórmula de Shoelace que é dada por:
 > $$
 > \begin{gathered}
 > A = \dfrac{1}{2} \cdot |\sum_{i = 1}^{n} (y_{i + 1} + y_i) \cdot (x_{i + 1} - x_i)|

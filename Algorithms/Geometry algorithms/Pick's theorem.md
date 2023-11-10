@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - O teorema de Pick nos diz que $S = i + \frac{p}{2} - 1$, tal que $S$ é a área do polígono simples, no qual podemos descobrir usando [[Area of ​​a simple polygon - Shoelace]], $i$ é a quantidade de lattice points que estão estritamente contidos dentro do polígono e $p$ é a quantidade de lattice points que estão contidos nas arestas, para descobrir esse número precisaremos as vezes utilizar o [[Euclidean algorithm]]. O algoritmo demonstrado abaixo tem como objetivo descobrir $i$. Ademais, a implementação utiliza o [[Point2D]].
+> - Tem como objetivo calcular algumas informações dado o teorema de Pick. O teorema de Pick nos diz que $S = i + \frac{p}{2} - 1$, tal que $S$ é a área do polígono simples, no qual podemos descobrir usando [[Area of ​​a simple polygon - Shoelace]], $i$ é a quantidade de lattice points que estão estritamente contidos dentro do polígono e $p$ é a quantidade de lattice points que estão contidos nas arestas, para descobrir esse número precisaremos as vezes utilizar o [[Euclidean algorithm]]. O algoritmo demonstrado abaixo tem como objetivo descobrir $i$. Ademais, a implementação utiliza o [[Point2D]].
 
 > [!note]- Complexidade
 > - $O(n)$

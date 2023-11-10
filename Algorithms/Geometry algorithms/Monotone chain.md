@@ -1,8 +1,5 @@
 > [!info] Objetivo
-> - Encontrar o fecho convexo, ou seja, o menor polígono convexo tal que ele contenha todos os pontos. A implementação utiliza o [[Point2D]] e as suas funções [[Clockwise]], [[Counter clockwise]] e [[Collinear]].
-
-> [!caution] Restrição
-> - É necessário que os pontos estejam ordenados o menor para o maior $x$ e em caso de empate desempataremos pelo menor $y$.
+> - Dado um vetor de pontos, tem como objetivo calcular o fecho convexo, ou seja, o menor polígono convexo que contém todos os pontos. Ademais, a implementação utiliza o [[Point2D]] e as suas funções [[Clockwise]], [[Counter clockwise]] e [[Collinear]].
 
 > [!note]- Complexidade
 > - $O(n \log n)$

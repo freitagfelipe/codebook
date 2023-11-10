@@ -1,8 +1,5 @@
 > [!info] Objetivo
-> - Dado um conjunto de pontos, o problema é encontrar o par de pontos como menor distância dentre todos os outros. Esta implementação utiliza [[Line sweep]] e do fato que temos um número constante de pontos ativos durante o processamento dos eventos. Ademais, a implementação utiliza o [[Point2D]] e sua função [[Distance between points]].
-
-> [!caution] Restrição
-> - Os pontos devem estar ordenados pelo menor $x$.
+> - Tem como objetivo encontrar o par de pontos como menor distância dentre todos os outros. Esta implementação utiliza [[Line sweep]] e do fato que temos um número constante de pontos ativos durante o processamento dos eventos. Ademais, a implementação utiliza o [[Point2D]] e sua função [[Distance between points]].
 
 > [!note]- Complexidade
 > - $O(n \log n)$
@@ -12,7 +9,7 @@ template <typename T>
 using ptt = pair<T, T>;
 
 template <typename T>
-double find_minimum_distance(vector<Point2D<T>> points) {
+double find_minimum_distance(vector<Point2D<T>> &points) {
 	int n {(int) points.size()};
 
 	// Sort them according to their x-coordinates in ascending order
