@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Fazer de maneira eficiente $Q$ operações que podem consistir em perguntar algo sobre uma submatriz da matriz ou fazer um point update em um índice qualquer da matriz. Essas perguntas na submatriz podem, por exemplo, estar relacionada a um dos seguintes temas: mínimo, máximo, etc. A parte da estrutura que muda junto com a necessidade da questão é a classe Node.
+> - A segment tree 2D tem como objetivo realizar de maneira eficiente operações que consistem em consultas em intervalo e atualizações em índice sobre submatrizes.
 
 > [!note]- Complexidade
 > - Build: $O(nm)$

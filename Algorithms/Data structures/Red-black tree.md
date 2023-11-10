@@ -10,6 +10,8 @@
 > [!note]- Complexidade
 > - Search/insert/remove: $O(\log n)$
 > - Find min/max key: $O(\log n)$
+> - Print inorder: $O(n)$
+> - Empty: $O(1)$
 
 ```cpp
 template <typename T>
@@ -75,14 +77,6 @@ public:
 
     void print_inorder() const {
         this->print_inorder(this->root);
-    }
-
-    void print_preorder() const {
-        this->print_preorder(this->root);
-    }
-
-    void print_postorder() const {
-        this->print_postorder(this->root);
     }
 
     bool empty() const {
@@ -251,28 +245,6 @@ public:
         this->print_inorder(node->right);
     }
 
-    void print_preorder(const Node *node) const {
-        if (node == this->null) {
-            return;
-        }
-
-        cout << node->key << '\n';
-
-        this->print_preorder(node->left);
-        this->print_preorder(node->right);
-    }
-
-    void print_postorder(const Node *node) const {
-        if (node == this->null) {
-            return;
-        }
-
-        this->print_postorder(node->left);
-        this->print_postorder(node->right);
-
-        cout << node->key << '\n';
-    }
-
     void left_rotation(Node *node) {
         Node *x {node->right};
         Node *beta {x->left};
@@ -367,7 +339,7 @@ public:
         this->fix_insertion(p);
     }
 
-    typename Node::Color check_color(Node *node) {
+	typename Node::Color check_color(Node *node) {
         if (node == this->null) {
             return Node::Color::BLACK;
         }

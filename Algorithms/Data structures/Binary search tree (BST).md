@@ -1,11 +1,11 @@
 > [!info] Objetivo
-> - Organizar os dados de uma maneira em que seja possível fazer operações de inserção, remoção, etc. Basicamente para cada nó $i$ todos os filhos a esquerda de $i$ são menores e todos os filhos a direita de $i$ são maiores.
+> - A BST é uma árvore que tem como objetivo o armazenamento de dados e cada nó dela atende uma propriedade, basicamente para cada nó $n$ todos os filhos a esquerda de $n$ são menores que $n$ e todos os filhos a direita de $n$ são maiores que $n$.
 
 > [!note]- Complexidade
-> - Search: $O(h)$
-> - Insert: $O(h)$
-> - Remove: $O(h)$
+> - Search/insert/remove: $O(h)$
 > - Find max/min key: $O(h)$
+> - Print inorder: $O(n)$
+> - Empty: $O(1)$
 
 ```cpp
 template <typename T>
@@ -49,14 +49,6 @@ public:
 
     void print_inorder() const {
         this->print_inorder(this->root);
-    }
-
-    void print_preorder() const {
-        this->print_preorder(this->root);
-    }
-
-    void print_postorder() const {
-        this->print_postorder(this->root);
     }
 
     bool empty() const {
@@ -156,28 +148,6 @@ private:
         cout << node->key << '\n';
 
         this->print_inorder(node->right);
-    }
-
-    void print_preorder(const Node *node) const {
-        if (node == nullptr) {
-            return;
-        }
-
-        cout << node->key << '\n';
-
-        this->print_preorder(node->left);
-        this->print_preorder(node->right);
-    }
-
-    void print_postorder(const Node *node) const {
-        if (node == nullptr) {
-            return;
-        }
-
-        this->print_postorder(node->left);
-        this->print_postorder(node->right);
-
-        cout << node->key << '\n';
     }
 
     void free(Node *node) {

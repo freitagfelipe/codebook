@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Fazer de maneira eficiente $Q$ operações que podem consistir em perguntar algo sobre um intervalo $[L, R]$ ou fazer um range update em um intervalo qualquer. Essas perguntas no intervalo podem, por exemplo, estar relacionada a um dos seguintes temas: mínimo, máximo, etc.
+> - A segment tree tem como objetivo realizar de maneira eficiente operações que consistem em consultas em intervalo e atualizações em intervalo fazendo utilização da propagação lenta.
 
 > [!note]- Complexidade
 > - Build: $O(n)$

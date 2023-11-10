@@ -2,9 +2,9 @@
 > - A Treap é uma estrutura criada a partir da junção da [[Binary search tree (BST)]] e da [[Binary heap]] e tem como objetivo ser uma árvore randomicamente balanceada.
 
 > [!note]- Complexidade
-> - Search/insert/remove: $O(\log n)$
 > - Split/split by size: $O(\log n)$
 > - Merge: $O(\log n)$
+> - Search/insert/remove: $O(\log n)$
 
 ```cpp
 #define PTreapNull -1
@@ -170,7 +170,7 @@ PTreap merge(PTreap l, PTreap r) {
 }
 
 template <typename T>
-PTreap erase(PTreap t, T key) {
+PTreap remove(PTreap t, T key) {
     if (t == PTreapNull) {
         return PTreapNull;
     }
@@ -182,9 +182,9 @@ PTreap erase(PTreap t, T key) {
     }
 
     if (key < treap.data) {
-        treap.children[0] = erase(treap.children[0], key);
+        treap.children[0] = remove(treap.children[0], key);
     } else {
-        treap.children[1] = erase(treap.children[1], key);
+        treap.children[1] = remove(treap.children[1], key);
     }
 
     return t;

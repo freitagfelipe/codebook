@@ -1,9 +1,14 @@
 > [!info] Objetivo
-> - Responder de maneira eficiente qual o menor elemento e qual o maior elemento em uma stack. Para transformar essas queries em uma queue em fila, basta criar duas estruturas, da primeira você só remove e da segunda você só adiciona e quando a primeira estiver vazia você passa todos os elementos da segunda para a primeira.
+> - A stack query tem como objetivo responder de maneira eficiente qual o menor elemento e qual o maior elemento em uma stack.
 
-> [!info]- Complexidade
-> - Inserir/remover: $O(1)$
+> [!note]- Complexidade
+> - Push/pop: $O(1)$
+> - Min/max: $O(1)$
 > - Top: $O(1)$
+> - Empty: $O(1)$
+
+> [!hint] Adaptação para uma queue
+> - É possível utilizar essa estrutura para realizar queries em queue, basta criar duas stack query e na primeira você só remove e da segunda você só adiciona e quando a primeira estiver vazia você passa todos os elementos da segunda para a primeira.
 
 ```cpp
 template <typename T>

@@ -1,60 +1,74 @@
 > [!info] Objetivo
-> - Possui o mesmo objetivo do [[Union-find]], porém essa implementação permite com que seja possível desfazer operações de merge. Entretanto, para atingir esse feito é necessário remover a compressão de caminho da função find.
+> - O union-find com rollback possui o mesmo objetivo do [[Union-find]], porém essa implementação permite com que seja possível desfazer operações de união. Entretanto, para atingir esse feito é necessário remover a compressão de caminho da função find.
 
 > [!note]- Complexidade
-> - Build: $O(n)$
 > - Find/merge: $O(\log n)$
 > - Rollback: $O(t)$
+> - Time: $O(1)$
 
 ```cpp
-// MAXN is the largest possible number of elements
-int p[MAXN];
-int h[MAXN];
-vector<tuple<int, int, int, int>> op;
+class UnionFindRB {
+public:
+    UnionFindRB(int n) {
+        this->n = n;
+        this->p.assign(n, 0);
+        this->h.assign(n, 0);
 
-int find(int x) {
-    if (p[x] == x) {
-        return x;
+        iota(this->p.begin(), this->p.end(), 1);
     }
 
-    return find(p[x]);
-}
+    int find(int x) {
+        if (this->p[x] == x) {
+            return x;
+        }
 
-void join(int x, int y) {
-    x = find(x);
-    y = find(y);
-
-    if (x == y) {
-        return;
+        return this->find(this->p[x]);
     }
 
-    if (h[x] < h[y]) {
-        swap(x, y);
+    void join(int x, int y) {
+        x = this->find(x);
+        y = this->find(y);
+
+        if (x == y) {
+            return;
+        }
+
+        if (this->h[x] < this->h[y]) {
+            swap(x, y);
+        }
+
+        this->op.emplace_back(x, this->h[x], y, this->p[y]);
+
+        this->p[y] = x;
+
+        if (this->h[x] == this->h[y]) {
+            ++this->h[x];
+        }
     }
 
-	op.emplace_back(x, h[x], y, p[y]);
+    // Undo the operations until only t operations are left
+    void rollback(int t) {
+	    while ((int) op.size() > t) {
+		    auto [x, hx, y, py] = op.back();
 
-    p[y] = x;
+		    h[x] = hx;
+		    p[y] = py;
 
-    if (h[x] == h[y]) {
-        ++h[x];
+		    op.pop_back();
+	    }	
     }
-}
 
-void rollback(int t) {
-	while ((int) op.size() > t) {
-		auto [x, hx, y, py] = op.back();
+    // Return how many operations were done
+    int time() {
+	    return (int) op.size();
+    }
 
-		h[x] = hx;
-		p[y] = py;
-
-		op.pop_back();
-	}	
-}
-
-int time() {
-	return (int) op.size();
-}
+private:
+    int n;
+    vector<int> p;
+    vector<int> h;
+    vector<tuple<int, int, int, int>> op;
+};
 ```
 
 ---

@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Essa estrutura é feita a partir de uma modificação da [[Treap]] e tem como objetivo ser um vetor poderoso, capaz de inserir/remover elementos em qualquer índice, aceitar consultas em intervalo, aceitar atualizações em range e tudo isso com ótima complexidade.
+> - A implicit treap é uma adaptação feita a partir da [[Treap]] e tem como objetivo ser um vetor poderoso, capaz de inserir e remover elementos em qualquer índice, realizar consultas em intervalo, aceitar atualizações em intervalo e tudo isso com uma ótima complexidade.
 
 > [!note]- Complexidade
 > - Split: $O(\log n)$

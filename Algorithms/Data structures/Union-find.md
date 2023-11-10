@@ -1,47 +1,52 @@
 > [!info] Objetivo
-> - Gerenciar uma coleção de conjuntos disjuntos, onde cada conjunto contém elementos distintos. Ele fornece operações eficientes para realizar união de conjuntos e encontrar a representação de um elemento dentro de um conjunto.
+> - O union-find tem como objetivo gerenciar uma coleção de conjuntos disjuntos, onde cada conjunto contém elementos distintos. Ele fornece operações eficientes para realizar união de conjuntos e encontrar a representação de um elemento dentro de um conjunto.
 
 > [!note]- Complexidade
-> - Build: $O(n)$
-> - Find/merge: $O(\alpha(n))$
+> - Find/join: $O(\alpha(n))$
 
 ```cpp
-// MAXN is the largest possible number of elements
-int p[MAXN];
-int h[MAXN];
+class UnionFind {
+public:
+    UnionFind(int n) {
+        this->n = n;
+        this->p.assign(n, 0);
+        this->h.assign(n, 0);
 
-int find(int x) {
-    if (p[x] == x) {
-        return x;
+        iota(this->p.begin(), this->p.end(), 1);
     }
 
-    return p[x] = find(p[x]);
-}
+    int find(int x) {
+        if (this->p[x] == x) {
+            return x;
+        }
 
-void join(int x, int y) {
-    x = find(x);
-    y = find(y);
-
-    if (x == y) {
-        return;
+        return this->p[x] = this->find(this->p[x]);
     }
 
-    if (h[x] < h[y]) {
-        swap(x, y);
+    void join(int x, int y) {
+        x = this->find(x);
+        y = this->find(y);
+
+        if (x == y) {
+            return;
+        }
+
+        if (this->h[x] < this->h[y]) {
+            swap(x, y);
+        }
+
+        this->p[y] = x;
+
+        if (this->h[x] == this->h[y]) {
+            ++this->h[x];
+        }
     }
 
-    p[y] = x;
-
-    if (h[x] == h[y]) {
-        ++h[x];
-    }
-}
-
-void build(int n) {
-	for (int i {}; i < n; ++i) {
-		p[i] = i;
-	}
-}
+private:
+    int n;
+    vector<int> p;
+    vector<int> h;
+};
 ```
 
 ---

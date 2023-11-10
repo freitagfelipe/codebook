@@ -1,9 +1,10 @@
-> [!objetivo] Objetivo
-> - Armazenar valores ordenáveis de maneira rápida, por se tratar de uma árvore balanceada, e responder consultas de mínimo e máximo em tempo constante.
+> [!info] Objetivo
+> - A binary heap é uma árvore balanceada que tem como objetivo implementar uma fila de prioridade.
 
 > [!note]- Complexidade
- > - Top: $O(1)$
-> - Insert/remove: $O(\log n)$
+> - Top: $O(1)$
+> - Push/pop: $O(\log n)$
+> - Empty: $O(1)$
 
 ```cpp
 template <typename T>

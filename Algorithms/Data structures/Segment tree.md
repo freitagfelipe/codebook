@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Fazer de maneira eficiente $Q$ operações que podem consistir em perguntar algo sobre um intervalo $[L, R]$ ou fazer um point update em um índice qualquer. Essas perguntas no intervalo podem, por exemplo, estar relacionada a um dos seguintes temas: mínimo, máximo, etc. A parte da estrutura que muda junto com a necessidade da questão é a classe Node.
+> - A segment tree tem como objetivo realizar de maneira eficiente operações que consistem em consultas em intervalo e atualizações em índice.
 
 > [!note]- Complexidade
 > - Build: $O(n)$

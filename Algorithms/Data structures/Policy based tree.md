@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Essas estruturas conseguem fazer as mesmas coisas das estruturas $multimap$ e $set$, mas com duas operações a mais que podem ser úteis dependendo do problema.
+> - Essas estruturas conseguem fazer as mesmas coisas das estruturas $multimap$ e $set$, mas com duas operações adicionais que podem ser úteis dependendo do problema.
 
 > [!note]- Complexidade
 > - Find by order: $O(\log n)$

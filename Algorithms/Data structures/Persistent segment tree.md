@@ -1,10 +1,12 @@
 > [!info] Objetivo
-> - O objetivo da [[Segment tree]] continua o mesmo, mas agora com a adição de persistência que permite que novas versões da estrutura sejam criados e permite que versões passadas sejam consultadas e alteradas sem perder as informações da versão atual.
+> - A persistent segment tree tem o mesmo objetivo da [[Segment tree]], mas agora com a adição de persistência que permite que novas versões da estrutura sejam criadas e permite que versões passadas sejam consultadas e alteradas sem alterar outras versões.
 
 > [!note]- Complexidade
 > - Build: $O(n)$
 > - Update: $O(\log n)$
 > - Query: $O(\log n)$
+> - Create state: $O(1)$
+> - States size: $O(1)$
 
 ```cpp
 // T is the type that the Node will store

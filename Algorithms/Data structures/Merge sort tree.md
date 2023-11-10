@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Tem como objetivo permitir consultas em intervalos da merge sort tree, como por exemplo quantos números são menores que $k$ em um intervalo $[L, R]$ ou quantos elementos são iguais a $k$ em um intervalo $[L, R]$.
+> - A merge sort tree tem como objetivo permitir consultas em intervalos da merge sort tree.
 
 > [!note]- Complexidade
 > - Build: $O(n \log n)$

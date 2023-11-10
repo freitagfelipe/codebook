@@ -1,9 +1,9 @@
 > [!info] Objetivo
-> - Responder $Q$ perguntas de intervalo $[L, R]$ de maneira eficiente em um vetor $V$. Essas $Q$ perguntas podem, por exemplo, estar relacionada um dos seguintes assuntos: mínimo, máximo, etc.
+> - A sparse table consegue responder consultas em intervalos em tempo constante, mas com uma etapa de construção um pouco mais custosa.
 
 > [!caution] Restrições
-> - O vetor não pode mudar durante as perguntas.
-> - A função utilizada na sparse table deve aceitar sobreposições, pois as vezes pode acontecer de os intervalos utilizados durante a query da sparse table não serem disjuntos. Caso a função utilizada não aceite sobreposições o que se deve fazer é dividir o intervalo nos maiores logs possíveis. 
+> - O vetor não pode mudar durante as consultas.
+> - A função utilizada na sparse table deve ser idempotente. Caso a função utilizada não seja idempotente o que se deve fazer é dividir o intervalo nos maiores logs possíveis e com isso realizar a consulta com uma complexidade $O(\log n)$.
 
 > [!note]- Complexidade
 > - Build: $O(n \log n)$
