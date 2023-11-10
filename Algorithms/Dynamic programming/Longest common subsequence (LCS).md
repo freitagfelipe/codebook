@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Encontrar a maior subsequência comum entre dois vetores.
+> - Tem como objetivo encontrar a maior subsequência comum entre $a$ e $b$.
 
 > [!note]- Complexidade
 > - $O(nm)$
@@ -22,8 +22,8 @@ int lcs(const string &a, const string &b) {
 }
 ```
 
-> [!hint] Retornar a maior subsequência comum
-> - O código abaixo pode ser utilizado para retornar a LCS.
+> [!hint] Encontrando a maior subsequência comum
+> - O código abaixo pode ser utilizado para dizer qual é a maior subsequência comum entre $a$ e $b$.
 
 ```cpp
 string lcs(const string &a, const string &b) {
@@ -60,64 +60,5 @@ string lcs(const string &a, const string &b) {
 	return answer;
 }
 ```
-
-> [!hint] Encontrar a LCS utilizando uma LIS
-> - Caso uma das sequências tenha apenas elementos distintos a LCS pode ser calculada por meio de uma [[Longest increasing subsequence (LIS)]] como mostrado abaixo.
-
-````ad-example
-title: Exemplo com a questão [Não é só mais um LCS](https://neps.academy/br/exercise/301).
-
-> [!note]- Complexidade
-> - $O(n \log n)$
-
-```cpp
-#include <bits/stdc++.h>
-
-using namespace std;
-
-unordered_map<int, int> mp;
-
-int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
-	
-    int n, m;
-
-    cin >> n >> m;
-
-    for (int i {}; i < n; ++i) {
-        int aux;
-
-        cin >> aux;
-		
-		mp[aux] = i;
-    }
-
-    vector<int> lis;
-
-    for (int i {}; i < m; ++i) {
-        int aux;
-
-        cin >> aux;
-
-        if (mp.find(aux) == mp.end()) {
-            continue;
-        }
-
-        vector<int>::iterator it {lower_bound(lis.begin(), lis.end(), mp[aux])};
-
-        if (it == lis.end()) {
-            lis.push_back(mp[aux]);
-        } else {
-            *it = mp[aux];
-        }
-    }
-
-    cout << lis.size() << '\n';
-
-    return 0;
-}
-```
-````
 
 ---

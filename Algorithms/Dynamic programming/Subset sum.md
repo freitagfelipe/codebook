@@ -1,23 +1,23 @@
-> [!info]
-> - Dado uma sequência de inteiros não negativos e um valor $K$, determine se existe algum subconjunto de números que somem $K$.
+> [!info] Objetivo
+> - Tem como objetivo determinar quais números podem ou não ser formados por uma soma de alguns elementos de $v$.
 
 > [!note]- Complexidade
 > - $O(\dfrac{n \cdot k}{wordsize})$
 
 ```cpp
 // MAXK is the max size of K
-bitset<MAXK> bits;
+bitset<MAXK> dp;
 
-void build(const vector<int> &v) {
-	bits[0] = true;
+void build(const vector<int> &v, int maxk) {
+	dp[0] = true;
 
 	for (int n : v) {
-		bits |= (bits << n);
+		dp |= (dp << n);
 	}
 }
 
-bool subset_sum(int k) {
-	return bits[k];
+bool query(int k) {
+	return dp[k];
 }
 ```
 

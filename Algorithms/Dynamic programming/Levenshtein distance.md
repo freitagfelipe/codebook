@@ -1,5 +1,5 @@
-> [!info]
-> - Encontrar a distância de edição entre duas sequências que faça com que os conjuntos fiquem iguais.
+> [!info] Objetivo
+> - Tem como objetivo encontrar a distância de edição entre essas strings, ou seja, encontrar o menor número de operações de inserção, remoção ou substituição para transformar $a$ em $b$.
 
 > [!note]- Complexidade
 > - $O(nm)$

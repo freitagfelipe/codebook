@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> Resolver o problema da soma máxima de um intervalo, ou seja, dado um vetor $v$ ele encontra uma subsequência de $v$ que tenha a maior soma.
+> - Tem como objetivo calcular a soma máxima daquele conjunto, ou seja, encontrar a subsequência contínua de $v$ que tenha a maior soma.
 
 > [!note]- Complexidade
 > - $O(n)$
@@ -18,20 +18,15 @@ int kadane(const vector<int> &v) {
 }
 ```
 
-> [!hint] Adaptação
-> O algoritmo de Kadane pode ser adaptado para encontrar o início e o fim da sequência como mostrado logo abaixo.
-
-> [!note]- Complexidade
-> - $O(n)$
+> [!hint] Encontrando o início e o fim da subsequência
+> - O algoritmo de Kadane pode ser adaptado para encontrar o início e o fim da subsequência contínua de soma máxima com a mesma complexidade.
 
 ```cpp
 typedef pair<int, int> pii;
 
-// MAXN is the max size of v
-int DP[MAXN];
-int opt[MAXN];
-
 pii kadane(const vector<int> &v) {
+	vector<int> DP(v.size()), opt(v.size());
+
     DP[0] = v[0];
     opt[0] = 0;
     
@@ -58,8 +53,8 @@ pii kadane(const vector<int> &v) {
 }
 ```
 
-> [!hint] Adaptação
-> - O algoritmo de Kadane pode ser adaptado para encontrar a maior soma em um vetor circular.
+> [!hint] Vetor circular
+> - O algoritmo de Kadane pode ser adaptado para encontrar a subsequência de $v$ que tem a maior soma tal que $v$ é um vetor circular.
 
 ```cpp
 int circular_kadane(vector<int> &v) {
