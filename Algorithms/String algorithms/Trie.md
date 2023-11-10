@@ -1,12 +1,9 @@
 > [!info] Objetivo
-> - Armazenar e buscar de maneira eficiente palavras, onde cada nó da árvore representa um caractere e o caminho até uma folha é formado pelos prefixos da palavra e as folhas a palavra em si.
+> - Tem como objetivo armazenar e buscar palavras, nessa estrutura cada nó da árvore representa um caractere e o caminho até uma folha é formado pelos prefixos da palavra.
 
 > [!note]- Complexidade
-> - Insert: $O(n)$
-> - Remove: $O(n)$
-> - Exists: $O(n)$
-> - Count prefix: $O(n)$
-> - Count string: $O(n)$
+> - Add/remove/exists: $O(n)$
+> - Count prefix/string: $O(n)$
 
 ```cpp
 class Trie {

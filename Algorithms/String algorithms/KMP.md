@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Calcular de maneira eficiente o array de prefixo.
+> - Tem como objetivo calcular de maneira eficiente o vetor de prefixo.
 
 > [!note]- Complexidade
 > - $O(n)$

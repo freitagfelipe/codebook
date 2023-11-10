@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Permite pesquisarmos de forma rápida vários padrões de uma só vez em um texto. É construído um autômato em cima de uma [[Trie]] que consiste de transições feitas com suffix links.
+> - Tem como objetivo permitir a pesquisa de forma eficiente de vários padrões de uma só vez em um texto. É construído um autômato em cima de uma [[Trie]] que consiste de transições feitas com suffix links e end links.
 
 > [!note]- Complexidade
 > - Insert: $O(n)$

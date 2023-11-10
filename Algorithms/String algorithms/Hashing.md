@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Quando queremos comparar duas strings $a$ e $b$ obtemos uma complexidade de $min(|a|, |b|)$, porém se transformarmos essas strings em números através de um hashing podemos comparar esses números em $O(1)$. O algoritmo utiliza a seguinte fórmula chamada de polynomial rolling hash function:
+> - Tem como objetivo realizar o hashing de strings, pois quando queremos comparar duas strings $a$ e $b$ obtemos uma complexidade de $min(|a|, |b|)$, porém se transformarmos essas strings em números através de um hashing podemos comparar esses números em $O(1)$. O algoritmo utiliza a seguinte fórmula chamada de polynomial rolling hash function:
 >  
 > $$
 > \begin{gathered}
