@@ -1,36 +1,24 @@
 > [!info] Objetivo
-> - Encontrar o menor caminho de todos os nós para todos os nós.
+> - Tem como objetivo encontrar para todos os vértices $v$ de um grafo o menor caminho de $v$ para todos os outros vértices do grafo.
 
 > [!note]- Complexidade
 > - $O(n^3)$
 
 ```cpp
-// MAXN is the largest possible number of nodes
-int dp[MAXN][MAXN];
-int n, m;
+typedef pair<int, int, int> Edge;
 
-void floyd_warshall() {
-    cin >> n >> m;
+// The graph must be 0-indexed
+vector<vector<int>> floyd_warshall(int n, const vector<Edge> &edges) {
+	// INF is a distance that can represent the node as unreachable
+	vector<vector<int>> dp(n, vector<int>(n, INF));
 
-    for (int i {}; i < n; ++i) {
-        for (int j {}; j < n; ++j) {
-            if (i == j) {
-                dp[i][j] = 0;
-            } else {
-				// INF is a distance that can represent the node as unreachable
-                dp[i][j] = INF;
-            }
-        }
-    }
+	for (int i {}; i < n; ++i) {
+		dp[i][i] = 0;
+	}
 
-    for (int i {}; i < m; ++i) {
-        int u, v, w;
-
-        cin >> u >> v >> w;
-
-        dp[u][v] = w;
-        dp[v][u] = w;
-    }
+	for (auto [u, v, w] : edges) {
+		dp[u][v] = w;
+	}
 
     for (int k {}; k < n; ++k) {
         for (int i {}; i < n; ++i) {
@@ -41,6 +29,8 @@ void floyd_warshall() {
             }
         }
     }
+
+	return dp;
 }
 ```
 

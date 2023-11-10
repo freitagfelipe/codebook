@@ -1,15 +1,14 @@
 > [!info] Objetivo
-> - Encontrar um ciclo em um grafo, a primeira implementação será para grafos bidirecionais e a segunda para grafos direcionados.
+> - Tem como objetivo encontrar ciclos em um grafo, a primeira implementação será para grafos bidirecionais e a segunda para grafos direcionados.
 
 > [!note]- Complexidade
 > - $O(V + E)$
 
 ```cpp
-int n;
-// MAXN is the largest possible number of nodes
-vector<int> g[MAXN], parent(MAXN, -1);
-bitset<MAXN> visited;
-int cycle_start {-1}, cycle_end;
+vector<vector<int>> g;
+vector<int> parent;
+vector<bool> visited;
+int cycle_start, cycle_end;
 
 bool dfs(int u, int p = -1) {
 	visited[u] = true;
@@ -36,7 +35,13 @@ bool dfs(int u, int p = -1) {
 	return false;
 }
 
-vector<int> find_cycle() {
+// The graph must be 0-indexed
+vector<int> find_cycle(int n) {
+	cycle_start = -1;
+
+	parent.assign(n, -1);
+	visited.assign(n, false);
+
 	for (int i {}; i < n; ++i) {
 		if (!visited[i] && dfs(i)) {
 			break;
@@ -62,11 +67,9 @@ vector<int> find_cycle() {
 ```
 
 ```cpp
-int n;
-// MAXN is the largest possible number of nodes
-vector<int> g[MAXN], parent(MAXN, -1);
-vector<char> color(MAXN, 0);
-int cycle_start {-1}, cycle_end;
+vector<vector<int>> g;
+vector<int> parent, color;
+int cycle_start, cycle_end;
 
 bool dfs(int u) {
 	color[u] = 1;
@@ -91,7 +94,13 @@ bool dfs(int u) {
 	return false;
 }
 
-vector<int> find_cycle() {
+// The graph must be 0-indexed
+vector<int> find_cycle(int n) {
+	cycle_start = -1;
+
+	parent.assign(n, -1);
+	color.assign(n, 0);
+
 	for (int i {}; i < n; ++i) {
 		if (color[i] == 0 && dfs(i)) {
 			break;

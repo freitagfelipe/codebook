@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Encontrar em um grafo acíclico e conexo, ou seja, uma árvore um ou dois vértices que minimizam a distância máxima entre ele e todos os outros vértices. Utiliza uma adaptação da [[Depth-first search (DFS)]].
+> - Tem como objetivo encontrar em uma árvore um ou dois vértices que minimizam a distância máxima entre ele e todos os outros vértices, ou seja, o vértice que está no centro. Ademais, o algoritmo utiliza uma adaptação da [[Depth-first search (DFS)]] e utiliza a ideia do [[Tree diameter]] para encontrar os vértices que estão na ponta do diâmetro.
 
 > [!note]- Complexidade
 > - $O(V)$
@@ -9,8 +9,8 @@ typedef pair<int, int> pii;
 typedef tuple<int, int, int> tiii;
 
 // MAXN is the largest possible number of nodes
-vector<int> g[MAXN];
-int parent[MAXN];
+vector<vector<int>> g;
+vector<int> parent;
 
 pii dfs(int u, int d = 0, int p = -1) {
     pii most_distant {u, d};
@@ -37,7 +37,10 @@ tiii get_most_distants() {
 	return {x, y, d};
 }
 
-vector<int> get_center() {
+// The graph must be 0-indexed
+vector<int> get_center(int n) {
+	parent.assign(n, -1);
+
 	auto [x, y, k] = get_most_distants();
 
 	vector<int> path;

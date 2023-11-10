@@ -1,42 +1,34 @@
 > [!info] Objetivo
-> - Dado um grafo ele tem como objetivo encontrar o menor caminho de $s$ para todos os outros nós do grafo.
+> - Tem como objetivo encontrar para um dado vértice $s$ o menor caminho para todos os outros vértices do grafo.
 
 > [!note]- Complexidade
 > - $O(VE)$
 
 ```cpp
-struct Edge {
-    int u;
-    int v;
-    int w;
-};
+typedef tuple<int, int, int> Edge;
 
-// MAXN is the largest possible number of nodes
-int n;
-int dist[MAXN];
-vector<Edge> edges;
+// The graph must be 0-indexed
+vector<int> bellman_ford(int s, int n, const vector<Edge> &edges) {
+	// INF is a distance that can represent the node as unreachable
+	vector<int> dists(n, INF);
 
-void bellman_ford(int s) {
-    for (int i {}; i < n; ++i) {
-	    // INF is a distance that can represent the node as unreachable
-        dist[i] = INF;
-    }
-
-    dist[s] = 0;
+    dists[s] = 0;
 
     for (int i {}; i < n - 1; ++i) {
         for (auto [u, v, w] : edges) {
-            if (dist[u] != INF) {
-                dist[v] = min(dist[v], dist[u] + w);
+            if (dists[u] != INF) {
+                dists[v] = min(dists[v], dists[u] + w);
             }
         }
     }
 
     for (auto [u, v, w] : edges) {
-        if (dist[u] + w < dist[v]) {
+        if (dists[u] + w < dists[v]) {
             throw runtime_error("Has negative cycle");
         }
     }
+
+	return dists;
 }
 ```
 
@@ -44,21 +36,11 @@ void bellman_ford(int s) {
 > - O algoritmo de Bellman-Ford consegue detectar se o grafo contém ciclos negativos e retornar os vértices que estão nesse ciclo utilizando a seguinte adaptação.
 
 ```cpp
-typedef pair<bool, vector<int>> pbvi;
+typedef tuple<int, int, int> Edge;
 
-struct Edge {
-    int u;
-    int v;
-    int w;
-};
-
-// MAXN is the largest possible number of nodes
-int n;
-int dist[MAXN];
-vector<Edge> edges;
-
-pbvi bellman_ford() {
-	vector<int> p(n + 1);
+// The graph must be 0-indexed
+pair<bool, vector<int>> bellman_ford(int n, const vector<Edge> &edges) {
+	vector<int> p(n), dists(n);
 	int x {-1};
 
     for (int i {}; i < n; ++i) {

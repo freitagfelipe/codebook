@@ -1,14 +1,14 @@
 > [!info] Objetivo
-> - Fazer a travessia em um grafo.
+> - Tem como objetivo fazer a travessia em um grafo utilizando busca em profundidade.
 
 > [!note]- Complexidade
 > - $O(V + E)$
 
 ```cpp
-// MAXN is the largest possible number of nodes
-vector<int> g[MAXN];
-bitset<MAXN> visited;
+vector<vector<int>> g;
+vector<bool> visited;
 
+// The graph must be 0-indexed
 void dfs(int u) {
     visited[u] = true;
 
@@ -17,6 +17,11 @@ void dfs(int u) {
 			dfs(to);
 		}
 	}
+}
+
+// Call it before call the setup
+void setup(int n) {
+	visited.assign(n, false);
 }
 ```
 

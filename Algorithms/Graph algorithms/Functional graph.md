@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Dado um grafo funcional, tem como objetivo calcular algumas informações úteis que podem ser utilizadas para resolver o dado problema.
+> - Tem como objetivo calcular algumas informaçõs úteis a respeito de um grafo funcional que podem ser utilizadas para resolver algum problema.
 
 > [!note]- Complexidade
 > - $O(V)$

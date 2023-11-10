@@ -5,14 +5,15 @@
 > - $O(nm)$
 
 ```cpp
-// MAXN is the largest possible number of rows and columns for a square matrix
-int l, c;
 int di[] = {1, 0, -1, 0};
 int dj[] = {0, 1, 0, -1};
-int board[MAXN][MAXN];
-bitset<MAXN> visited[MAXN];
+vector<vector<int>> mat;
+vector<vector<bool>> visited;
 
 bool is_cell_valid(int i, int j) {
+	int l {(int) mat.size()};
+	int c {(int) mat[0].size()};
+
     if (i < 0 || i >= l || j < 0 || j >= c) {
         return false;
     } else if (visited[i][j]) {
@@ -22,6 +23,7 @@ bool is_cell_valid(int i, int j) {
     return true;
 }
 
+// The graph must be 0-indexed
 void dfs(int i, int j) {
     visited[i][j] = true;
 
@@ -33,6 +35,11 @@ void dfs(int i, int j) {
             dfs(ni, nj);
         }
     }
+}
+
+// Call it before call the dfs
+void setup(int n, int m) {
+	visited.assign(n, vector<bool>(m));
 }
 ```
 

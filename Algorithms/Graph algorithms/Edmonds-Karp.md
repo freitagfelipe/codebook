@@ -1,25 +1,31 @@
 > [!info] Objetivo
-> - Dado um grafo e a capacidade de fluxo de cada aresta, tem como objetivo encontrar o fluxo máximo de $s$ para $t$.
+> - Tem como objetivo encontrar o fluxo máximo de $s$ para $t$.
 
 > [!note]- Complexidade
 > - $O(VE^2)$
 
 ```cpp
 typedef long long ll;
-typedef pair<int, ll> pil;
 
-int n;
-// MAXN is the largest possible number of nodes
-vector<int> g[MAXN];
+vector<vector<int>> g;
 vector<vector<ll>> capacity;
 
-ll bfs(int s, int t, vector<int>& p) {
+void add_edge(int u, int v, int c) {
+	g[u].push_back(v);
+	g[v].push_back(u);
+
+	capacity[u][v] += c;
+	capacity[v][u] += 0;
+}
+
+ll bfs(int s, int t, vector<int> &p) {
     fill(p.begin(), p.end(), -1);
 
     p[s] = -2;
 
-    queue<pil> q;
+    queue<pair<int, ll>> q;
 
+	// INF is the numeric limits max of the capacity type
     q.push({s, INF});
 
     while (!q.empty()) {
@@ -45,7 +51,8 @@ ll bfs(int s, int t, vector<int>& p) {
     return 0;
 }
 
-ll max_flow(int s, int t) {
+// The graph must be 0-indexed
+ll max_flow(int s, int t, int n) {
     ll flow {};
     ll new_flow {};
     vector<int> p(n);
@@ -66,6 +73,10 @@ ll max_flow(int s, int t) {
     }
 
     return flow;
+}
+
+void setup(int n) {
+	capacity.assign(n, vector<ll>(n));
 }
 ```
 

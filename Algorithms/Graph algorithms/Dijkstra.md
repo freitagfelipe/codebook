@@ -1,30 +1,24 @@
 > [!info] Objetivo
-> - Dado um grafo ele tem como objetivo encontrar o menor caminho de $s$ para todos os outros nós do grafo.
+> - Tem como objetivo encontrar para um dado vértice $s$ o menor caminho para todos os outros vértices do grafo. A primeira implementação é melhor para grafos esparsos, já a segunda implementação é melhor para grafos densos, ou seja, quando $E \approx V^2$.
 
-> [!caution] Restrição
-> - Não funciona com grafos que contém arestas com peso negativo, para isso se deve usar [[Bellman-Ford]] ou o [[Floyd-Warshall]].
+> [!caution] Arestas com pesos negativos
+> - O algoritmo de Dijkstra não funciona com grafos que contém arestas com peso negativo, para isso se deve usar [[Bellman-Ford]] ou o [[Floyd-Warshall]].
 
 > [!note]- Complexidade
-> - $O((V + E) \log V)$
+> - Sparse Dijkstra: $O((V + E) \log V)$
+> - Dense Dijkstra:  $O(V^2 + E)$
 
 ```cpp
 typedef pair<int, int> pii;
 
-// MAXN is the largest possible number of nodes
-int n;
-int dist[MAXN];
-bitset<MAXN> marked;
-vector<pii> g[MAXN];
-
-void dijkstra(int s) {
-    for (int i {}; i < n; ++i) {
-		// INF is a distance that can represent the node as unreachable
-        dist[i] = INF;
-    }
+vector<int> dijkstra(int s, const vector<vector<pii>> &g) {
+	// INF is a distance that can represent the node as unreachable
+	vector<int> dists(g.size(), INF);
+	vector<bool> marked(g.size());
 
     priority_queue<pii, vector<pii>, greater<pii>> pq;
 
-    dist[s] = 0;
+    dists[s] = 0;
 
     pq.push({0, s});
 
@@ -40,38 +34,29 @@ void dijkstra(int s) {
         marked[curr] = true;
 
         for (auto [w, to] : g[curr]) {
-            if (dist[curr] + w < dist[to]) {
-                dist[to] = dist[curr] + w;
+            if (dists[curr] + w < dists[to]) {
+                dists[to] = dists[curr] + w;
 
-                pq.push({dist[to], to});
+                pq.push({dists[to], to});
             }
         }
     }
+
+	return dists;
 }
 ```
-
-> [!caution] Atenção
-> - Caso o grafo seja denso, ou seja, $E \approx V^2$, é melhor utilizar a adaptação abaixo.
-
-> [!note]- Complexidade
-> - $O(V^2 + E)$
 
 ```cpp
 typedef pair<int, int> pii;
 
-// MAXN is the largest possible number of nodes
-int n;
-int dist[MAXN];
-bitset<MAXN> marked;
-vector<pii> g[MAXN];
+void dijkstra(int s, const vector<vector<pii>> &g) {
+	// INF is a distance that can represent the node as unreachable
+	vector<int> dists(g.size(), INF);
+	vector<bool> marked(g.size());
 
-void dijkstra(int s) {
-    for (int i {}; i < n; ++i) {
-		// INF is a distance that can represent the node as unreachable
-        dist[i] = INF;
-    }
+	int n {(int) g.size()};
 
-    dist[s] = 0;
+    dists[s] = 0;
 
     for (int i {}; i < n; ++i) {
         int curr {-1};
@@ -81,7 +66,7 @@ void dijkstra(int s) {
                 continue;
             }
 
-            if (curr == -1 || dist[j] < dist[curr]) {
+            if (curr == -1 || dists[j] < dists[curr]) {
                 curr = j;
             }
         }
@@ -89,9 +74,11 @@ void dijkstra(int s) {
         marked[curr] = true;
 
         for (auto [w, to] : g[curr]) {
-            dist[to] = min(dist[to], dist[curr] + w);
+            dists[to] = min(dists[to], dists[curr] + w);
         }
     }
+
+	return dists;
 }
 ```
 

@@ -1,25 +1,17 @@
 > [!info] Objetivo
-> - Encontrar arestas em um grafo direcionado que se removidas fazem com que seja gerada uma nova componente conexa, ou seja, desconectam o grafo.
+> - Tem como objetivo encontras as pontes de um grafo, ou seja, as arestas que se removidas fazem com que seja gerado uma nova componente conexa, ou seja, desconectam o grafo.
 
 > [!note]- Complexidade
 > - $O(V + E)$
 
 ```cpp
-struct Edge {
-    int u;
-    int v;
+typedef pair<int, int> Edge;
 
-	Edge(int u, int v) {
-		this->u = u;
-		this->v = v;
-	}
-};
-
-int n, timer {};
-// MAXN is the largest possible number of nodes
-vector<int> g[MAXN], tin(MAXN, 0), low(MAXN, 0);
+int timer;
+vector<vector<int>> g;
+vector<int> tin, low;
 vector<Edge> bridges;
-bitset<MAXN> visited;
+vector<bool> visited;
 
 void dfs(int u, int p = -1) {
     visited[u] = true;
@@ -45,7 +37,14 @@ void dfs(int u, int p = -1) {
     }
 }
 
-void find_bridges() {
+// The graph must be 0-indexed
+void find_bridges(int n) {
+	timer = 0;
+
+	tin.assign(n, 0);
+	low.assign(n, 0);
+	visited.assign(n, false);
+
 	for (int i {}; i < n; ++i) {
 		if (!visited[i]) {
 			dfs(i);

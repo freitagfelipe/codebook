@@ -1,16 +1,18 @@
 > [!info] Objetivo
-> - Tem como objetivo dado uma árvore responder perguntas sobre o menor ancestral comum entre dois vértices $v$ e $u$, mas pode ser adaptado para responder consultas de mínimo, máximo, soma das arestas, etc.
+> - Tem como objetivo dado uma árvore responder perguntas sobre o menor ancestral comum entre dois vértices, mas pode ser adaptado para responder consultas de mínimo, máximo, soma das arestas, etc.
 
 > [!note]- Complexidade
 > - Build: $O((V + E) \log V)$
+> - Is ancestor: $O(1)$
+> - Lca: $O(\log V)$
+> - Go: $O(\log V)$
 > - Query: $O(\log V)$
 
 ```cpp
-// L is the ceil(log(n))
-int n, l, timer {};
-// MAXN is the largest possible number of nodes
-vector<int> g[MAXN], tin(MAXN, 0), tout(MAXN, 0);
-vector<vector<int>> up;
+// l is the ceil(log(n))
+int l, timer;
+vector<vector<int>> g, up;
+vector<int> tin, tout;
 
 void dfs(int u, int p) {
     tin[u] = ++timer;
@@ -75,9 +77,14 @@ int query(int u, int v) {
 	// Return the ans based on something related with the go(u, lca_ans) and go(v, lca_ans)
 }
 
-void build(int root) {
+void build(int n, int root) {
+	timer = 0;
     l = ceil(log2(n));
+    
     up.assign(n, vector<int>(l + 1));
+	tin.assign(n, 0);
+	tout.assign(n, 0);
+
     dfs(root, root);
 }
 ```

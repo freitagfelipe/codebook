@@ -1,18 +1,18 @@
 > [!info] Objetivo
-> - Tem como objetivo dividir uma árvore em vários caminhos para que consultas e atualizações a respeito de caminhos de uma árvore e/ou sub-árvores sejam feitas de maneira eficiente.
+> - Tem como objetivo processar uma árvore de uma maneira que consultas e atualizações a respeito de caminhos de uma árvore e/ou sub-árvores sejam feitas de maneira eficiente junto de uma estrutura de dados.
 
 > [!note]- Complexidade
-> - Considere $f$ como sendo a complexidade da operação utilizando a estrutura de dados auxiliar.
+> - Considere $q$ como sendo a complexidade de realizar uma consulta na estrutura de dados auxiliar e $u$ como sendo a complexidade de realizar uma atualização na estrutura de dados auxiliar.
 > - Build: $O(n)$
-> - Query path: $O(\log n \cdot f)$
-> - Update path: $O(\log n \cdot)$
+> - Query path: $O(\log n \cdot q)$
+> - Update path: $O(\log n \cdot u)$
 > - Update vertex: $O(f)$
 > - Query subtree: $O(f)$
 > - Update subtree: $O(f)$
 
 ```cpp
-// MAXN is the largest possible number of nodes
-vector<int> g[MAXN], p, depth, heavy, head, pos, sz;
+vector<vector<int>> g;
+vector<int> p, depth, heavy, head, pos, sz;
 int curr_pos;
 
 int dfs(int u) {

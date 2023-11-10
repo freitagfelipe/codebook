@@ -1,13 +1,12 @@
 > [!info] Objetivo
-> - Transformar uma árvore em um array para que seja possível fazermos utilizarmos outra estrutura para fazermos consultas e atualizações que podem ser a respeito de um caminho da árvore ou de uma sub-árvore.
+> - Tem como objetivo transformar uma árvore em um array para que seja possível fazermos utilizarmos outra estrutura para fazermos consultas e atualizações que podem ser a respeito de um caminho da árvore ou de uma sub-árvore.
 
-> [!info]- Complexidade
+> [!note]- Complexidade
 > - $O(n)$
 
 ```cpp
-// MAXN is the largest possible number of nodes
-vector<int> g[MAXN];
-int n, timer;
+vector<vector<int>> g;
+int timer;
 
 template <bool is_path_query>
 void dfs(int u, int p, vector<int> &start, vector<int> &end) {
@@ -40,8 +39,10 @@ void dfs(int u, int p, vector<int> &start, vector<int> &end) {
 //       position with the inverse
 //     - For queries you can query in the [start[node], end[node] - 1] interval
 template <bool is_path_query = false>
-tuple<vector<int>, vector<int>> get_euler_tour(int s) {
+tuple<vector<int>, vector<int>> get_euler_tour(int s, int n) {
     vector<int> start(n), end(n);
+    
+	timer = 0;
 
     dfs<is_path_query>(s, -1, start, end);
 

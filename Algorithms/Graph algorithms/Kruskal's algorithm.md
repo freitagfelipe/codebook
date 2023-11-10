@@ -1,44 +1,29 @@
 > [!info] Objetivo
-> O algoritmo de Kruskal tem como objetivo dado um grafo bidirecional, encontrar a árvore geradora do grafo que tenha menor custo, ou seja, a Minimal Spanning Tree (MST) do grafo. Além disso, o algoritmo de Kruskal utiliza o [[Union-find]].
+> - Tem como objetivo dado um grafo bidirecional, encontrar a árvore geradora do grafo que tenha menor custo, ou seja, a Minimal Spanning Tree (MST) do grafo. Ademais, o algoritmo de Kruskal utiliza o [[Union-find]].
 
 > [!caution] Grafos densos
-> O algoritmo de Kruskal é melhor para grafos esparsos, caso o grafo seja denso é melhor usar o algoritmo de [[Prim's algorithm]].
+> - O algoritmo de Kruskal é melhor para grafos esparsos, caso o grafo seja denso é melhor usar o [[Prim's algorithm]].
 
 > [!note]- Complexidade
-> - $O(V + E \log E)$, gast
+> - $O(V + E \log E)$
+
+> [!hint] Encontrando a Maximal Spanning Tree
+> - Para encontrar a Maximal Spanning Tree basta ao invés de ordenar do menor para o maior peso ordenar do maior para o menor peso.
 
 ```cpp
-struct Edge {
-    int u;
-    int v;
-    int w;
+typedef tuple<int, int, int> Edge;
 
-    Edge(int u, int v, int w) {
-        this->u = u;
-        this->v = v;
-        this->w = w;
-    }
+// The graph must be 0-indexed
+int kruskal(int n, const vector<Edge> &edges) {
+	UnionFind uf(n);
 
-    bool operator<(const Edge &e) const {
-        return this->w < e.w;
-    }
-};
-
-int n;
-vector<Edge> edges;
-
-int kruskal() {
     sort(edges.begin(), edges.end());
-
-    for (int i {}; i < n; ++i) {
-        p[i] = i;
-    }
 
     int mst_cost {};
 
     for (auto [u, v, w] : edges) {
-        if (find(u) != find(v)) {
-            join(u, v);
+        if (uf.find(u) != uf.find(v)) {
+            uf.join(u, v);
 
             mst_cost += w;
         }

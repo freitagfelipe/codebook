@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Realizar a ordenação topológica de um grafo, ou seja, uma ordem linear de seus nós em que cada nó vem antes de todos nós para os quais este tenha arestas de saída.
+> - Tem como objetivo realizar a ordenação topológica de um grafo, ou seja, uma ordem linear de seus nós em que cada nó vem antes de todos nós para os quais este tenha arestas de saída.
 
 > [!caution] Atenção
 > - O gráfico deve ser um DAG (Directed Acyclic Graph) para ter ordenação topológica.
@@ -9,12 +9,12 @@
 > - $O(V + E)$
 
 ```cpp
-// MAXN is the largest possible number of nodes
-int n;
-int in_degree[MAXN];
-vector<int> g[MAXN];
+vector<vector<int>> g;
 
-vector<int> topological_sort() {
+// The graph must be 0-indexed
+vector<int> topological_sort(int n) {
+	vector<int> in_degree(n);
+
     for (int i {}; i < n; ++i) {
         for (int to : g[i]) {
             ++in_degree[to];

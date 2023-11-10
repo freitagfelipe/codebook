@@ -1,13 +1,12 @@
 > [!info] Objetivo
-> - Calcular as componentes conexas de um grafo bidirecional.
+> - Tem como objetivo calcular as componentes conexas de um grafo bidirecional.
 
 > [!note]- Complexidade
 > - $O(V + E)$
 
 ```cpp
-// MAXN is the largest possible number of nodes
-int n;
-vector<int> g[MAXN], component(MAXN, -1);
+vector<vector<int>> g;
+vector<int> component;
 
 void dfs(int u, int c) {
 	component[u] = c;
@@ -19,7 +18,10 @@ void dfs(int u, int c) {
 	}
 }
 
-int cc() {
+// The graph must be 0-indexed
+int cc(int n) {
+	component.assign(n, -1);
+	
 	int comp {};
 
 	for (int i {}; i < n; ++i) {

@@ -1,14 +1,14 @@
 > [!info] Objetivo
-> - Encontrar todos os vértices de um grafo que se removidos causariam a criação de uma ou mais componente conexas.
+> - Tem como objetivo encontrar os pontos de articulação de um grafo, ou seja, os vértices que se removidos do grafo causariam a criação de uma ou mais componentes conexas.
 
 > [!note]- Complexidade
 > - $O(V + E)$
 
 ```cpp
-int n, timer {};
-// MAXN is the largest possible number of nodes
-vector<int> g[MAXN], tin(MAXN, 0), low(MAXN, 0);
-bitset<MAXN> visited, is_articulation_point;
+int timer;
+vector<vector<int>> g;
+vector<int> tin, low;
+vector<bool> visited, is_articulation_point;
 
 void dfs(int u, int p = -1) {
     visited[u] = true;
@@ -42,7 +42,15 @@ void dfs(int u, int p = -1) {
     }
 }
 
-void find_articulation_points() {
+// The graph must be 0-indexed
+void find_articulation_points(int n) {
+	timer = 0;
+
+	tin.assign(n, 0);
+	low.assign(n, 0);
+	visited.assign(n, false);
+	is_articulation_point.assign(n, false);
+
 	for (int i {}; i < n; ++i) {
 		if (!visited[i]) {
 			dfs(i);
