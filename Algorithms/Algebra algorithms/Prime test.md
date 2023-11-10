@@ -1,5 +1,5 @@
 > [!Info] Objetivo
-> Dado um número $n$, tem como objetivo responser se $n$ é ou não primo.
+> - Tem como objetivo responser se $n$ é ou não primo.
 
 > [!note]- Complexidade
 > - $O(\sqrt n)$

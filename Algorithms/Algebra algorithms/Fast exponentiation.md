@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Dado uma base $b$, um expoente $e$ e um módulo $m$, tem como objetivo calcular de maneira eficiente $b^e \text{ mod m}$.
+> - Tem como objetivo calcular de maneira eficiente $b^e \text{ mod m}$.
 
 > [!note]- Complexidade
 > - $O(\log e)$

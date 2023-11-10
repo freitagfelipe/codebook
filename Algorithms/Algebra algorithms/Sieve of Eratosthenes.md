@@ -1,9 +1,8 @@
 > [!info] Objetivo
-> - Dado um número $r$, tem como objetivo calcular todos os números primos do intervalo $[2, r]$
+> - Tem como objetivo calcular para todos os números do intervalo $[2, r]$ se ele é ou não primo.
 
 > [!note]- Complexidade
-> - Build: $O(n \log \log n)$
-> - Query: $O(1)$
+> - $O(n \log \log n)$
 
 ```cpp
 vector<bool> build(int r) {
@@ -23,7 +22,7 @@ vector<bool> build(int r) {
 }
 ```
 
-> [!hint] Adaptação
+> [!hint] Encontrando o menor fator primo
 > - O Crivo de Erastótenes pode ser adaptado para encontrar o menor fator primo de cada número no intervalo $[1, r]$ com a mesma complexidade.
 
 ```cpp

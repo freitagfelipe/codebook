@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Dado um número $n$, tem como objetivo calcular de maneira eficiente o n-ésimo número da sequência fibonacci.
+> - Tem como objetivo calcular de maneira eficiente o n-ésimo número da sequência fibonacci.
 
 > [!note]- Complexidade
 > - $O(\log n)$

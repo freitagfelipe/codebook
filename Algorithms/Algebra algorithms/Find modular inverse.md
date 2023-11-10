@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Dado um número $a$ e um número $m$, tem como objetivo encontrar o inverso modular de $a$, ou seja, encontrar um número $x$, tal que $a \cdot x \equiv 1 \text{ mod m}$. O algoritmo utiliza o [[Extended Euclidean algorithm]] durante o cálculo.
+> - Tem como objetivo encontrar o inverso modular de $a$, ou seja, encontrar um número $x$, tal que $a \cdot x \equiv 1 \text{ mod m}$. O algoritmo utiliza o [[Extended Euclidean algorithm]] durante o cálculo.
 
 > [!note]- Complexidade
 > - $O(\log min(a, b))$ 

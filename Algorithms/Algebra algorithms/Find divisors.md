@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Dado um número $n$, tem como objetivo calcular todos os divisores de $n$.
+> - Tem como objetivo calcular todos os divisores de $n$.
 
 > [!note]- Complexidade
 > - $O(\sqrt n)$
@@ -25,30 +25,20 @@ vector<int> get_divisors(int n) {
 ---
 
 > [!info] Objetivo
-> - Dado um número $r$, tem como objetivo calcular os divisores de todos os números do intervalo $[1, r]$.
+> - Tem como objetivo calcular os divisores de todos os números do intervalo $[1, r]$.
 
 > [!note]- Complexidade
-> - Build: $O(r \cdot \log r)$
-> - Get divisors: $O(1)$
+> - $O(r \cdot \log r)$
 
 ```cpp
-vector<vector<int>> divisors;
-
 void build(int r) {
+	vector<vector<int>> divisors(r + 1);
+
 	for (int i {1}; i <= r; ++i) {
 		for (int j {i}; j <= r; j += i) {
 			divisors[j].push_back(i);
 		}
 	}
-}
-
-// X must be in the interval [1, r]
-vector<int> &get_divisors(int x) {
-	return divisors[x];
-}
-
-void setup(int r) {
-	divisors.assign(r + 1, vector<int>());
 }
 ```
 

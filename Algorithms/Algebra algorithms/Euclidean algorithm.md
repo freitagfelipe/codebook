@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Dados dois números $a$ e $b$, tem como objetivo encontrar o máximo divisor comum (mdc).
+> - Tem como objetico encontrar o máximo divisor comum de $a$ e $b$.
 
 > [!note]- Complexidade
 > - $O(\log min(a, b))$ 

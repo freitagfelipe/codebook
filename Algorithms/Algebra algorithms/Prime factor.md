@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Dado um número $n$, tem como objetivo encontrar a fatoração prima de $n$. Ademais, também é possível adaptar o [[Sieve of Eratosthenes]] para atingir o mesmo objetivo.
+> - Tem como objetivo encontrar a fatoração prima de $n$. Ademais, também é possível adaptar o [[Sieve of Eratosthenes]] para atingir o mesmo objetivo.
 
 > [!note]- Complexidade
 > - $O(\sqrt n)$

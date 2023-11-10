@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - Dados dois números $a$ e $b$, tem como objetivo calcular a identidade de Bézout, ou seja, dois números $x$ e $y$ tal que $a \cdot x + b \cdot y = mdc(a, b)$.
+> - Tem como objetivo calcular a identidade de Bézout, ou seja, dois números $x$ e $y$ tal que $a \cdot x + b \cdot y = mdc(a, b)$.
 
 > [!note]- Complexidade
 > - $O(\log min(a, b))$ 
