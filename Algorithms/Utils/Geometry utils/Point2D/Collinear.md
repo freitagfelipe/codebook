@@ -1,7 +1,7 @@
 > [!info] Objetivo
 > - Tem como objetivo dizer se um dois vetores $\vec{b}$ e $\vec{c}$ centrados no ponto $a$ são colineares utilizando [[Point2D]] e sua função [[Orientation]].
 
-> [!info]- Complexidade
+> [!note]- Complexidade
 > - $O(1)$
 
 ```cpp
