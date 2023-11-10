@@ -1,5 +1,5 @@
 > [!info] Objetivo
-> - A implementação abaixo do algoritmo tem como objetivo ordenar o vetor em ordem crescente.
+> - Tem como objetivo ordenar um conjunto de elementos em ordem crescente.
 
 >[!note]- Complexidade
 >- $O(n \log n)$
@@ -24,6 +24,7 @@ int partition(vector<int> &v, int start, int end) {
 	return j;
 }
 
+// 0-indexed
 void quick_sort(vector<int> &v, int start, int end) {
 	if (start < end) {
 		int pi {partition(v, start, end)};

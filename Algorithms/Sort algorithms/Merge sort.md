@@ -1,9 +1,5 @@
 > [!info] Objetivo
-> - A implementação abaixo do algoritmo tem como objetivo ordenar um vetor em ordem crescente.
-
-> [!caution] Pré-condições
-> - O start deve começar igual a zero.
-> - O end deve começar em $|v| - 1$.
+> - Tem como objetivo ordenar um conjunto de elementos em ordem crescente.
 
 > [!note]- Complexidade
 > - $O(n \log n)$
@@ -33,6 +29,7 @@ void merge(vector<int> &v, int start, int end) {
     copy(result.begin(), result.end(), v.begin() + start);
 }
 
+// 0-indexed
 void merge_sort(vector<int> &v, int start, int end) {
     if (end > start) {
         int mid {(start + end) / 2};
