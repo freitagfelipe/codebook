@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "057b799fa6f0c789",
+        "id": "0068ce8ac4ea0232",
         "type": "tabs",
         "children": [
           {
-            "id": "47088f90da1a4b90",
+            "id": "ec94c452f85e0993",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -89,6 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Algorithms/Graph algorithms/Dinic's algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Algorithms/Graph algorithms/Dinic's algorithm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +128,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Algorithms/Graph algorithms/Dinic's algorithm.md"
+              }
             }
           },
           {
@@ -156,10 +160,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "47088f90da1a4b90",
+  "active": "ec94c452f85e0993",
   "lastOpenFiles": [
     "Contents.md",
+    "broken links output.md",
+    "Algorithms/Graph algorithms/Graph algorithms.md",
+    "Algorithms/Graph algorithms/Dinic's algorithm.md",
+    "Algorithms/String algorithms/Trie.md",
     "Algorithms/Graph algorithms/Edmonds-Karp.md",
+    "Algorithms/Geometry algorithms/Nearest pair of points.md",
+    "Algorithms/Geometry algorithms/Monotone chain.md",
+    "Algorithms/Geometry algorithms/Pick's theorem.md",
+    "Algorithms/Data structures/Fenwick tree (BIT).md",
+    "Algorithms/Data structures/Fenwick tree (BIT) 2D.md",
+    "Algorithms/Algebra algorithms/Fast multiplication.md",
+    "Algorithms/Algebra algorithms/Fast exponentiation.md",
+    "Algorithms/Programming techniques/Inversions count.md",
+    "Algorithms/Algebra algorithms/Find divisors.md",
+    "Algorithms/Data structures/Segment tree with lazy propagation.md",
+    "Algorithms/Graph algorithms/Find cycle.md",
     "Algorithms/Graph algorithms/Prim's algorithm.md",
     "Algorithms/Graph algorithms/Tree diameter.md",
     "Algorithms/Graph algorithms/Eulerian path.md",
@@ -169,21 +188,6 @@
     "Algorithms/Graph algorithms/Kruskal's algorithm.md",
     "Algorithms/Graph algorithms/Lowest common ancestor (LCA).md",
     "Algorithms/Dynamic programming/Longest increasing subsequence (LIS).md",
-    "Algorithms/Graph algorithms/Is graph bipartite.md",
-    "Algorithms/Data structures/Union-find.md",
-    "Algorithms/Graph algorithms/Kosaraju's algorithm.md",
-    "Algorithms/Graph algorithms/Kahn's algorithm.md",
-    "Algorithms/Graph algorithms/Heavy-light decomposition (HLD).md",
-    "Algorithms/Graph algorithms/Functional graph.md",
-    "Algorithms/Graph algorithms/Floyd-Warshall.md",
-    "Algorithms/Graph algorithms/Find cycle.md",
-    "Algorithms/Graph algorithms/Find bridges.md",
-    "Algorithms/Graph algorithms/Find articulation points.md",
-    "Algorithms/Graph algorithms/Euler tour.md",
-    "Algorithms/Graph algorithms/Connected components.md",
-    "Algorithms/Graph algorithms/Depth-first search (DFS).md",
-    "Algorithms/Graph algorithms/Depth-first search grid (DFS-Grid).md",
-    "Algorithms/Graph algorithms/Dijkstra.md",
     "Algorithms/Dynamic programming",
     "Untitled",
     "Algorithms/String algorithms",
