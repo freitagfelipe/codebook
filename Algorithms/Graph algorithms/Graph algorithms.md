@@ -8,7 +8,7 @@
 > - [[Depth-first search (DFS)]]
 > - [[Depth-first search grid (DFS-Grid)]]
 > - [[Dijkstra]]
-> - [[Edmonds-Karp]]
+> - [[Dinic's algorithm]]
 > - [[Euler tour]]
 > - [[Eulerian path]]
 > - [[Find articulation points]]

@@ -52,9 +52,7 @@ vector<int> find_cycle(int n) {
 		return {};
 	}
 
-	vector<int> cycle;
-
-	cycle.push_back(cycle_start);
+	vector<int> cycle {cycle_start};
 
 	for (int v {cycle_end}; v != cycle_start; v = parent[v]) {
 		cycle.push_back(v);
@@ -111,9 +109,7 @@ vector<int> find_cycle(int n) {
 		return {};
 	}
 
-	vector<int> cycle;
-
-	cycle.push_back(cycle_start);
+	vector<int> cycle {cycle_start};
 
 	for (int v {cycle_end}; v != cycle_start; v = parent[v]) {
 		cycle.push_back(v);
