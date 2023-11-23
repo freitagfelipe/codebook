@@ -20,19 +20,21 @@ vector<Point2D<T>> monotone_chain(vector<Point2D<T>> &points, bool include_colli
 
     // This treat the case where all the input points are collinear and return the input
     // In reverse order, that would be what Graham's Scan algorithm would return
-	for (int i {1}; i < n - 1; ++i) {
-        if (!collinear(p1, points[i], p2)) {
-            break;
-        }
-
-        if (i + 1 == n - 1) {
-            vector<Point2D<T>> hull {points};
-
-            reverse(hull.begin(), hull.end());
-
-            return hull;
-        }
-	}
+    if (include_collinear) {
+		for (int i {1}; i < n - 1; ++i) {
+	        if (!collinear(p1, points[i], p2)) {
+	            break;
+	        }
+	
+	        if (i + 1 == n - 1) {
+	            vector<Point2D<T>> hull {points};
+	
+	            reverse(hull.begin(), hull.end());
+	
+	            return hull;
+	        }
+		}
+    }
 
 	vector<Point2D<T>> up, down;
 
