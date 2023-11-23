@@ -73,7 +73,7 @@
 	- [x] [[Depth-first search (DFS)]]
 	- [x] [[Depth-first search grid (DFS-Grid)]]
 	- [x] [[Dijkstra]]
-	- [x] [[Edmonds-Karp]]
+	- [x] [[Dinic's algorithm]]
 	- [x] [[Euler tour]]
 	- [x] [[Eulerian path]]
 	- [x] [[Find articulation points]]
