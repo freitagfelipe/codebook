@@ -2,9 +2,13 @@
 > - Tem como objetivo encontrar o fluxo máximo de $s$ para $t$. Ademais, é possível modelar o problema do fluxo máximo para conseguir resolver vários problemas.
 
 > [!note]- Complexidade
-> - $O(V^2E)$
+> - Add edge: $O(1)$
+> - Get max flow: $O(V^2E)$
+> - Get minimum cut: $O(V^2E)$
 
 ```cpp
+typedef pair<int, int> pii;
+
 // T is the type of the flow
 template <typename T>
 class Dinic {
@@ -31,13 +35,13 @@ public:
         while (true) {
             fill(this->level.begin(), this->level.end(), -1);
             
-            if (!bfs()) {
+            if (!this->bfs()) {
                 break;
             }
 
             fill(this->ptr.begin(), this->ptr.end(), 0);
 
-            while (T new_flow = dfs(s, Dinic::FLOW_INF)) {
+            while (T new_flow = this->dfs(s, Dinic::FLOW_INF)) {
                 flow += new_flow;
             }
         }
@@ -45,47 +49,8 @@ public:
         return flow;
     }
 
-    // Get the set of edges that are in the minimum cut
-    // You must call the get_max_flow method before
-    vector<pair<int, int>> get_min_cut() {
-        vector<bool> visited(this->n);
-
-        visited[this->s] = true;
-
-        queue<int> q;
-
-        q.push(this->s);
-
-        while (!q.empty()) {
-            int u {q.front()};
-
-            q.pop();
-
-            for (int edge_id : g[u]) {
-                auto [from, to, capacity, flow] {this->edges[edge_id]};
-
-                if (capacity == flow) {
-                    continue;
-                }
-
-                if (!visited[to]) {
-                    q.push(to);
-
-                    visited[to] = true;
-                }
-            }
-        }
-
-        vector<pair<int, int>> min_cut;
-
-        for (auto [from, to, capacity, flow] : this->edges) {
-            if (capacity > 0 && capacity == flow && visited[from] != visited[to]) {
-                min_cut.emplace_back(from, to);
-            }
-        }
-        
-        return min_cut;
-    }
+    template <typename U>
+    friend vector<pii> get_min_cut(const Dinic<U> &d);
 
 private:
     struct Edge {
@@ -150,7 +115,7 @@ private:
                 continue;
             }
             
-            T new_flow {dfs(to, min(bottleneck, capacity - flow))};
+            T new_flow {this->dfs(to, min(bottleneck, capacity - flow))};
 
             if (new_flow == 0) {
                 continue;
@@ -165,6 +130,49 @@ private:
         return 0;
     }
 };
+
+// Get the set of edges that are in the minimum cut
+// You must call the get_max_flow method before
+template <typename U>
+vector<pii> get_min_cut(const Dinic<U> &d) {
+    vector<bool> visited(d.n);
+
+    visited[d.s] = true;
+
+    queue<int> q;
+
+    q.push(d.s);
+
+    while (!q.empty()) {
+        int u {q.front()};
+
+        q.pop();
+
+        for (int edge_id : d.g[u]) {
+            auto [from, to, capacity, flow] {d.edges[edge_id]};
+
+            if (capacity == flow) {
+                continue;
+            }
+
+            if (!visited[to]) {
+                q.push(to);
+
+                visited[to] = true;
+            }
+        }
+    }
+
+    vector<pii> min_cut;
+
+    for (auto [from, to, capacity, flow] : d.edges) {
+        if (capacity > 0 && capacity == flow && visited[from] != visited[to]) {
+            min_cut.emplace_back(from, to);
+        }
+    }
+    
+    return min_cut;
+}
 ```
 
 ---
