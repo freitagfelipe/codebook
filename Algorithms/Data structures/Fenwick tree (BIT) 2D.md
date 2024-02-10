@@ -6,7 +6,7 @@
 > - Query/update: $O(\log n \cdot \log m)$
 > - Range query/update: $O(\log n \cdot \log m)$
 
-> [!hint] Outras operações
+> [!hint] Outras operações além da soma
 > - Essa estrutura aceita várias operações, mas para utilizar a função de consulta de intervalo deve ser possível desfazer essa operação como, por exemplo, operações de xor. Contudo, operações que não possuem tal propriedade ainda podem ser utilizadas, desde que todas as consultas tenham $l = 1$, um exemplo de operação assim é a de $max$.
 
 ```cpp
@@ -30,20 +30,26 @@ public:
         }
     }
 
-    int query(int idx, int idy) {
+    T query(int idx, int idy) {
+		T ans {};
+
 	    for (int x {idx}; x > 0; x -= x & -x) {
 		    for (int y {idy}; y > 0; y -= y & -y) {
-			    // Query logic	
+			    // Query logic
 		    }
 	    }
+
+		return ans;
     }
 
-    int range_query(int ix, int iy, int ex, int ey) {
-	    // Do the query for (xe, ye) and remove the excess if needed with the queries
-	    // (ex, iy - 1), (ix - 1, ey) and then add (ix - 1, iy - 1) because it was removed two times
+    T range_query(int ix, int iy, int ex, int ey) {
+	    // Do a query for (xe, ye) and remove the excess
+	    // with queries for (ex, iy - 1) and (ix - 1, ey)
+	    // after that you need to add the part that you
+	    // removed two times i.e (ix - 1, iy - 1)
     }
 
-    void update(int idx, int idy, int k) {
+    void update(int idx, int idy, T k) {
 	    for (int x {idx}; x <= n; x += x & -x) {
 		    for (int y {idy}; y <= m; y += y & -y) {
 			    // Update logic
@@ -51,9 +57,9 @@ public:
 	    }
     }
 
-    void range_update(int ix, int iy, int ex, int ey, int k) {
-        // Do the update for (ix, iy) with k
-        // After that undo the update for r + 1
+    void range_update(int ix, int iy, int ex, int ey, T k) {
+	    // Do an update for (ix, iy) and
+	    // undo the update for (ex + 1, ey + 1)
     }
 
 private:
@@ -61,34 +67,6 @@ private:
     int m;
     vector<vector<T>> bit;
 };
-```
-
-```cpp
-int n, m;
-// MAXN is the largest possible number of rows
-// MAXM is the largest possible number of columns
-int BIT[MAXN][MAXM];
-
-int query(int idx, int idy) {
-	for (int x {idx}; x > 0; x -= x & -x) {
-		for (int y {idy}; y > 0; y -= y & -y) {
-			// Query logic	
-		}
-	}
-}
-
-int range_query(int ix, int iy, int ex, int ey) {
-	// Do the query for (xe, ye) and remove the excess if needed with the queries
-	// (ex, iy - 1), (ix - 1, ey) and then add (ix - 1, iy - 1)
-}
-
-void update(int idx, int idy, int k) {
-	for (int x {idx}; x <= n; x += x & -x) {
-		for (int y {idy}; y <= m; y += y & -y) {
-			// Update logic
-		}
-	}
-}
 ```
 
 ---
