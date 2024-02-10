@@ -6,9 +6,6 @@
 > - Query/update: $O(\log n)$
 > - Range query/update: $O(\log n)$
 
-> [!hint] Outras operações além da soma
-> - Essa estrutura aceita várias operações, mas para utilizar a função de consulta de intervalo deve ser possível desfazer essa operação como, por exemplo, operações de xor. Contudo, operações que não possuem tal propriedade ainda podem ser utilizadas, desde que todas as consultas tenham $l = 1$, um exemplo de operação assim é a de $max$.
-
 ```cpp
 template <typename T>
 class BIT {
