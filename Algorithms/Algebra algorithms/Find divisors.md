@@ -31,7 +31,7 @@ vector<int> get_divisors(int n) {
 > - $O(r \cdot \log r)$
 
 ```cpp
-void build(int r) {
+vector<vector<int>> build(int r) {
 	vector<vector<int>> divisors(r + 1);
 
 	for (int i {1}; i <= r; ++i) {
@@ -39,6 +39,8 @@ void build(int r) {
 			divisors[j].push_back(i);
 		}
 	}
+
+	return divisors;
 }
 ```
 
