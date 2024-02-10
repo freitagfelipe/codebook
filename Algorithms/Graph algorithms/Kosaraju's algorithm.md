@@ -126,14 +126,13 @@ vector<vector<int>> scc(int n) {
 		}
 	}
 
-	for (int i {}; i < comp; ++i) {
-		sort(cg[i].begin(), cg[i].end());
+	for (vector<int> &v : cg) {
+        sort(v.begin(), v.end());
 
-		cg[i].erase(unique(cg[i].begin(), cg[i].end()), cg[i].end());
-	}
+        v.erase(unique(v.begin(), v.end()), v.end());
+    }
 
 	ts.clear();
-	same_comp.clear();
 
 	return cg;
 }
