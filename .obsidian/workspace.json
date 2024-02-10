@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "0068ce8ac4ea0232",
+        "id": "43ee3496de6bd357",
         "type": "tabs",
         "children": [
           {
-            "id": "ec94c452f85e0993",
+            "id": "856ebea6084a9b66",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {}
             }
           }
@@ -89,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms/Graph algorithms/Dinic's algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms/Graph algorithms/Dinic's algorithm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Algorithms/Graph algorithms/Dinic's algorithm.md"
-              }
+              "state": {}
             }
           },
           {
@@ -139,7 +135,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -160,34 +158,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ec94c452f85e0993",
+  "active": "856ebea6084a9b66",
   "lastOpenFiles": [
-    "Contents.md",
-    "broken links output.md",
-    "Algorithms/Graph algorithms/Graph algorithms.md",
-    "Algorithms/Graph algorithms/Dinic's algorithm.md",
-    "Algorithms/String algorithms/Trie.md",
-    "Algorithms/Graph algorithms/Edmonds-Karp.md",
-    "Algorithms/Geometry algorithms/Nearest pair of points.md",
-    "Algorithms/Geometry algorithms/Monotone chain.md",
-    "Algorithms/Geometry algorithms/Pick's theorem.md",
+    "Algorithms/Utils/Geometry utils/Point2D/Point2D.md",
+    "a.txt",
+    "Algorithms/String algorithms/Hashing.md",
     "Algorithms/Data structures/Fenwick tree (BIT).md",
+    "Algorithms/Programming techniques/Prefix sum matrix.md",
+    "Algorithms/Programming techniques/Prefix sum array.md",
     "Algorithms/Data structures/Fenwick tree (BIT) 2D.md",
-    "Algorithms/Algebra algorithms/Fast multiplication.md",
-    "Algorithms/Algebra algorithms/Fast exponentiation.md",
-    "Algorithms/Programming techniques/Inversions count.md",
-    "Algorithms/Algebra algorithms/Find divisors.md",
-    "Algorithms/Data structures/Segment tree with lazy propagation.md",
-    "Algorithms/Graph algorithms/Find cycle.md",
-    "Algorithms/Graph algorithms/Prim's algorithm.md",
+    "Annotations/Untitled.md",
+    "Algorithms/Data structures/Policy based tree.md",
+    "Algorithms/Data structures/Persistent segment tree.md",
+    "Annotations/Annotations.md",
+    "broken links output.md",
+    "Annotations/Lexicographically Smallest Concatenation.md",
+    "Algorithms/Algorithms.md",
+    "Algorithms/Graph algorithms/Graph algorithms.md",
     "Algorithms/Graph algorithms/Tree diameter.md",
-    "Algorithms/Graph algorithms/Eulerian path.md",
-    "Algorithms/Graph algorithms/Centroid decomposition.md",
-    "Algorithms/Data structures/Binary heap.md",
-    "Algorithms/Graph algorithms/Tree center.md",
+    "Algorithms/Graph algorithms/Find bridges.md",
+    "Algorithms/Graph algorithms/Kosaraju's algorithm.md",
     "Algorithms/Graph algorithms/Kruskal's algorithm.md",
-    "Algorithms/Graph algorithms/Lowest common ancestor (LCA).md",
-    "Algorithms/Dynamic programming/Longest increasing subsequence (LIS).md",
+    "Algorithms/String algorithms/KMP.md",
+    "Algorithms/String algorithms/Manacher.md",
+    "Algorithms/Graph algorithms/Bellman-Ford.md",
+    "Algorithms/Graph algorithms/Untitled.md",
+    "Annotations/Bit manipulation annotations.md",
+    "Algorithms/Graph algorithms/Connected components.md",
+    "Algorithms/Algebra algorithms/Algebra algorithms.md",
+    "Algorithms/Algebra algorithms/Counting divisors.md",
     "Algorithms/Dynamic programming",
     "Untitled",
     "Algorithms/String algorithms",
@@ -197,7 +196,6 @@
     "Algorithms/Geometry algorithms",
     "Algorithms/Numerical method/Numerical methods",
     "Algorithms/Numerical methods",
-    "Algorithms/Utils/Geometry utils",
     "Assets/Círculo trigonométrico.png",
     "Assets/Identidades trigonométricas.png",
     "Assets/Triângulo retângulo.png",

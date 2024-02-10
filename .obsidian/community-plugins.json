@@ -1,8 +1,6 @@
 [
   "url-into-selection",
-  "obsidian-admonition",
   "obsidian-discordrpc",
   "dataview",
-  "find-unlinked-files",
   "cm-editor-syntax-highlight-obsidian"
 ]
